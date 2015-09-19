@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
+
+.sans-serif-400, .sans-serif-600, .sans-serif-700, .sans-serif-800 {
+  font-family: 'Open Sans', 'arial', sans-serif;
+}
+
+.serif-400, .serif-700 {
+  font-family: 'Cardo', 'times new roman', serif;
+}
+
+.sans-serif-400 { font-weight: 400; }
+.sans-serif-600 { font-weight: 600; }
+.sans-serif-700 { font-weight: 700; }
+.sans-serif-800 { font-weight: 800; }
+
+.serif-400 { font-weight: 400; }
+.serif-700 { font-weight: 700; }
+
+.italic { font-style: italic; }
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container-fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.container-fixed-center {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.navigation-button {
+  background-color: #C33244;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 15px;
+	z-index:9999;
+  
+  font-size: 1em;
+  color: white;
+  line-height: 0.5em;
+  letter-spacing: 0.3em;
+  text-align: center;
+  border-bottom: 8px solid #8A0011;
+}
+
+.homepage-logo {
+  font-size: 3.125em;
+  /*color: white;*/
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  text-align: center;
+  position: relative;
+  
+}
+
+.featured-items-description {
+  color: white;
+  display: block;
+  background-color: #C33244;
+  font-size: 1.25em;
+  line-height: 1.875em;
+
+  padding:10px 40px 10px 40px !important;
+  
+}
