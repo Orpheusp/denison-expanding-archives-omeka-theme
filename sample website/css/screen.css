@@ -67,12 +67,27 @@ body{
 
 .homepage-logo {
   font-size: 3.125em;
-  /*color: white;*/
+  color: white;
   line-height: 1em;
   letter-spacing: 0.3em;
   text-align: center;
   position: relative;
-  
+}
+
+.featured-items-image {
+  border: 30px solid white;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../images/featured-item-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.featured-items-image img{
+  width: 100%;
+  object-fit: cover;
 }
 
 .featured-items-description {
