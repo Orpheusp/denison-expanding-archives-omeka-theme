@@ -19,11 +19,12 @@
 .italic { font-style: italic; }
 
 body{
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  color: #4a4a4a;
 }
 
 .container-fixed-top {
@@ -31,6 +32,7 @@ body{
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
 
 .container-fixed-bottom {
@@ -38,6 +40,7 @@ body{
   bottom: 0px;
   left: 0;
   right: 0;
+  z-index: 9999;
 }
 
 .container-fixed-center {
@@ -45,6 +48,7 @@ body{
   left: 0;
   right: 0;
   top: 50%;
+  z-index: 9999;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -55,7 +59,7 @@ body{
   display: block;
   padding-top: 20px;
   padding-bottom: 15px;
-	z-index:9999;
+	
   
   font-size: 1em;
   color: white;
@@ -96,7 +100,25 @@ body{
   background-color: #C33244;
   font-size: 1.25em;
   line-height: 1.875em;
+  padding: 20px 40px 40px 40px !important;
+}
 
-  padding:10px 40px 10px 40px !important;
-  
+.section-header {
+  padding: 120px 0 30px 0;
+}
+
+.section-name {
+  letter-spacing: 1.25em;
+  text-align: center;
+  font-size: 1em;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.article-header-image {
+  width: 100%;
+  margin-bottom: 50px;
 }
