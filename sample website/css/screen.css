@@ -204,3 +204,10 @@ body{
   font-size: 0.9em;
 }
 
+.item {
+  padding-top: 150px;
+}
+
+.item-image img{
+  width: 100%;
+}
