@@ -209,7 +209,7 @@ article > quote, .article-content > quote, .article-header > quote {
 
 .item-image {
   height: 800px;
-  margin: 10% 0 10% 0;
+  margin-bottom: 50px;
 }
 
 .item-image img{
