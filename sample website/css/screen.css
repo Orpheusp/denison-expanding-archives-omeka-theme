@@ -211,3 +211,33 @@ body{
 .item-image img{
   width: 100%;
 }
+
+.item-description-tag-name {
+  font-family: 'Open Sans', 'arial', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  font-size: 0.8em;
+
+  border-top: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+  
+  margin-bottom: 0.5em;
+}
+
+.item-description-tag-title {
+  font-family: 'Open Sans', 'arial', sans-serif;
+  font-weight: 700;
+}
+
+.item-description-tag-content {
+  font-family: 'Cardo', 'times new roman', serif;
+  font-weight: 400;
+}
+
+.item-description-tag {
+  margin-bottom: 1.5em;
+}
+
+.item-description-tag-image {
+  width: 100%;
+}
