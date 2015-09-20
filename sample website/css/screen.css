@@ -134,9 +134,14 @@ body{
   -webkit-column-rule-width:  1.875em;
   -moz-column-rule-width:  1.875em;
   column-rule-width:  1.875em;
+  margin-bottom: 120px;
 }
 
-.article h1 {
+.article-description {
+  margin-bottom: 120px;
+}
+
+article > h1, article-content > h1, .article-header > h1 {
   font-family: 'Open Sans', 'arial', sans-serif;
   font-weight: 800;
   font-size: 3.125em;
@@ -145,7 +150,7 @@ body{
   color: #4a4a4a;
 }
 
-.article p {
+article > p, .article-content > p, .article-header > p {
   font-family: 'Cardo', 'times new roman', serif;
   font-weight: 400;
   font-size: 1.25em;
@@ -154,7 +159,7 @@ body{
   line-height: 1.7em;
 }
 
-.article quote {
+article > quote, .article-content > quote, .article-header > quote {
   font-family: 'Cardo', 'times new roman', serif;
   font-weight: 400;
   font-style: italic;
@@ -163,10 +168,6 @@ body{
   font-size: 2em;
   margin-bottom: 1.6875em;
   padding: 0 1em 0 1em;
-}
-
-.article-content {
-  padding-bottom: 120px;
 }
 
 .exhibit-item {
@@ -212,11 +213,11 @@ body{
   width: 100%;
 }
 
-.item-description-tag {
+.item-description-tag, .article-description-tag {
   margin-bottom: 1.5em;
 }
 
-.item-description-tag > h1 {
+.item-description-tag > h1, .article-description-tag > h1 {
   font-family: 'Open Sans', 'arial', sans-serif;
   font-weight: 400;
   letter-spacing: 0.5em;
@@ -228,16 +229,16 @@ body{
   margin-bottom: 0.5em;
 }
 
-.item-description-tag > b {
+.item-description-tag > b, .article-description-tag > b {
   font-family: 'Open Sans', 'arial', sans-serif;
   font-weight: 700;
 }
 
-.item-description-tag > p {
+.item-description-tag > p, .article-description-tag > p {
   font-family: 'Cardo', 'times new roman', serif;
   font-weight: 400;
 }
 
-.item-description-tag > img {
+.item-description-tag > img, .article-description-tag > img {
   width: 100%;
 }
