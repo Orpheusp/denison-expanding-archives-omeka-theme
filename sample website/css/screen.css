@@ -204,7 +204,11 @@ article > quote, .article-content > quote, .article-header > quote {
 }
 
 .item {
-  padding-top: 150px;
+  padding: 200px 0 150px 0;
+}
+
+.item-image {
+  margin-bottom: 150px;
 }
 
 .item-image img{
