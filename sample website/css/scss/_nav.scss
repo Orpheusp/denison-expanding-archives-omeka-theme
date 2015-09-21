@@ -1,0 +1,15 @@
+@import 'color';
+
+.navigation-button {
+  background-color: $red;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  
+  font-size: 1em;
+  color: white;
+  line-height: 0.5em;
+  letter-spacing: 0.3em;
+  text-align: center;
+  border-bottom: 8px solid $dark-red;
+}

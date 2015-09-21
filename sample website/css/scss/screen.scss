@@ -1,0 +1,46 @@
+@import 'article';
+@import 'exhibit';
+@import 'item';
+@import 'nav';
+@import 'section';
+@import 'index';
+@import 'font';
+@import 'color';
+
+@mixin horizontal-center {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.container-fixed-top {
+  @extend .container-fixed;
+  top: 0;
+}
+
+.container-fixed-bottom {
+  @extend .container-fixed;
+  bottom: 0;
+}
+
+.container-fixed-center {
+  @extend .container-fixed;
+  @include horizontal-center;
+}
+
