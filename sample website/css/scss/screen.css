@@ -1,45 +1,45 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .exhibit-item > a, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1, .item-description-tag > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1, .serif-700 {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .item-description-tag > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .item-description-tag > quote, .article-description-tag > p, .exhibit-item > p, .section-header > h1, .serif-700 {
   font-family: 'Cardo', 'times new roman', serif; }
 
 .italic {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1 {
+.sans-serif-400, .article-description-tag > h1, .exhibit-item > a {
   font-weight: 400; }
 
 .sans-serif-600, .section-header > small {
   font-weight: 600; }
 
-.sans-serif-700, .article-description-tag > b {
+.sans-serif-700, .article-description-tag > b, .exhibit-item > h1 {
   font-weight: 700; }
 
-.sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1, .item-description-tag > h1 {
   font-weight: 800; }
 
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1 {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .item-description-tag > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .item-description-tag > quote, .article-description-tag > p, .exhibit-item > p, .section-header > h1 {
   font-weight: 400; }
 
 .serif-700 {
   font-weight: 700; }
 
-.article > img, article > img, .article-header > img, .article-content > img {
+.article > img, article > img, .article-header > img, .article-content > img, .item-description-tag > img {
   width: 100%;
   margin-bottom: 3.125em; }
-.article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.article > h1, article > h1, .article-header > h1, .article-content > h1, .item-description-tag > h1 {
   font-size: 3.125em;
   line-height: 1.25em;
   margin-bottom: 1.275em;
   color: #4a4a4a; }
-.article > p, article > p, .article-header > p, .article-content > p {
+.article > p, article > p, .article-header > p, .article-content > p, .item-description-tag > p {
   font-size: 1.25em;
   margin-bottom: 1.6875em;
   color: #4a4a4a;
   line-height: 1.7em; }
-.article > quote, article > quote, .article-header > quote, .article-content > quote {
+.article > quote, article > quote, .article-header > quote, .article-content > quote, .item-description-tag > quote {
   font-style: italic;
   color: #C33244;
   display: block;
@@ -70,6 +70,42 @@ article {
     margin-bottom: 0.5em; }
   .article-description-tag > img {
     width: 100%; }
+
+.exhibit-item {
+  margin-bottom: 1em;
+  padding: 10px;
+  color: #4a4a4a; }
+  .exhibit-item:hover {
+    background-color: #C33244;
+    color: white !important; }
+  .exhibit-item > img {
+    width: 100%;
+    margin-bottom: 1em; }
+  .exhibit-item > h1 {
+    font-size: 1.25em; }
+  .exhibit-item > p {
+    font-size: 1.25em;
+    margin-bottom: 1.5em; }
+  .exhibit-item > a {
+    font-size: 0.9em; }
+
+.item {
+  padding-bottom: 150px; }
+
+.item-image {
+  height: 800px;
+  margin-bottom: 50px; }
+  .item-image img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
 
 .navigation-button {
   background-color: #C33244;
