@@ -1,0 +1,27 @@
+@import 'article';
+
+.item {
+  padding-bottom: 150px;
+}
+
+.item-image {
+  height: 800px;
+  margin-bottom: 50px;
+  
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+.item-description-tag {
+  @extend .article;
+}

@@ -1,5 +1,6 @@
 @import 'color';
 @import 'font';
+@import 'sass-import-once';
 
 @mixin column-count($num) {
   -webkit-column-count: $num;
@@ -13,79 +14,81 @@
   column-rule-width:  $width;
 }
 
-.article {
-  & > img {
-    width: 100%;
-    margin-bottom: 3.125em;
-  }
-  
-  & > h1 {
-    @extend .sans-serif-800;
-    font-size: 3.125em;
-    line-height: 1.25em;
-    margin-bottom: 1.275em;
-    color: $dark-grey;
-  }
-  
-  & > p {
-    @extend .serif-400;
-    font-size: 1.25em;
-    margin-bottom: 1.6875em;
-    color: $dark-grey;
-    line-height: 1.7em;
-  }
-  
-  & > quote {
-    @extend .serif-400;
-    font-style: italic;
-    color: $red;
-    display: block;
-    font-size: 2em;
-    margin-bottom: 1.6875em;
-    padding: 0 1em 0 1em;
-  }
-}
+@include exports('article') {
+  .article {
+    & > img {
+      width: 100%;
+      margin-bottom: 3.125em;
+    }
 
-article {
-  @extend .article;
-  margin-bottom: 120px;
-}
+    & > h1 {
+      @extend .sans-serif-800;
+      font-size: 3.125em;
+      line-height: 1.25em;
+      margin-bottom: 1.275em;
+      color: $dark-grey;
+    }
 
-.article-header {
-  @extend .article;
-}
+    & > p {
+      @extend .serif-400;
+      font-size: 1.25em;
+      margin-bottom: 1.6875em;
+      color: $dark-grey;
+      line-height: 1.7em;
+    }
 
-.article-content {
-  @include column-count(2);
-  @include column-rule-width(1.875em);
-  @extend .article;
-  
-  margin-bottom: 120px;
-}
+    & > quote {
+      @extend .serif-400;
+      font-style: italic;
+      color: $red;
+      display: block;
+      font-size: 2em;
+      margin-bottom: 1.6875em;
+      padding: 0 1em 0 1em;
+    }
+  }
 
-.article-description-tag {
-  margin-bottom: 1.5em;
-  
-  & > h1 {
-    @extend .sans-serif-400;
-    letter-spacing: 0.5em;
-    font-size: 0.8em;
-    border-top: 1px solid $dark-grey;
-    border-bottom: 1px solid $dark-grey;
-    padding: 2px 0 2px 0;
-    margin-bottom: 0.5em;
+  article {
+    @extend .article;
+    margin-bottom: 120px;
   }
-  
-  & > b {
-    @extend .sans-serif-700;
+
+  .article-header {
+    @extend .article;
   }
-  
-  & > p {
-    @extend .serif-400;
+
+  .article-content {
+    @include column-count(2);
+    @include column-rule-width(1.875em);
+    @extend .article;
+
+    margin-bottom: 120px;
   }
-  
-  & > img {
-    width: 100%;
+
+  .article-description-tag {
+    margin-bottom: 1.5em;
+
+    & > h1 {
+      @extend .sans-serif-400;
+      letter-spacing: 0.5em;
+      font-size: 0.8em;
+      border-top: 1px solid $dark-grey;
+      border-bottom: 1px solid $dark-grey;
+      padding: 2px 0 2px 0;
+      margin-bottom: 0.5em;
+    }
+
+    & > b {
+      @extend .sans-serif-700;
+    }
+
+    & > p {
+      @extend .serif-400;
+    }
+
+    & > img {
+      width: 100%;
+    }
   }
 }
 

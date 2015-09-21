@@ -1,0 +1,35 @@
+@import 'color';
+@import 'font';
+
+.exhibit-item {
+  margin-bottom: 1em;
+  padding: 10px;
+  color: $dark-grey;
+  
+  &:hover {
+    background-color: $red;
+    color: white !important;
+  }
+  
+  & > img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  & > h1 {
+    @extend .sans-serif-700;
+    font-size: 1.25em;
+  }
+  
+  & > p {
+    @extend .serif-400;
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+  }
+  
+  & > a {
+    @extend .sans-serif-400;
+    font-size: 0.9em;
+  }
+}
+
