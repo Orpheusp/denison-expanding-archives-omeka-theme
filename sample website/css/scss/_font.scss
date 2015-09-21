@@ -1,22 +1,25 @@
 @import 'sass-import-once';
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
 
-.sans-serif { font-family: 'Open Sans', 'arial', sans-serif; }
-.serif{ font-family: 'Cardo', 'times new roman', serif; }
-.italic { font-style: italic; }
 
-.sans-serif-400, .sans-serif-600, .sans-serif-700, .sans-serif-800 {
-  @extend .sans-serif;
+@include exports('font') {
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
+  .sans-serif { font-family: 'Open Sans', 'arial', sans-serif; }
+  .serif{ font-family: 'Cardo', 'times new roman', serif; }
+  .italic { font-style: italic; }
+
+  .sans-serif-400, .sans-serif-600, .sans-serif-700, .sans-serif-800 {
+    @extend .sans-serif;
+  }
+
+  .serif-400, .serif-700 {
+    @extend .serif;
+  }
+
+  .sans-serif-400 { font-weight: 400; }
+  .sans-serif-600 { font-weight: 600; }
+  .sans-serif-700 { font-weight: 700; }
+  .sans-serif-800 { font-weight: 800; }
+
+  .serif-400 { font-weight: 400; }
+  .serif-700 { font-weight: 700; }
 }
-
-.serif-400, .serif-700 {
-  @extend .serif;
-}
-
-.sans-serif-400 { font-weight: 400; }
-.sans-serif-600 { font-weight: 600; }
-.sans-serif-700 { font-weight: 700; }
-.sans-serif-800 { font-weight: 800; }
-
-.serif-400 { font-weight: 400; }
-.serif-700 { font-weight: 700; }
