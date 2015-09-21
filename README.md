@@ -1,3 +1,3 @@
-# Denison Expanding Archives Omeka Theme
+# Denison Expanding Archives Omeka Theme Demo
 
-This is an Omeka theme made especially for the Expanding Archives project of Denison University, but can be used in other Omeka website with the similar purposes. The project is written in PHP, HTML and CSS.
+This is a Demo site for the Denison Expanding Archives Omeka Theme.
