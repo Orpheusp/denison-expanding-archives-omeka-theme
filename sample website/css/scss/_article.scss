@@ -1,5 +1,6 @@
 @import 'color';
 @import 'font';
+@import 'sass-import-once';
 
 @mixin column-count($num) {
   -webkit-column-count: $num;
