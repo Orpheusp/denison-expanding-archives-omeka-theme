@@ -1,25 +1,62 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-/* line 16, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
+/* line 3, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+  font-family: 'Open Sans', 'arial', sans-serif; }
+
+/* line 4, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1, .serif-700 {
+  font-family: 'Cardo', 'times new roman', serif; }
+
+/* line 5, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.italic {
+  font-style: italic; }
+
+/* line 15, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.sans-serif-400, .article-description-tag > h1 {
+  font-weight: 400; }
+
+/* line 16, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.sans-serif-600, .section-header > small {
+  font-weight: 600; }
+
+/* line 17, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.sans-serif-700, .article-description-tag > b {
+  font-weight: 700; }
+
+/* line 18, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+  font-weight: 800; }
+
+/* line 20, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1 {
+  font-weight: 400; }
+
+/* line 21, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
+.serif-700 {
+  font-weight: 700; }
+
+/* line 17, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 .article > img, article > img, .article-header > img, .article-content > img {
   width: 100%;
   margin-bottom: 3.125em; }
 
-/* line 21, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+/* line 22, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-size: 3.125em;
   line-height: 1.25em;
   margin-bottom: 1.275em;
   color: #4a4a4a; }
 
-/* line 29, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+/* line 30, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 .article > p, article > p, .article-header > p, .article-content > p {
   font-size: 1.25em;
   margin-bottom: 1.6875em;
   color: #4a4a4a;
   line-height: 1.7em; }
 
-/* line 37, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+/* line 38, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 .article > quote, article > quote, .article-header > quote, .article-content > quote {
   font-style: italic;
   color: #C33244;
@@ -28,11 +65,11 @@
   margin-bottom: 1.6875em;
   padding: 0 1em 0 1em; }
 
-/* line 48, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+/* line 49, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 article {
   margin-bottom: 120px; }
 
-/* line 57, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+/* line 58, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
 .article-content {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -41,6 +78,21 @@ article {
   -moz-column-rule-width: 1.875em;
   column-rule-width: 1.875em;
   margin-bottom: 120px; }
+
+/* line 66, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+.article-description-tag {
+  margin-bottom: 1.5em; }
+  /* line 69, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+  .article-description-tag > h1 {
+    letter-spacing: 0.5em;
+    font-size: 0.8em;
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    padding: 2px 0 2px 0;
+    margin-bottom: 0.5em; }
+  /* line 87, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_article.scss */
+  .article-description-tag > img {
+    width: 100%; }
 
 /* line 3, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_nav.scss */
 .navigation-button {
@@ -56,11 +108,11 @@ article {
   border-bottom: 8px solid #8A0011; }
 
 /* line 3, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif, .sans-serif-400, .sans-serif-600, .section-header > small, .sans-serif-700, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 /* line 4, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .section-header > h1, .serif-700 {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1, .serif-700 {
   font-family: 'Cardo', 'times new roman', serif; }
 
 /* line 5, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -68,7 +120,7 @@ article {
   font-style: italic; }
 
 /* line 15, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif-400 {
+.sans-serif-400, .article-description-tag > h1 {
   font-weight: 400; }
 
 /* line 16, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -76,7 +128,7 @@ article {
   font-weight: 600; }
 
 /* line 17, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif-700 {
+.sans-serif-700, .article-description-tag > b {
   font-weight: 700; }
 
 /* line 18, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -84,7 +136,7 @@ article {
   font-weight: 800; }
 
 /* line 20, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .section-header > h1 {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1 {
   font-weight: 400; }
 
 /* line 21, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -138,11 +190,11 @@ article {
   padding: 20px 40px 40px 40px !important; }
 
 /* line 3, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif, .sans-serif-400, .sans-serif-600, .section-header > small, .sans-serif-700, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 /* line 4, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .section-header > h1, .serif-700 {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1, .serif-700 {
   font-family: 'Cardo', 'times new roman', serif; }
 
 /* line 5, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -150,7 +202,7 @@ article {
   font-style: italic; }
 
 /* line 15, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif-400 {
+.sans-serif-400, .article-description-tag > h1 {
   font-weight: 400; }
 
 /* line 16, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -158,7 +210,7 @@ article {
   font-weight: 600; }
 
 /* line 17, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.sans-serif-700 {
+.sans-serif-700, .article-description-tag > b {
   font-weight: 700; }
 
 /* line 18, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
@@ -166,14 +218,14 @@ article {
   font-weight: 800; }
 
 /* line 20, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .section-header > h1 {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .section-header > h1 {
   font-weight: 400; }
 
 /* line 21, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/_font.scss */
 .serif-700 {
   font-weight: 700; }
 
-/* line 17, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
+/* line 18, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
 body {
   margin: 0px;
   padding: 0px;
@@ -181,22 +233,22 @@ body {
   width: 100%;
   box-sizing: border-box; }
 
-/* line 25, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
+/* line 26, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
 .container-fixed, .container-fixed-top, .container-fixed-bottom, .container-fixed-center {
   position: fixed;
   left: 0;
   right: 0;
   z-index: 9999; }
 
-/* line 32, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
+/* line 33, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
 .container-fixed-top {
   top: 0; }
 
-/* line 37, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
+/* line 38, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
 .container-fixed-bottom {
   bottom: 0; }
 
-/* line 42, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
+/* line 43, /Users/peng_w2/Documents/denison-expanding-archives-omeka-theme/sample website/css/scss/screen.scss */
 .container-fixed-center {
   top: 50%;
   transform: translateY(-50%);
