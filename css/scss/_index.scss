@@ -1,4 +1,16 @@
 @import 'color';
+@import 'font';
+
+@mixin transition($property, $time, $timing-function) {
+   /* Firefox */
+  -moz-transition: $property $time $timing-function;
+  /* WebKit */
+  -webkit-transition: $property $time $timing-function;
+  /* Opera */
+  -o-transition: $property $time $timing-function;
+  /* Standard */
+  transition: $property $time $timing-function;
+}
 
 .homepage-logo {
   font-size: 3.125em;
@@ -26,10 +38,68 @@
 }
 
 .featured-items-description {
+  z-index: 9999;
   color: white;
   display: block;
   background-color: $red;
   font-size: 1.25em;
   line-height: 1.875em;
   padding: 20px 40px 40px 40px !important;
+  @include transition(bottom, 0.5s, ease-in-out);
+  @include transition(background-color, 0.1s, ease-in-out);
+  
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $dark-red;
+  }
+  
+  & > p {
+    @extend .serif-400;
+    @extend .italic;
+  }
+
+}
+
+.hidden-featured-items-description {   
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -500px; 
+}
+
+.current-featured-items-description { 
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  
+}
+
+.show-featured-item {
+  margin-top: 30px;
+  
+  & > a {
+    @extend .sans-serif-600;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $red;
+    text-align: center;
+    @include transition(background-color, 0.1s, ease-in-out);
+  }
+  
+  & > a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: $dark-red;
+  }
 }

@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, .sans-serif-600, .section-header > small, .show-featured-item > a, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .serif-700 {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-items-description > p, .serif-700 {
   font-family: 'Cardo', 'times new roman', serif; }
 
-.italic {
+.italic, .featured-items-description > p {
   font-style: italic; }
 
 .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a {
   font-weight: 400; }
 
-.sans-serif-600, .section-header > small {
+.sans-serif-600, .section-header > small, .show-featured-item > a {
   font-weight: 600; }
 
 .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1 {
@@ -20,7 +20,7 @@
 .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-weight: 800; }
 
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1 {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-items-description > p {
   font-weight: 400; }
 
 .serif-700 {
@@ -151,12 +151,72 @@ article {
     object-fit: cover; }
 
 .featured-items-description {
+  z-index: 9999;
   color: white;
   display: block;
   background-color: #C33244;
   font-size: 1.25em;
   line-height: 1.875em;
-  padding: 20px 40px 40px 40px !important; }
+  padding: 20px 40px 40px 40px !important;
+  /* Firefox */
+  -moz-transition: bottom 0.5s ease-in-out;
+  /* WebKit */
+  -webkit-transition: bottom 0.5s ease-in-out;
+  /* Opera */
+  -o-transition: bottom 0.5s ease-in-out;
+  /* Standard */
+  transition: bottom 0.5s ease-in-out;
+  /* Firefox */
+  -moz-transition: background-color 0.1s ease-in-out;
+  /* WebKit */
+  -webkit-transition: background-color 0.1s ease-in-out;
+  /* Opera */
+  -o-transition: background-color 0.1s ease-in-out;
+  /* Standard */
+  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
+  text-decoration: none; }
+  .featured-items-description:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #8A0011; }
+
+.hidden-featured-items-description {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -500px; }
+
+.current-featured-items-description {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.show-featured-item {
+  margin-top: 30px; }
+  .show-featured-item > a {
+    font-size: 1em;
+    letter-spacing: 0.5em;
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #C33244;
+    text-align: center;
+    /* Firefox */
+    -moz-transition: background-color 0.1s ease-in-out;
+    /* WebKit */
+    -webkit-transition: background-color 0.1s ease-in-out;
+    /* Opera */
+    -o-transition: background-color 0.1s ease-in-out;
+    /* Standard */
+    transition: background-color 0.1s ease-in-out; }
+  .show-featured-item > a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #8A0011; }
 
 body {
   margin: 0px;
