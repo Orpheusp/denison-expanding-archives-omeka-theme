@@ -45,3 +45,12 @@ body {
   @include horizontal-center;
 }
 
+::selection {
+  background-color: $dark-grey;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: $dark-grey;
+  color: white;
+}

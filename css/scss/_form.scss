@@ -30,13 +30,16 @@
     color: $dark-grey;
   }
   
+  
   & input[type="text"] {
     @extend .serif-400;
+    letter-spacing: 0.05em;
     @include appearance(none);
     padding: 5px 0;
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid $dark-grey;
+    border-radius: 0;
     font-size: 1.5em;
     width: 100%;
     
@@ -46,7 +49,11 @@
     }
   }
   
-  & input[type="submit"], & button[type="button"] {
+  & input[name="search"] {
+    width: 80%;
+  }
+  
+  & button[type="button"] {
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -56,6 +63,7 @@
     @include box-shadow(none);
     color: $dark-grey;
     border: 1px solid $dark-grey;
+    border-radius: 0;
     background-color: white;
     margin: 20px 0;
     
@@ -70,6 +78,29 @@
     }
   }
   
+  & input[type="submit"] {
+    width: 15%;
+    text-align: center;
+    padding: 10px 0;
+    @extend .sans-serif-400;
+    letter-spacing: 0.5em;
+    @include appearance(none);
+    @include box-shadow(none);
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    border-radius: 0;
+    background-color: white;
+    margin: 20px 0;
+    &:focus{
+      @include box-shadow(none);
+      outline: none;
+    }
+    
+    &:hover {
+      color: white;
+      background-color: $dark-grey;
+    }
+  }
   
   & .field {
     margin-bottom: 2em;

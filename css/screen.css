@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form input[type="submit"], #advanced-search-form button[type="button"], .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button[type="button"], #advanced-search-form input[type="submit"], .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-item-description, #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700 {
@@ -8,7 +8,7 @@
 .italic, .featured-item-description {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form input[type="submit"], #advanced-search-form button[type="button"] {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button[type="button"], #advanced-search-form input[type="submit"] {
   font-weight: 400; }
 
 .sans-serif-600, .section-header > small {
@@ -198,6 +198,7 @@ article {
     letter-spacing: 0.3em;
     color: #4a4a4a; }
   #advanced-search-form input[type="text"] {
+    letter-spacing: 0.05em;
     appearance: none;
     /* Opera */
     -o-appearance: none;
@@ -209,6 +210,7 @@ article {
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid #4a4a4a;
+    border-radius: 0;
     font-size: 1.5em;
     width: 100%; }
     #advanced-search-form input[type="text"]:focus {
@@ -220,7 +222,9 @@ article {
       /* Safari and Chrome */
       -webkit-box-shadow: none;
       outline: none; }
-  #advanced-search-form input[type="submit"], #advanced-search-form button[type="button"] {
+  #advanced-search-form input[name="search"] {
+    width: 80%; }
+  #advanced-search-form button[type="button"] {
     width: 100%;
     text-align: center;
     padding: 10px 0;
@@ -241,9 +245,10 @@ article {
     -webkit-box-shadow: none;
     color: #4a4a4a;
     border: 1px solid #4a4a4a;
+    border-radius: 0;
     background-color: white;
     margin: 20px 0; }
-    #advanced-search-form input[type="submit"]:focus, #advanced-search-form button[type="button"]:focus {
+    #advanced-search-form button[type="button"]:focus {
       box-shadow: none;
       /* Opera */
       -o-box-shadow: none;
@@ -252,7 +257,43 @@ article {
       /* Safari and Chrome */
       -webkit-box-shadow: none;
       outline: none; }
-    #advanced-search-form input[type="submit"]:hover, #advanced-search-form button[type="button"]:hover {
+    #advanced-search-form button[type="button"]:hover {
+      color: white;
+      background-color: #4a4a4a; }
+  #advanced-search-form input[type="submit"] {
+    width: 15%;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 0.5em;
+    appearance: none;
+    /* Opera */
+    -o-appearance: none;
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    box-shadow: none;
+    /* Opera */
+    -o-box-shadow: none;
+    /* Firefox */
+    -moz-box-shadow: none;
+    /* Safari and Chrome */
+    -webkit-box-shadow: none;
+    color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    border-radius: 0;
+    background-color: white;
+    margin: 20px 0; }
+    #advanced-search-form input[type="submit"]:focus {
+      box-shadow: none;
+      /* Opera */
+      -o-box-shadow: none;
+      /* Firefox */
+      -moz-box-shadow: none;
+      /* Safari and Chrome */
+      -webkit-box-shadow: none;
+      outline: none; }
+    #advanced-search-form input[type="submit"]:hover {
       color: white;
       background-color: #4a4a4a; }
   #advanced-search-form .field {
@@ -309,5 +350,13 @@ body {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%); }
+
+::selection {
+  background-color: #4a4a4a;
+  color: white; }
+
+::-moz-selection {
+  background-color: #4a4a4a;
+  color: white; }
 
 /*# sourceMappingURL=screen.css.map */
