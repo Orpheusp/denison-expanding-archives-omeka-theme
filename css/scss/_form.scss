@@ -1,0 +1,100 @@
+@import 'font';
+@import 'color';
+
+@mixin appearance($val){
+  appearance:$val;
+  /* Opera */
+  -o-appearance:$val;
+  /* Firefox */
+  -moz-appearance:$val;
+  /* Safari and Chrome */
+  -webkit-appearance:$val; 
+}
+
+@mixin box-shadow($val){
+  box-shadow:$val;
+  /* Opera */
+  -o-box-shadow:$val;
+  /* Firefox */
+  -moz-box-shadow:$val;
+  /* Safari and Chrome */
+  -webkit-box-shadow:$val; 
+}
+
+#advanced-search-form {
+  color: $dark-grey;
+  & label, & .label {
+    @extend .sans-serif-400;
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    color: $dark-grey;
+  }
+  
+  & input[type="text"] {
+    @extend .serif-400;
+    @include appearance(none);
+    padding: 5px 0;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid $dark-grey;
+    font-size: 1.5em;
+    width: 100%;
+    
+    &:focus{
+      @include box-shadow(none);
+      outline: none;
+    }
+  }
+  
+  & input[type="submit"], & button[type="button"] {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    @extend .sans-serif-400;
+    letter-spacing: 0.5em;
+    @include appearance(none);
+    @include box-shadow(none);
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    background-color: white;
+    margin: 20px 0;
+    
+    &:focus{
+      @include box-shadow(none);
+      outline: none;
+    }
+    
+    &:hover {
+      color: white;
+      background-color: $dark-grey;
+    }
+  }
+  
+  
+  & .field {
+    margin-bottom: 2em;
+  }
+  
+  & select {
+    @extend .serif-400;
+    letter-spacing: 0.1em;
+    margin: 5px 0;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid $dark-grey;
+    @include appearance(none);
+    background-color: white;
+    
+    &:focus, &:hover {
+      @include box-shadow(none);
+      outline: none;
+      color: white;
+      background-color: $dark-grey;
+    }
+    
+  }
+  
+  
+}

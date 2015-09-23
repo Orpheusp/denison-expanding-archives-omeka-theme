@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<meta name="renderer" content="webkit"/>
+	<title>Expanding Archive - Article</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fixed-top">
+    <div class="container">
+      <div class="navigation-button col-md-2 col-md-offset-5">
+        <p class="sans-serif-800">EXPANDING</p>
+        <p class="serif-400">ARCHIVE</p>
+      </div>
+    </div>
+  </div>
+    
+  <div class="container">
+    <form id="advanced-search-form" action="/items/browse" method="GET" class="col-md-12">
+      <div class="section-header col-md-10 col-md-offset-1">
+        <small>-SEARCH ITEMS-</small>
+        <!-- search-keywords -->
+        <div id="search-keywords" class="field col-md-12">
+          <label for="keyword-search"></label>        
+          <div class="inputs">
+            <input type="text" name="search" id="keyword-search" placeholder="Search for Keywords" size="80">        
+          </div><!-- end of inputs -->
+        </div><!-- end of search-keywords -->
+      </div>
+
+      <div class="col-md-4">
+        <!-- search-narrow-by-fields -->
+        <div id="search-narrow-by-fields" class="field">
+          <div class="label">-Narrow by Specific Fields-</div>
+
+          <div class="inputs">
+            <div class="search-entry">
+              <select name="advanced[0][element_id]" id="" title="Search Field" class="advanced-search-element">
+                <option value="">Select Below </option>
+                <optgroup id="-optgroup-Dublin Core" label="Dublin Core">
+                  <option value="50">Title</option>
+                  <option value="49">Subject</option>
+                  <option value="41">Description</option>
+                  <option value="39">Creator</option>
+                  <option value="48">Source</option>
+                  <option value="45">Publisher</option>
+                  <option value="40">Date</option>
+                  <option value="37">Contributor</option>
+                  <option value="47">Rights</option>
+                  <option value="46">Relation</option>
+                  <option value="42">Format</option>
+                  <option value="44">Language</option>
+                  <option value="51">Type</option>
+                  <option value="43">Identifier</option>
+                  <option value="38">Coverage</option>
+                </optgroup>
+                <optgroup id="-optgroup-Item Type Metadata" label="Item Type Metadata">
+                  <option value="29">Event Type</option>
+                  <option value="30">Participants</option>
+                  <option value="31">Birth Date</option>
+                  <option value="32">Birthplace</option>
+                  <option value="33">Death Date</option>
+                  <option value="34">Occupation</option>
+                  <option value="35">Biographical Text</option>
+                  <option value="36">Bibliography</option>
+                  <option value="7">Original Format</option>
+                  <option value="28">URL</option>
+                  <option value="27">Lesson Plan Text</option>
+                  <option value="14">Director</option>
+                  <option value="13">Producer</option>
+                  <option value="12">Compression</option>
+                  <option value="11">Duration</option>
+                  <option value="10">Physical Dimensions</option>
+                  <option value="6">Local URL</option>
+                  <option value="5">Transcription</option>
+                  <option value="4">Location</option>
+                  <option value="3">Interviewee</option>
+                  <option value="2">Interviewer</option>
+                  <option value="15">Bit Rate/Frequency</option>
+                  <option value="16">Time Summary</option>
+                  <option value="26">Materials</option>
+                  <option value="25">Objectives</option>
+                  <option value="24">Standards</option>
+                  <option value="23">Number of Attachments</option>
+                  <option value="22">BCC</option>
+                  <option value="21">CC</option>
+                  <option value="20">To</option>
+                  <option value="19">From</option>
+                  <option value="18">Subject Line</option>
+                  <option value="17">Email Body</option>
+                  <option value="1">Text</option>
+                </optgroup>
+              </select>
+              <select name="advanced[0][type]" id="" title="Search Type" class="advanced-search-type">
+                <option value="" selected="selected">Select Below </option>
+                <option value="contains">contains</option>
+                <option value="does not contain">does not contain</option>
+                <option value="is exactly">is exactly</option>
+                <option value="is empty">is empty</option>
+                <option value="is not empty">is not empty</option>
+              </select>
+              <input type="text" name="advanced[0][terms]" id="" value="" size="20" title="Search Terms" class="advanced-search-terms">                
+              <button type="button" class="remove_search" disabled="disabled" style="display: none;">REMOVE FIELD</button>
+            </div><!-- end of search-entry -->
+          </div><!-- end of inputs-->
+
+          <button type="button" class="add_search">ADD A FIELD</button>
+        </div><!-- end of search-narrow-by-fields -->
+      </div>
+
+      <div class="col-md-4">
+        <!-- search-by-range -->
+        <div id="search-by-range" class="field">
+          <label for="range">-Search by Range of ID (e.g. 1-4, 1)-</label>        
+          <div class="inputs">
+            <input type="text" name="range" id="range" value="" size="40">        
+          </div><!-- end of inputs -->
+        </div><!-- end of search-by-range -->
+
+        <!-- collection-search -->
+        <div class="field">
+          <label for="collection-search">-Search By Collection-</label>        
+          <div class="inputs">
+            <select name="collection" id="collection-search">
+              <option value="">Select Below </option>
+            </select>        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+
+        <!-- item-type-search -->
+        <div class="field">
+          <label for="item-type-search">-Search By Type-</label>       
+          <div class="inputs">
+            <select name="type" id="item-type-search">
+              <option value="">Select Below </option>
+              <option value="14">Dataset</option>
+              <option value="9">Email</option>
+              <option value="8">Event</option>
+              <option value="11">Hyperlink</option>
+              <option value="13">Interactive Resource</option>
+              <option value="10">Lesson Plan</option>
+              <option value="3">Moving Image</option>
+              <option value="4">Oral History</option>
+              <option value="12">Person</option>
+              <option value="15">Physical Object</option>
+              <option value="16">Service</option>
+              <option value="17">Software</option>
+              <option value="5">Sound</option>
+              <option value="6">Still Image</option>
+              <option value="1">Text</option>
+              <option value="7">Website</option>
+            </select>        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+
+
+        <!-- user-search -->
+        <div class="field">
+          <label for="user-search">-Search By User-</label>        
+          <div class="inputs">
+            <select name="user" id="user-search">
+              <option value="">Select Below </option>
+              <option value="1">Super User</option>
+            </select>        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+      </div>
+
+      <div class="col-md-4">
+        <!-- tag-search -->
+        <div class="field">
+          <label for="tag-search">-Search By Tags-</label>        
+          <div class="inputs">
+            <input type="text" name="tags" id="tag-search" value="" size="40">        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+
+        <!-- public -->
+        <div class="field">
+          <label for="public">-Public/Non-Public-</label>        
+          <div class="inputs">
+            <select name="public" id="public">
+              <option value="">Select Below </option>
+              <option value="1">Only Public Items</option>
+              <option value="0">Only Non-Public Items</option>
+            </select>        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+
+        <!-- featured -->
+        <div class="field">
+          <label for="featured">-Featured/Non-Featured-</label>        
+          <div class="inputs">
+            <select name="featured" id="featured">
+              <option value="">Select Below </option>
+              <option value="1">Only Featured Items</option>
+              <option value="0">Only Non-Featured Items</option>
+            </select>        
+          </div><!-- end of inputs -->
+        </div><!-- end of field -->
+
+        <div>
+          <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="SEARCH FOR ITEMS">
+        </div>
+      </div>
+    </form>
+    
+    
+    <div class="waterfall col-md-12" data-col-min-width="360">
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-1.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-3.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-6.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-2.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-4.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+      <div class="exhibit-item col-md-4">
+        <img src="./images/featured-item-5.jpg">
+        <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
+        <p>Albucius scriptorem mel ut. Usu te oblique evertitur, legere detraxit an pri. </p>
+      </div>
+
+    </div>
+    
+  </div>
+  
+</body>
+  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+  <script src="javascripts/jquery.waterfall.js"></script>
+</html>
