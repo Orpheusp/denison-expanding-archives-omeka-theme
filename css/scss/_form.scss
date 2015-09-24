@@ -21,8 +21,30 @@
   -webkit-box-shadow:$val; 
 }
 
+@mixin transition($property, $time, $timing-function) {
+   /* Firefox */
+  -moz-transition: $property $time $timing-function;
+  /* WebKit */
+  -webkit-transition: $property $time $timing-function;
+  /* Opera */
+  -o-transition: $property $time $timing-function;
+  /* Standard */
+  transition: $property $time $timing-function;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+   25% {opacity: 0.4;}
+   50% {opacity: 0.7;}
+   75% {opacity: 0.9;}
+  100% {opacity: 1;}
+}
+
 #advanced-search-form {
   color: $dark-grey;
+  margin-bottom: 50px;
+  
+  
   & label, & .label {
     @extend .sans-serif-400;
     font-size: 0.8em;
@@ -32,12 +54,12 @@
   
   & .advanced-search-form-extra {
     height: auto;
-  }
-  
-  & .search-narrow-by-fields {
-    max-height: 500px;
-    overflow: scroll;
-    background-color: $lighter-grey;
+    animation-name: fade;
+    animation-duration: 0.3s;
+    
+    &.hidden {
+      display: none;
+    }
   }
   
   & input[type="text"] {
@@ -68,7 +90,7 @@
     margin: 0 5px;
   }
     
-  & button[type="submit"], & .open-advanced-search {
+  & button[type="submit"], & .expand-advanced-search {
     display: inline-block;
     text-align: center;
     font-size: 2em;
@@ -78,15 +100,15 @@
     color: $dark-grey;
     border-radius: 0;
     background-color: white;
-    margin: 20px 0;
+    margin: 0 0 0 -5px;
     cursor: pointer;
     
-    &:focus{
+    &:focus {
       @include box-shadow(none);
       outline: none;
     }
     
-    &:hover {
+    &:hover, &.active {
       color: $red;
     }
   }
@@ -185,6 +207,4 @@
     }
     
   }
-  
-  
 }

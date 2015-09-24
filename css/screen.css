@@ -191,8 +191,20 @@ article {
   z-index: 9999;
   max-height: 300px; }
 
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.4; }
+  50% {
+    opacity: 0.7; }
+  75% {
+    opacity: 0.9; }
+  100% {
+    opacity: 1; } }
 #advanced-search-form {
   color: #4a4a4a;
+  margin-bottom: 50px;
   /*
   & input[type="submit"] {
     width: 15%;
@@ -222,11 +234,11 @@ article {
     letter-spacing: 0.3em;
     color: #4a4a4a; }
   #advanced-search-form .advanced-search-form-extra {
-    height: auto; }
-  #advanced-search-form .search-narrow-by-fields {
-    max-height: 500px;
-    overflow: scroll;
-    background-color: #f3f3f3; }
+    height: auto;
+    animation-name: fade;
+    animation-duration: 0.3s; }
+    #advanced-search-form .advanced-search-form-extra.hidden {
+      display: none; }
   #advanced-search-form input[type="text"] {
     letter-spacing: 0.05em;
     appearance: none;
@@ -258,7 +270,7 @@ article {
     width: 60%;
     padding: 5px 10px;
     margin: 0 5px; }
-  #advanced-search-form button[type="submit"], #advanced-search-form .open-advanced-search {
+  #advanced-search-form button[type="submit"], #advanced-search-form .expand-advanced-search {
     display: inline-block;
     text-align: center;
     font-size: 2em;
@@ -280,9 +292,9 @@ article {
     color: #4a4a4a;
     border-radius: 0;
     background-color: white;
-    margin: 20px 0;
+    margin: 0 0 0 -5px;
     cursor: pointer; }
-    #advanced-search-form button[type="submit"]:focus, #advanced-search-form .open-advanced-search:focus {
+    #advanced-search-form button[type="submit"]:focus, #advanced-search-form .expand-advanced-search:focus {
       box-shadow: none;
       /* Opera */
       -o-box-shadow: none;
@@ -291,7 +303,7 @@ article {
       /* Safari and Chrome */
       -webkit-box-shadow: none;
       outline: none; }
-    #advanced-search-form button[type="submit"]:hover, #advanced-search-form .open-advanced-search:hover {
+    #advanced-search-form button[type="submit"]:hover, #advanced-search-form button[type="submit"].active, #advanced-search-form .expand-advanced-search:hover, #advanced-search-form .expand-advanced-search.active {
       color: #C33244; }
   #advanced-search-form button[class="remove_search"] {
     text-align: center;

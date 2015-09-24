@@ -27,7 +27,7 @@
         <div id="search-keywords" class="field col-md-12">
           <label for="keyword-search"></label>        
           <div class="inputs">
-            <div class="open-advanced-search">
+            <div class="expand-advanced-search">
               <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
             </div>
             <input type="text" name="search" id="keyword-search" placeholder="Search for Keywords"> 
@@ -39,8 +39,8 @@
         </div><!-- end of search-keywords -->
       </div>
 
-      <div class="advanced-search-form-extra col-md-12">
-        <div class="col-md-4 search-narrow-by-fields">
+      <div class="advanced-search-form-extra hidden col-md-12">
+        <div class="col-md-4">
           <!-- search-narrow-by-fields -->
           <div id="search-narrow-by-fields" class="field">
             <div class="label">-Narrow by Specific Fields-</div>
@@ -123,7 +123,6 @@
             </button>
           </div><!-- end of search-narrow-by-fields -->
         </div>
-            
 
         <div class="col-md-4">
           <!-- search-by-range -->
@@ -221,7 +220,7 @@
       </div>
     </form>
     
-    <div class="waterfall col-md-12" data-col-min-width="360">
+    <div class="waterfall col-md-12 search-results" data-col-min-width="360">
       <div class="exhibit-item col-md-4">
         <img src="./images/featured-item-1.jpg">
         <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
@@ -265,4 +264,5 @@
 </body>
   <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
   <script src="javascripts/jquery.waterfall.js"></script>
+  <script src="javascripts/form.js"></script>
 </html>
