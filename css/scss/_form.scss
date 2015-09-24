@@ -30,18 +30,31 @@
     color: $dark-grey;
   }
   
+  & .advanced-search-form-extra {
+    height: auto;
+  }
+  
+  & .search-narrow-by-fields {
+    max-height: 500px;
+    overflow: scroll;
+    background-color: $lighter-grey;
+  }
   
   & input[type="text"] {
     @extend .serif-400;
     letter-spacing: 0.05em;
     @include appearance(none);
-    padding: 5px 0;
-    margin-bottom: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
     border: none;
     border-bottom: 1px solid $dark-grey;
     border-radius: 0;
     font-size: 1.5em;
     width: 100%;
+    
+    &.advanced-search-terms {
+      width: 90%;
+    }
     
     &:focus{
       @include box-shadow(none);
@@ -50,22 +63,47 @@
   }
   
   & input[name="search"] {
-    width: 80%;
+    width: 60%;
+    padding: 5px 10px;
+    margin: 0 5px;
   }
-  
-  & button[type="button"] {
-    width: 100%;
+    
+  & button[type="submit"], & .open-advanced-search {
+    display: inline-block;
     text-align: center;
-    padding: 10px 0;
-    @extend .sans-serif-400;
-    letter-spacing: 0.5em;
+    font-size: 2em;
     @include appearance(none);
     @include box-shadow(none);
+    border: none;
     color: $dark-grey;
-    border: 1px solid $dark-grey;
     border-radius: 0;
     background-color: white;
     margin: 20px 0;
+    cursor: pointer;
+    
+    &:focus{
+      @include box-shadow(none);
+      outline: none;
+    }
+    
+    &:hover {
+      color: $red;
+    }
+  }
+  
+  & button[class="remove_search"] {
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    @include appearance(none);
+    @include box-shadow(none);
+    
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    border-radius: 50%;
+    background-color: white;
+    margin: 20px 0;
+    cursor: pointer;
     
     &:focus{
       @include box-shadow(none);
@@ -78,6 +116,26 @@
     }
   }
   
+  & button[class="add_search"] {
+    @include appearance(none);
+    @include box-shadow(none);
+    
+    color: $light-grey;
+    border: 1px dashed $light-grey;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    display: block;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:hover {
+      color: $grey;
+    border: 1px dashed $dark-grey;
+    }
+  }
+  /*
   & input[type="submit"] {
     width: 15%;
     text-align: center;
@@ -100,7 +158,7 @@
       color: white;
       background-color: $dark-grey;
     }
-  }
+  }*/
   
   & .field {
     margin-bottom: 2em;
@@ -117,6 +175,7 @@
     border: 1px solid $dark-grey;
     @include appearance(none);
     background-color: white;
+    cursor: pointer;
     
     &:focus, &:hover {
       @include box-shadow(none);

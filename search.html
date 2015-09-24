@@ -27,20 +27,27 @@
         <div id="search-keywords" class="field col-md-12">
           <label for="keyword-search"></label>        
           <div class="inputs">
+            <div class="open-advanced-search">
+              <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            </div>
             <input type="text" name="search" id="keyword-search" placeholder="Search for Keywords"> 
-            <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="SEARCH">
+            <button type="submit" class="submit" name="submit_search" id="submit_search_advanced">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+            <!--<input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">-->
           </div><!-- end of inputs -->
         </div><!-- end of search-keywords -->
       </div>
 
-      <div class="col-md-4">
-        <!-- search-narrow-by-fields -->
-        <div id="search-narrow-by-fields" class="field">
-          <div class="label">-Narrow by Specific Fields-</div>
+      <div class="advanced-search-form-extra col-md-12">
+        <div class="col-md-4 search-narrow-by-fields">
+          <!-- search-narrow-by-fields -->
+          <div id="search-narrow-by-fields" class="field">
+            <div class="label">-Narrow by Specific Fields-</div>
 
-          <div class="inputs">
-            <div class="search-entry">
-              <select name="advanced[0][element_id]" id="" title="Search Field" class="advanced-search-element">
+            <div class="inputs">
+              <div class="search-entry">
+                <select name="advanced[0][element_id]" id="" title="Search Field" class="advanced-search-element">
                 <option value="">Select Below </option>
                 <optgroup id="-optgroup-Dublin Core" label="Dublin Core">
                   <option value="50">Title</option>
@@ -96,7 +103,7 @@
                   <option value="1">Text</option>
                 </optgroup>
               </select>
-              <select name="advanced[0][type]" id="" title="Search Type" class="advanced-search-type">
+                <select name="advanced[0][type]" id="" title="Search Type" class="advanced-search-type">
                 <option value="" selected="selected">Select Below </option>
                 <option value="contains">contains</option>
                 <option value="does not contain">does not contain</option>
@@ -104,110 +111,115 @@
                 <option value="is empty">is empty</option>
                 <option value="is not empty">is not empty</option>
               </select>
-              <input type="text" name="advanced[0][terms]" id="" value="" size="20" title="Search Terms" class="advanced-search-terms">                
-              <button type="button" class="remove_search" disabled="disabled" style="display: none;">REMOVE FIELD</button>
-            </div><!-- end of search-entry -->
-          </div><!-- end of inputs-->
+                <input type="text" name="advanced[0][terms]" id="" value="" size="20" title="Search Terms" class="advanced-search-terms">                
+                <button type="button" class="remove_search" disabled="disabled" style="display: none;">
+                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              </div><!-- end of search-entry -->
+            </div><!-- end of inputs-->
 
-          <button type="button" class="add_search">ADD A FIELD</button>
-        </div><!-- end of search-narrow-by-fields -->
-      </div>
+            <button type="button" class="add_search">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div><!-- end of search-narrow-by-fields -->
+        </div>
+            
 
-      <div class="col-md-4">
-        <!-- search-by-range -->
-        <div id="search-by-range" class="field">
-          <label for="range">-Search by Range of ID (e.g. 1-4, 1)-</label>        
-          <div class="inputs">
-            <input type="text" name="range" id="range" value="">        
-          </div><!-- end of inputs -->
-        </div><!-- end of search-by-range -->
+        <div class="col-md-4">
+          <!-- search-by-range -->
+          <div id="search-by-range" class="field">
+            <label for="range">-Search by Range of ID (e.g. 1-4, 1)-</label>        
+            <div class="inputs">
+              <input type="text" name="range" id="range" value="">        
+            </div><!-- end of inputs -->
+          </div><!-- end of search-by-range -->
 
-        <!-- collection-search -->
-        <div class="field">
-          <label for="collection-search">-Search By Collection-</label>        
-          <div class="inputs">
-            <select name="collection" id="collection-search">
-              <option value="">Select Below </option>
-            </select>        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
+          <!-- collection-search -->
+          <div class="field">
+            <label for="collection-search">-Search By Collection-</label>        
+            <div class="inputs">
+              <select name="collection" id="collection-search">
+                <option value="">Select Below </option>
+              </select>        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
 
-        <!-- item-type-search -->
-        <div class="field">
-          <label for="item-type-search">-Search By Type-</label>       
-          <div class="inputs">
-            <select name="type" id="item-type-search">
-              <option value="">Select Below </option>
-              <option value="14">Dataset</option>
-              <option value="9">Email</option>
-              <option value="8">Event</option>
-              <option value="11">Hyperlink</option>
-              <option value="13">Interactive Resource</option>
-              <option value="10">Lesson Plan</option>
-              <option value="3">Moving Image</option>
-              <option value="4">Oral History</option>
-              <option value="12">Person</option>
-              <option value="15">Physical Object</option>
-              <option value="16">Service</option>
-              <option value="17">Software</option>
-              <option value="5">Sound</option>
-              <option value="6">Still Image</option>
-              <option value="1">Text</option>
-              <option value="7">Website</option>
-            </select>        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
+          <!-- item-type-search -->
+          <div class="field">
+            <label for="item-type-search">-Search By Type-</label>       
+            <div class="inputs">
+              <select name="type" id="item-type-search">
+                <option value="">Select Below </option>
+                <option value="14">Dataset</option>
+                <option value="9">Email</option>
+                <option value="8">Event</option>
+                <option value="11">Hyperlink</option>
+                <option value="13">Interactive Resource</option>
+                <option value="10">Lesson Plan</option>
+                <option value="3">Moving Image</option>
+                <option value="4">Oral History</option>
+                <option value="12">Person</option>
+                <option value="15">Physical Object</option>
+                <option value="16">Service</option>
+                <option value="17">Software</option>
+                <option value="5">Sound</option>
+                <option value="6">Still Image</option>
+                <option value="1">Text</option>
+                <option value="7">Website</option>
+              </select>        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
 
 
-        <!-- user-search -->
-        <div class="field">
-          <label for="user-search">-Search By User-</label>        
-          <div class="inputs">
-            <select name="user" id="user-search">
-              <option value="">Select Below </option>
-              <option value="1">Super User</option>
-            </select>        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
-      </div>
+          <!-- user-search -->
+          <div class="field">
+            <label for="user-search">-Search By User-</label>        
+            <div class="inputs">
+              <select name="user" id="user-search">
+                <option value="">Select Below </option>
+                <option value="1">Super User</option>
+              </select>        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
+        </div>
 
-      <div class="col-md-4">
-        <!-- tag-search -->
-        <div class="field">
-          <label for="tag-search">-Search By Tags-</label>        
-          <div class="inputs">
-            <input type="text" name="tags" id="tag-search" value="">        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
+        <div class="col-md-4">
+          <!-- tag-search -->
+          <div class="field">
+            <label for="tag-search">-Search By Tags-</label>        
+            <div class="inputs">
+              <input type="text" name="tags" id="tag-search" value="">        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
 
-        <!-- public -->
-        <div class="field">
-          <label for="public">-Public/Non-Public-</label>        
-          <div class="inputs">
-            <select name="public" id="public">
-              <option value="">Select Below </option>
-              <option value="1">Only Public Items</option>
-              <option value="0">Only Non-Public Items</option>
-            </select>        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
+          <!-- public -->
+          <div class="field">
+            <label for="public">-Public/Non-Public-</label>        
+            <div class="inputs">
+              <select name="public" id="public">
+                <option value="">Select Below </option>
+                <option value="1">Only Public Items</option>
+                <option value="0">Only Non-Public Items</option>
+              </select>        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
 
-        <!-- featured -->
-        <div class="field">
-          <label for="featured">-Featured/Non-Featured-</label>        
-          <div class="inputs">
-            <select name="featured" id="featured">
-              <option value="">Select Below </option>
-              <option value="1">Only Featured Items</option>
-              <option value="0">Only Non-Featured Items</option>
-            </select>        
-          </div><!-- end of inputs -->
-        </div><!-- end of field -->
+          <!-- featured -->
+          <div class="field">
+            <label for="featured">-Featured/Non-Featured-</label>        
+            <div class="inputs">
+              <select name="featured" id="featured">
+                <option value="">Select Below </option>
+                <option value="1">Only Featured Items</option>
+                <option value="0">Only Non-Featured Items</option>
+              </select>        
+            </div><!-- end of inputs -->
+          </div><!-- end of field -->
 
-        
+
+        </div>
       </div>
     </form>
-    
     
     <div class="waterfall col-md-12" data-col-min-width="360">
       <div class="exhibit-item col-md-4">

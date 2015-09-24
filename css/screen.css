@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button[type="button"], #advanced-search-form input[type="submit"], .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-item-description, #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700 {
@@ -8,7 +8,7 @@
 .italic, .featured-item-description {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button[type="button"], #advanced-search-form input[type="submit"] {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label {
   font-weight: 400; }
 
 .sans-serif-600, .section-header > small {
@@ -192,11 +192,41 @@ article {
   max-height: 300px; }
 
 #advanced-search-form {
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  /*
+  & input[type="submit"] {
+    width: 15%;
+    text-align: center;
+    padding: 10px 0;
+    @extend .sans-serif-400;
+    letter-spacing: 0.5em;
+    @include appearance(none);
+    @include box-shadow(none);
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    border-radius: 0;
+    background-color: white;
+    margin: 20px 0;
+    &:focus{
+      @include box-shadow(none);
+      outline: none;
+    }
+    
+    &:hover {
+      color: white;
+      background-color: $dark-grey;
+    }
+  }*/ }
   #advanced-search-form label, #advanced-search-form .label {
     font-size: 0.8em;
     letter-spacing: 0.3em;
     color: #4a4a4a; }
+  #advanced-search-form .advanced-search-form-extra {
+    height: auto; }
+  #advanced-search-form .search-narrow-by-fields {
+    max-height: 500px;
+    overflow: scroll;
+    background-color: #f3f3f3; }
   #advanced-search-form input[type="text"] {
     letter-spacing: 0.05em;
     appearance: none;
@@ -206,13 +236,15 @@ article {
     -moz-appearance: none;
     /* Safari and Chrome */
     -webkit-appearance: none;
-    padding: 5px 0;
-    margin-bottom: 10px;
+    padding: 10px 0;
+    margin: 10px 0;
     border: none;
     border-bottom: 1px solid #4a4a4a;
     border-radius: 0;
     font-size: 1.5em;
     width: 100%; }
+    #advanced-search-form input[type="text"].advanced-search-terms {
+      width: 90%; }
     #advanced-search-form input[type="text"]:focus {
       box-shadow: none;
       /* Opera */
@@ -223,79 +255,107 @@ article {
       -webkit-box-shadow: none;
       outline: none; }
   #advanced-search-form input[name="search"] {
-    width: 80%; }
-  #advanced-search-form button[type="button"] {
+    width: 60%;
+    padding: 5px 10px;
+    margin: 0 5px; }
+  #advanced-search-form button[type="submit"], #advanced-search-form .open-advanced-search {
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+    appearance: none;
+    /* Opera */
+    -o-appearance: none;
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    box-shadow: none;
+    /* Opera */
+    -o-box-shadow: none;
+    /* Firefox */
+    -moz-box-shadow: none;
+    /* Safari and Chrome */
+    -webkit-box-shadow: none;
+    border: none;
+    color: #4a4a4a;
+    border-radius: 0;
+    background-color: white;
+    margin: 20px 0;
+    cursor: pointer; }
+    #advanced-search-form button[type="submit"]:focus, #advanced-search-form .open-advanced-search:focus {
+      box-shadow: none;
+      /* Opera */
+      -o-box-shadow: none;
+      /* Firefox */
+      -moz-box-shadow: none;
+      /* Safari and Chrome */
+      -webkit-box-shadow: none;
+      outline: none; }
+    #advanced-search-form button[type="submit"]:hover, #advanced-search-form .open-advanced-search:hover {
+      color: #C33244; }
+  #advanced-search-form button[class="remove_search"] {
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    appearance: none;
+    /* Opera */
+    -o-appearance: none;
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    box-shadow: none;
+    /* Opera */
+    -o-box-shadow: none;
+    /* Firefox */
+    -moz-box-shadow: none;
+    /* Safari and Chrome */
+    -webkit-box-shadow: none;
+    color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    background-color: white;
+    margin: 20px 0;
+    cursor: pointer; }
+    #advanced-search-form button[class="remove_search"]:focus {
+      box-shadow: none;
+      /* Opera */
+      -o-box-shadow: none;
+      /* Firefox */
+      -moz-box-shadow: none;
+      /* Safari and Chrome */
+      -webkit-box-shadow: none;
+      outline: none; }
+    #advanced-search-form button[class="remove_search"]:hover {
+      color: white;
+      background-color: #4a4a4a; }
+  #advanced-search-form button[class="add_search"] {
+    appearance: none;
+    /* Opera */
+    -o-appearance: none;
+    /* Firefox */
+    -moz-appearance: none;
+    /* Safari and Chrome */
+    -webkit-appearance: none;
+    box-shadow: none;
+    /* Opera */
+    -o-box-shadow: none;
+    /* Firefox */
+    -moz-box-shadow: none;
+    /* Safari and Chrome */
+    -webkit-box-shadow: none;
+    color: #b0b0b0;
+    border: 1px dashed #b0b0b0;
     width: 100%;
-    text-align: center;
+    margin-top: 10px;
     padding: 10px 0;
-    letter-spacing: 0.5em;
-    appearance: none;
-    /* Opera */
-    -o-appearance: none;
-    /* Firefox */
-    -moz-appearance: none;
-    /* Safari and Chrome */
-    -webkit-appearance: none;
-    box-shadow: none;
-    /* Opera */
-    -o-box-shadow: none;
-    /* Firefox */
-    -moz-box-shadow: none;
-    /* Safari and Chrome */
-    -webkit-box-shadow: none;
-    color: #4a4a4a;
-    border: 1px solid #4a4a4a;
-    border-radius: 0;
+    display: block;
     background-color: white;
-    margin: 20px 0; }
-    #advanced-search-form button[type="button"]:focus {
-      box-shadow: none;
-      /* Opera */
-      -o-box-shadow: none;
-      /* Firefox */
-      -moz-box-shadow: none;
-      /* Safari and Chrome */
-      -webkit-box-shadow: none;
-      outline: none; }
-    #advanced-search-form button[type="button"]:hover {
-      color: white;
-      background-color: #4a4a4a; }
-  #advanced-search-form input[type="submit"] {
-    width: 15%;
-    text-align: center;
-    padding: 10px 0;
-    letter-spacing: 0.5em;
-    appearance: none;
-    /* Opera */
-    -o-appearance: none;
-    /* Firefox */
-    -moz-appearance: none;
-    /* Safari and Chrome */
-    -webkit-appearance: none;
-    box-shadow: none;
-    /* Opera */
-    -o-box-shadow: none;
-    /* Firefox */
-    -moz-box-shadow: none;
-    /* Safari and Chrome */
-    -webkit-box-shadow: none;
-    color: #4a4a4a;
-    border: 1px solid #4a4a4a;
-    border-radius: 0;
-    background-color: white;
-    margin: 20px 0; }
-    #advanced-search-form input[type="submit"]:focus {
-      box-shadow: none;
-      /* Opera */
-      -o-box-shadow: none;
-      /* Firefox */
-      -moz-box-shadow: none;
-      /* Safari and Chrome */
-      -webkit-box-shadow: none;
-      outline: none; }
-    #advanced-search-form input[type="submit"]:hover {
-      color: white;
-      background-color: #4a4a4a; }
+    margin-left: auto;
+    margin-right: auto; }
+    #advanced-search-form button[class="add_search"]:hover {
+      color: #808080;
+      border: 1px dashed #4a4a4a; }
   #advanced-search-form .field {
     margin-bottom: 2em; }
   #advanced-search-form select {
@@ -313,7 +373,8 @@ article {
     -moz-appearance: none;
     /* Safari and Chrome */
     -webkit-appearance: none;
-    background-color: white; }
+    background-color: white;
+    cursor: pointer; }
     #advanced-search-form select:focus, #advanced-search-form select:hover {
       box-shadow: none;
       /* Opera */
