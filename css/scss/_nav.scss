@@ -1,10 +1,12 @@
 @import 'color';
+@import 'font';
 
 .navigation-button {
   background-color: $red;
   display: block;
   padding-top: 20px;
   padding-bottom: 15px;
+  cursor: pointer;
   
   font-size: 1em;
   color: white;
@@ -12,4 +14,9 @@
   letter-spacing: 0.3em;
   text-align: center;
   border-bottom: 8px solid $dark-red;
+}
+
+nav {
+  background-color: white;
+  
 }

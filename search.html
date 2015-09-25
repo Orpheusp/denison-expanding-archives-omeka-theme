@@ -12,7 +12,45 @@
 <body>
   <div class="container-fixed-top">
     <div class="container">
-      <div class="navigation-button col-md-2 col-md-offset-5">
+      <input type="checkbox" id="nav-bar-toggle" class="checkbox-hidden">
+      
+      <nav id="primary-nav" role="navigation" class="col-md-12">
+        <ul class="navigation" class="col-md-5 col-md-offset-1">
+          <li><a href="/items/browse">Browse Items</a></li>
+          <li><a href="/collections/browse">Browse Collections</a></li>
+          <li><a href="/about">About</a>
+            <ul>
+              <li><a href="/example-page">Example Page</a></li>
+            </ul>
+          </li>
+        </ul>                
+        <div id="search-container" role="search" class="col-md-5">
+          <form id="search-form" name="search-form" action="/search" method="get">
+            <input type="text" name="query" id="query" value="" title="Search">
+            <div id="advanced-form">
+              <fieldset id="query-types">
+                <legend>Search using this query type:</legend>
+                <label><input type="radio" name="query_type" id="query_type-keyword" value="keyword" checked="checked">Keyword</label><br>
+                <label><input type="radio" name="query_type" id="query_type-boolean" value="boolean">Boolean</label><br>
+                <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>
+              </fieldset>
+              <fieldset id="record-types">
+                <legend>Search only these record types:</legend>
+                <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked">
+                <label for="record_types-Item">Item</label><br>
+                <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> 
+                <label for="record_types-File">File</label><br>
+                <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
+                <label for="record_types-Collection">Collection</label><br>
+              </fieldset>
+              <p><a href="/items/search">Advanced Search (Items only)</a></p>
+            </div>
+            <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+      <div class="navigation-button col-md-2 col-md-offset-5" for="nav-bar-toggle">
         <p class="sans-serif-800">EXPANDING</p>
         <p class="serif-400">ARCHIVE</p>
       </div>
