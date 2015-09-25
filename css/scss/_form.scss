@@ -40,10 +40,14 @@
   100% {opacity: 1;}
 }
 
+input[type=checkbox].checkbox-hidden {
+   position: absolute;
+   opacity: 0;
+}
+
 #advanced-search-form {
   color: $dark-grey;
   margin-bottom: 50px;
-  
   
   & label, & .label {
     @extend .sans-serif-400;
@@ -52,13 +56,18 @@
     color: $dark-grey;
   }
   
+  #expand-advanced-search-toggle:checked ~ div.advanced-search-form-extra {
+    display: block;
+  }
+  
   & .advanced-search-form-extra {
     height: auto;
     animation-name: fade;
     animation-duration: 0.3s;
+    display: none;
     
     &.hidden {
-      display: none;
+      
     }
   }
   
@@ -89,7 +98,7 @@
     padding: 5px 10px;
     margin: 0 5px;
   }
-    
+  
   & button[type="submit"], & .expand-advanced-search {
     display: inline-block;
     text-align: center;

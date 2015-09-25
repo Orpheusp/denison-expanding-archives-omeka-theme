@@ -27,9 +27,13 @@
         <div id="search-keywords" class="field col-md-12">
           <label for="keyword-search"></label>        
           <div class="inputs">
-            <div class="expand-advanced-search">
+            
+            
+            <label class="expand-advanced-search" for="expand-advanced-search-toggle">
               <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-            </div>
+            </label>
+            
+            
             <input type="text" name="search" id="keyword-search" placeholder="Search for Keywords"> 
             <button type="submit" class="submit" name="submit_search" id="submit_search_advanced">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -38,7 +42,8 @@
           </div><!-- end of inputs -->
         </div><!-- end of search-keywords -->
       </div>
-
+      
+      <input type="checkbox" id="expand-advanced-search-toggle" class="checkbox-hidden">
       <div class="advanced-search-form-extra hidden col-md-12">
         <div class="col-md-4">
           <!-- search-narrow-by-fields -->
@@ -264,5 +269,5 @@
 </body>
   <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
   <script src="javascripts/jquery.waterfall.js"></script>
-  <script src="javascripts/form.js"></script>
+  <!--<script src="javascripts/form.js"></script>-->
 </html>
