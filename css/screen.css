@@ -205,6 +205,10 @@ article {
 #advanced-search-form {
   color: #4a4a4a;
   margin-bottom: 50px;
+  /* hidden checkbox for "checkbox hack" toggle widget */
+  /* ("checkbox hack") if checkbox is checked, display advanced-search-form-extra form */
+  /* styles for advanced-search-form-extra form */
+  /* Styles for "Submit Advanced Search" button, and "Expand advanced Search Form" button */
   /*
   & input[type="submit"] {
     width: 15%;
@@ -233,12 +237,16 @@ article {
     font-size: 0.8em;
     letter-spacing: 0.3em;
     color: #4a4a4a; }
+  #advanced-search-form input[type=checkbox].checkbox-hidden {
+    position: absolute;
+    opacity: 0; }
+  #advanced-search-form #expand-advanced-search-toggle:checked ~ .advanced-search-form-extra {
+    display: block; }
   #advanced-search-form .advanced-search-form-extra {
     height: auto;
     animation-name: fade;
-    animation-duration: 0.3s; }
-    #advanced-search-form .advanced-search-form-extra.hidden {
-      display: none; }
+    animation-duration: 0.3s;
+    display: none; }
   #advanced-search-form input[type="text"] {
     letter-spacing: 0.05em;
     appearance: none;
@@ -256,7 +264,8 @@ article {
     font-size: 1.5em;
     width: 100%; }
     #advanced-search-form input[type="text"].advanced-search-terms {
-      width: 90%; }
+      width: 90%;
+      padding-right: 1em; }
     #advanced-search-form input[type="text"]:focus {
       box-shadow: none;
       /* Opera */

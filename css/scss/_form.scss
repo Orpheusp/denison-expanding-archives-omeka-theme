@@ -40,10 +40,6 @@
   100% {opacity: 1;}
 }
 
-input[type=checkbox].checkbox-hidden {
-   position: absolute;
-   opacity: 0;
-}
 
 #advanced-search-form {
   color: $dark-grey;
@@ -56,19 +52,23 @@ input[type=checkbox].checkbox-hidden {
     color: $dark-grey;
   }
   
-  #expand-advanced-search-toggle:checked ~ div.advanced-search-form-extra {
+  /* hidden checkbox for "checkbox hack" toggle widget */
+  & input[type=checkbox].checkbox-hidden {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  /* ("checkbox hack") if checkbox is checked, display advanced-search-form-extra form */
+  #expand-advanced-search-toggle:checked ~ .advanced-search-form-extra {
     display: block;
   }
   
+  /* styles for advanced-search-form-extra form */
   & .advanced-search-form-extra {
     height: auto;
     animation-name: fade;
     animation-duration: 0.3s;
     display: none;
-    
-    &.hidden {
-      
-    }
   }
   
   & input[type="text"] {
@@ -85,6 +85,7 @@ input[type=checkbox].checkbox-hidden {
     
     &.advanced-search-terms {
       width: 90%;
+      padding-right: 1em;
     }
     
     &:focus{
@@ -99,6 +100,7 @@ input[type=checkbox].checkbox-hidden {
     margin: 0 5px;
   }
   
+  /* Styles for "Submit Advanced Search" button, and "Expand advanced Search Form" button */
   & button[type="submit"], & .expand-advanced-search {
     display: inline-block;
     text-align: center;
