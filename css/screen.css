@@ -1,14 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form label, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-item-description, #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700 {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul > li * > a, nav #search-container form legend, .section-header > h1, .featured-item-description, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, nav > ul > li > a {
   font-family: 'Cardo', 'times new roman', serif; }
 
 .italic, .featured-item-description {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, #advanced-search-form label, #advanced-search-form .label {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form label, #advanced-search-form label, #advanced-search-form .label {
   font-weight: 400; }
 
 .sans-serif-600, .section-header > small {
@@ -20,10 +20,10 @@
 .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-weight: 800; }
 
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, .section-header > h1, .featured-item-description, #advanced-search-form input[type="text"], #advanced-search-form select {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul > li * > a, nav #search-container form legend, .section-header > h1, .featured-item-description, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
   font-weight: 400; }
 
-.serif-700 {
+.serif-700, nav > ul > li > a {
   font-weight: 700; }
 
 .article > img, article > img, .article-header > img, .article-content > img {
@@ -111,12 +111,50 @@ article {
   display: block;
   padding-top: 20px;
   padding-bottom: 15px;
+  cursor: pointer;
   font-size: 1em;
   color: white;
   line-height: 0.5em;
   letter-spacing: 0.3em;
   text-align: center;
   border-bottom: 8px solid #8A0011; }
+
+.nav-container {
+  border-bottom: 1px solid #C33244;
+  background-color: white;
+  padding: 5em 0; }
+
+nav a {
+  text-decoration: none;
+  color: #4a4a4a; }
+  nav a:hover {
+    text-decoration: none;
+    color: #C33244; }
+nav p {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4a4a4a; }
+nav > ul {
+  list-style-type: none; }
+  nav > ul > li {
+    list-style-type: none;
+    margin-bottom: 1em; }
+    nav > ul > li > a {
+      font-size: 1.5em; }
+  nav > ul > li * {
+    list-style-type: none; }
+    nav > ul > li * > a {
+      font-size: 1.5em; }
+nav #search-container form legend {
+  letter-spacing: 0.05em;
+  font-size: 1.5em; }
+nav #search-container form label {
+  font-size: 1em;
+  letter-spacing: 0.2em; }
+nav #search-container form fieldset {
+  margin-bottom: 1em; }
+nav #search-container form input[type="checkbox"], nav #search-container form input[type="radio"] {
+  margin: 0 1em 0 2em; }
 
 .section-header {
   margin: 120px 0 30px 0;
@@ -202,13 +240,41 @@ article {
     opacity: 0.9; }
   100% {
     opacity: 1; } }
+form input[type="text"] {
+  letter-spacing: 0.05em;
+  appearance: none;
+  /* Opera */
+  -o-appearance: none;
+  /* Firefox */
+  -moz-appearance: none;
+  /* Safari and Chrome */
+  -webkit-appearance: none;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #4a4a4a;
+  border-radius: 0;
+  font-size: 1.5em;
+  width: 100%; }
+  form input[type="text"].advanced-search-terms {
+    width: 90%; }
+  form input[type="text"]:focus {
+    box-shadow: none;
+    /* Opera */
+    -o-box-shadow: none;
+    /* Firefox */
+    -moz-box-shadow: none;
+    /* Safari and Chrome */
+    -webkit-box-shadow: none;
+    outline: none; }
+
+input[type=checkbox].checkbox-hidden {
+  position: absolute;
+  opacity: 0; }
+
 #advanced-search-form {
   color: #4a4a4a;
   margin-bottom: 50px;
-  /* hidden checkbox for "checkbox hack" toggle widget */
-  /* ("checkbox hack") if checkbox is checked, display advanced-search-form-extra form */
-  /* styles for advanced-search-form-extra form */
-  /* Styles for "Submit Advanced Search" button, and "Expand advanced Search Form" button */
   /*
   & input[type="submit"] {
     width: 15%;
@@ -237,10 +303,7 @@ article {
     font-size: 0.8em;
     letter-spacing: 0.3em;
     color: #4a4a4a; }
-  #advanced-search-form input[type=checkbox].checkbox-hidden {
-    position: absolute;
-    opacity: 0; }
-  #advanced-search-form #expand-advanced-search-toggle:checked ~ .advanced-search-form-extra {
+  #advanced-search-form #expand-advanced-search-toggle:checked ~ div.advanced-search-form-extra {
     display: block; }
   #advanced-search-form .advanced-search-form-extra {
     height: auto;
@@ -264,8 +327,7 @@ article {
     font-size: 1.5em;
     width: 100%; }
     #advanced-search-form input[type="text"].advanced-search-terms {
-      width: 90%;
-      padding-right: 1em; }
+      width: 90%; }
     #advanced-search-form input[type="text"]:focus {
       box-shadow: none;
       /* Opera */

@@ -4,52 +4,56 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 	<meta name="renderer" content="webkit"/>
-	<title>Expanding Archive - Article</title>
+	<title>Expanding Archive - Search</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 
 <body>
   <div class="container-fixed-top">
+    <input type="checkbox" id="nav-bar-toggle" class="checkbox-hidden">
+    <div class="nav-container">
+      <div class="container">
+        <nav id="primary-nav" role="navigation" class="col-md-12">
+          <ul class="navigation" class="col-md-8">
+            <li><a href="/items/browse">Browse Items</a></li>
+            <li><a href="/collections/browse">Browse Collections</a></li>
+            <li><a href="/about">About</a>
+              <ul>
+                <li><a href="/example-page">Example Page</a></li>
+              </ul>
+            </li>
+          </ul>     
+
+          <div id="search-container" role="search" class="col-md-4">
+            <form id="search-form" name="search-form" action="/search" method="get">
+              <input type="text" name="query" id="query" value="" title="Search">
+              <div id="advanced-form">
+                <fieldset id="query-types">
+                  <legend>Search using this query type:</legend>
+                  <label><input type="radio" name="query_type" id="query_type-keyword" value="keyword" checked="checked">Keyword</label><br>
+                  <label><input type="radio" name="query_type" id="query_type-boolean" value="boolean">Boolean</label><br>
+                  <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>
+                </fieldset>
+                <fieldset id="record-types">
+                  <legend>Search only these record types:</legend>
+                  <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked">
+                  <label for="record_types-Item">Item</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> 
+                  <label for="record_types-File">File</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
+                  <label for="record_types-Collection">Collection</label><br>
+                </fieldset>
+                <p><a href="/items/search">Advanced Search (Items only)</a></p>
+              </div>
+              <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div><!-- end of nav-container-->
+    
     <div class="container">
-      <input type="checkbox" id="nav-bar-toggle" class="checkbox-hidden">
-      
-      <nav id="primary-nav" role="navigation" class="col-md-12">
-        <ul class="navigation" class="col-md-5 col-md-offset-1">
-          <li><a href="/items/browse">Browse Items</a></li>
-          <li><a href="/collections/browse">Browse Collections</a></li>
-          <li><a href="/about">About</a>
-            <ul>
-              <li><a href="/example-page">Example Page</a></li>
-            </ul>
-          </li>
-        </ul>                
-        <div id="search-container" role="search" class="col-md-5">
-          <form id="search-form" name="search-form" action="/search" method="get">
-            <input type="text" name="query" id="query" value="" title="Search">
-            <div id="advanced-form">
-              <fieldset id="query-types">
-                <legend>Search using this query type:</legend>
-                <label><input type="radio" name="query_type" id="query_type-keyword" value="keyword" checked="checked">Keyword</label><br>
-                <label><input type="radio" name="query_type" id="query_type-boolean" value="boolean">Boolean</label><br>
-                <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>
-              </fieldset>
-              <fieldset id="record-types">
-                <legend>Search only these record types:</legend>
-                <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked">
-                <label for="record_types-Item">Item</label><br>
-                <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> 
-                <label for="record_types-File">File</label><br>
-                <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
-                <label for="record_types-Collection">Collection</label><br>
-              </fieldset>
-              <p><a href="/items/search">Advanced Search (Items only)</a></p>
-            </div>
-            <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
-          </form>
-        </div>
-      </nav>
-      
       <div class="navigation-button col-md-2 col-md-offset-5" for="nav-bar-toggle">
         <p class="sans-serif-800">EXPANDING</p>
         <p class="serif-400">ARCHIVE</p>
