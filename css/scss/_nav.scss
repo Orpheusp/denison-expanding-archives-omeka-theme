@@ -54,6 +54,9 @@
 }
 
 nav {
+  max-height: 90vh;
+  min-height: 35vh;
+
   a {
     text-decoration: none;
     color: $dark-grey;
@@ -71,7 +74,10 @@ nav {
     color: $dark-grey;
   }
   
-  & > ul {
+  & > ul.navigation {
+    max-height: 70vh;
+    min-height: 35vh;
+    overflow: scroll;
     list-style-type: none;
     & > li {
       list-style-type: none;
@@ -95,9 +101,11 @@ nav {
     #advanced-form {
       display: none;
       legend {
-        @extend .sans-serif-400;
-        font-size: 0.8em;
-        letter-spacing: 0.3em;
+        @extend .sans-serif-600;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        border: none;
+        margin-bottom: 0.2em;
       }
 
       label {
@@ -107,7 +115,7 @@ nav {
       }
 
       fieldset {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
       }
 
       input[type="checkbox"], input[type="radio"] {
@@ -117,6 +125,41 @@ nav {
 
     #expand-advanced-form-toggle:checked ~ #advanced-form {
       display: block;
+    }
+    
+    input[name="query"] {
+      width: 75%;
+    }
+    .expand-advanced-form, #submit_search {
+      font-size: 1.5em;
+      color: $dark-grey;
+      cursor: pointer;
+      &:hover {
+        color: $red;
+      }
+    }
+    
+    #submit_search {
+      display: inline-block;
+      text-align: center;
+      
+      @include appearance(none);
+      @include box-shadow(none);
+      border: none;
+      color: $dark-grey;
+      border-radius: 0;
+      background-color: white;
+      margin: 0 0 0 -5px;
+      cursor: pointer;
+
+      &:focus {
+        @include box-shadow(none);
+        outline: none;
+      }
+
+      &:hover, &.active {
+        color: $red;
+      }
     }
   }
 }
