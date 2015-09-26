@@ -34,11 +34,11 @@
 
 .nav-drawer {
   position: fixed;
-  top: -40vh;
+  top: calc(-40vh - 10em);
   left: 0;
   right: 0;
   z-index: 9999;
-  @include transition(top, 0.5s, ease);
+  @include transition(top, 0.3s, ease-in-out);
 }
 
 #nav-drawer-toggle:checked ~ .nav-drawer {

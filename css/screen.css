@@ -106,6 +106,24 @@ article {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
 
+.nav-drawer {
+  position: fixed;
+  top: calc(-40vh - 10em);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  /* Firefox */
+  -moz-transition: top 0.3s ease-in-out;
+  /* WebKit */
+  -webkit-transition: top 0.3s ease-in-out;
+  /* Opera */
+  -o-transition: top 0.3s ease-in-out;
+  /* Standard */
+  transition: top 0.3s ease-in-out; }
+
+#nav-drawer-toggle:checked ~ .nav-drawer {
+  top: 0; }
+
 .navigation-button {
   background-color: #C33244;
   display: block;
@@ -125,8 +143,7 @@ article {
   padding: 5em 0; }
 
 nav {
-  max-height: 90vh;
-  min-height: 35vh; }
+  height: 40vh; }
   nav a {
     text-decoration: none;
     color: #4a4a4a; }
@@ -138,9 +155,9 @@ nav {
     text-transform: uppercase;
     color: #4a4a4a; }
   nav > ul.navigation {
-    max-height: 70vh;
-    min-height: 35vh;
-    overflow: scroll;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     list-style-type: none; }
     nav > ul.navigation > li {
       list-style-type: none;
