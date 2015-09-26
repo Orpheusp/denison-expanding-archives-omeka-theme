@@ -127,17 +127,17 @@ article {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9998; }
+  z-index: 9998;
+  height: 100vh;
+  widows: 100vh;
+  opacity: 0.5;
+  background-color: #4a4a4a; }
 
 #nav-drawer-toggle:checked ~ .nav-drawer {
   top: 0; }
 
 #nav-drawer-toggle:checked ~ .nav-drawer-shade {
-  height: 100vh;
-  widows: 100vh;
-  display: block;
-  opacity: 0.5;
-  background-color: #4a4a4a; }
+  display: block; }
 
 .navigation-button {
   background-color: #C33244;

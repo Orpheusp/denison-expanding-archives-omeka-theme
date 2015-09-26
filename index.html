@@ -10,14 +10,77 @@
 </head>
 
 <body>
-  <div class="container-fixed-top">
+  <input type="checkbox" id="nav-drawer-toggle" class="checkbox-hidden">
+  <label class="nav-drawer-shade" for="nav-drawer-toggle" onclick></label>
+  <div class="nav-drawer">
+    <div class="nav-container">
+      <div class="container">
+        <nav id="primary-nav" role="navigation" class="col-md-12">
+          <ul class="navigation col-md-6 col-md-offset-1">
+            <li><a href="/items/browse">Browse Items</a></li>
+            <li><a href="/collections/browse">Browse Collections</a></li>
+            <li><a href="/about">About</a>
+              <ul>
+                <li><a href="/example-page">Example Page</a></li>
+              </ul>
+            </li> 
+            
+          </ul>     
+
+          <div id="search-container" role="search" class="col-md-4">
+            <!-- Commented for static demo -->
+            <!--<form id="search-form" name="search-form" action="/search" method="get">-->
+            <form id="search-form" name="search-form">
+              
+              <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
+                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+              </label>
+              
+              <input type="text" name="query" id="query" value="" title="Search">
+              
+              <button name="submit_search" id="submit_search" type="submit" value="Search">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
+              </button>
+              
+              <!-- Commented for static demo -->
+              <!--
+              <button name="submit_search" id="submit_search" type="submit" value="Search">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
+              </button>-->
+              
+              <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
+              <div id="advanced-form">
+                <fieldset id="query-types">
+                  <legend>Search using this query type:</legend>
+                  <label><input type="radio" name="query_type" id="query_type-keyword" value="keyword" checked="checked">Keyword</label><br>
+                  <label><input type="radio" name="query_type" id="query_type-boolean" value="boolean">Boolean</label><br>
+                  <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>
+                </fieldset>
+                <fieldset id="record-types">
+                  <legend>Search only these record types:</legend>
+                  <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked">
+                  <label for="record_types-Item">Item</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> 
+                  <label for="record_types-File">File</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
+                  <label for="record_types-Collection">Collection</label><br>
+                </fieldset>
+                <!--<p><a href="/items/search">Advanced Search (Items only)</a></p>-->
+              </div>
+              
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div><!-- end of nav-container-->
+    
     <div class="container">
-      <div class="navigation-button col-md-2 col-md-offset-5">
+      <label class="navigation-button col-md-2 col-md-offset-5" for="nav-drawer-toggle">
         <p class="sans-serif-800">EXPANDING</p>
         <p class="serif-400">ARCHIVE</p>
-      </div>
+      </label>
     </div>
-  </div>
+  </div><!-- end of nav-drawer -->
   
   <div class="container-fixed-center">
     <div class="container">

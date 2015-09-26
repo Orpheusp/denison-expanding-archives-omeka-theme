@@ -11,7 +11,7 @@
 
 <body>
   <input type="checkbox" id="nav-drawer-toggle" class="checkbox-hidden">
-  <label class="nav-drawer-shade" for="nav-drawer-toggle"></label>
+  <label class="nav-drawer-shade" for="nav-drawer-toggle" onclick></label>
   <div class="nav-drawer">
     <div class="nav-container">
       <div class="container">
@@ -23,13 +23,14 @@
               <ul>
                 <li><a href="/example-page">Example Page</a></li>
               </ul>
-            </li>
-            
+            </li> 
             
           </ul>     
 
           <div id="search-container" role="search" class="col-md-4">
-            <form id="search-form" name="search-form" action="/search" method="get">
+            <!-- Commented for static demo -->
+            <!--<form id="search-form" name="search-form" action="/search" method="get">-->
+            <form id="search-form" name="search-form">
               
               <label class="expand-advanced-form" for="expand-advanced-form-toggle">
                 <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
@@ -38,8 +39,14 @@
               <input type="text" name="query" id="query" value="" title="Search">
               
               <button name="submit_search" id="submit_search" type="submit" value="Search">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
               </button>
+              
+              <!-- Commented for static demo -->
+              <!--
+              <button name="submit_search" id="submit_search" type="submit" value="Search">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
+              </button>-->
               
               <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
               <div id="advanced-form">
@@ -58,7 +65,7 @@
                   <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
                   <label for="record_types-Collection">Collection</label><br>
                 </fieldset>
-                <p><a href="/items/search">Advanced Search (Items only)</a></p>
+                <!--<p><a href="/items/search">Advanced Search (Items only)</a></p>-->
               </div>
               
             </form>
@@ -73,10 +80,12 @@
         <p class="serif-400">ARCHIVE</p>
       </label>
     </div>
-  </div>
+  </div><!-- end of nav-drawer -->
     
   <div class="container">
-    <form id="advanced-search-form" action="/items/browse" method="GET" class="col-md-12">
+    <!-- Commented for static demo -->
+    <!--<form id="advanced-search-form" action="/items/browse" method="GET" class="col-md-12">-->
+    <form id="advanced-search-form" class="col-md-12">
       <div class="section-header col-md-10 col-md-offset-1">
         <small>-SEARCH ITEMS-</small>
         <!-- search-keywords -->
@@ -84,13 +93,15 @@
           <label for="keyword-search"></label>        
           <div class="inputs">
             
-            <label class="expand-advanced-search" for="expand-advanced-search-toggle">
+            <label class="expand-advanced-search" for="expand-advanced-search-toggle" onclick>
               <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
             </label>
             
             
             <input type="text" name="search" id="keyword-search" placeholder="Search for Keywords"> 
-            <button type="submit" class="submit" name="submit_search" id="submit_search_advanced">
+            <!-- Commented for static demo -->
+            <!--<button type="submit" class="submit" name="submit_search" id="submit_search_advanced">-->
+            <button type="submit" class="submit" name="submit_search" id="submit_search_advanced" disabled>
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
             <!--<input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">-->
