@@ -92,24 +92,31 @@ nav {
   }
   
   & #search-container form {
-    legend {
-      @extend .serif-400;
-      letter-spacing: 0.05em;
-      font-size: 1.5em;
+    #advanced-form {
+      display: none;
+      legend {
+        @extend .sans-serif-400;
+        font-size: 0.8em;
+        letter-spacing: 0.3em;
+      }
+
+      label {
+        @extend .sans-serif-400;
+        font-size: 1em;
+        letter-spacing: 0.2em;
+      }
+
+      fieldset {
+        margin-bottom: 1em;
+      }
+
+      input[type="checkbox"], input[type="radio"] {
+        margin: 0 1em 0 2em;
+      }
     }
-    
-    label {
-      @extend .sans-serif-400;
-      font-size: 1em;
-      letter-spacing: 0.2em;
-    }
-    
-    fieldset {
-      margin-bottom: 1em;
-    }
-    
-    input[type="checkbox"], input[type="radio"] {
-      margin: 0 1em 0 2em;
+
+    #expand-advanced-form-toggle:checked ~ #advanced-form {
+      display: block;
     }
   }
 }

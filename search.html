@@ -14,8 +14,8 @@
     <input type="checkbox" id="nav-bar-toggle" class="checkbox-hidden">
     <div class="nav-container">
       <div class="container">
-        <nav id="primary-nav" role="navigation" class="col-md-12">
-          <ul class="navigation" class="col-md-8">
+        <nav id="primary-nav" role="navigation col-md-12">
+          <ul class="navigation" class="col-md-6 col-md-offset-1">
             <li><a href="/items/browse">Browse Items</a></li>
             <li><a href="/collections/browse">Browse Collections</a></li>
             <li><a href="/about">About</a>
@@ -28,6 +28,12 @@
           <div id="search-container" role="search" class="col-md-4">
             <form id="search-form" name="search-form" action="/search" method="get">
               <input type="text" name="query" id="query" value="" title="Search">
+              
+              <label class="expand-advanced-form" for="expand-advanced-form-toggle">
+                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+              </label>
+              
+              <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
               <div id="advanced-form">
                 <fieldset id="query-types">
                   <legend>Search using this query type:</legend>
@@ -46,7 +52,9 @@
                 </fieldset>
                 <p><a href="/items/search">Advanced Search (Items only)</a></p>
               </div>
-              <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
+              <button name="submit_search" id="submit_search" type="submit" value="Search">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </button>
             </form>
           </div>
         </nav>
@@ -69,7 +77,6 @@
         <div id="search-keywords" class="field col-md-12">
           <label for="keyword-search"></label>        
           <div class="inputs">
-            
             
             <label class="expand-advanced-search" for="expand-advanced-search-toggle">
               <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
