@@ -32,6 +32,19 @@
   transition: $property $time $timing-function;
 }
 
+.nav-drawer {
+  position: fixed;
+  top: -40vh;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  @include transition(top, 0.5s, ease);
+}
+
+#nav-drawer-toggle:checked ~ .nav-drawer {
+  top: 0;
+}
+
 .navigation-button {
   background-color: $red;
   display: block;
@@ -54,8 +67,7 @@
 }
 
 nav {
-  max-height: 90vh;
-  min-height: 35vh;
+  height: 40vh;
 
   a {
     text-decoration: none;
@@ -75,9 +87,9 @@ nav {
   }
   
   & > ul.navigation {
-    max-height: 70vh;
-    min-height: 35vh;
-    overflow: scroll;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     list-style-type: none;
     & > li {
       list-style-type: none;
