@@ -30,14 +30,15 @@
           <div id="search-container" role="search" class="col-md-4">
             <!-- Commented for static demo -->
             <!--<form id="search-form" name="search-form" action="/search" method="get">-->
+            <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
+              <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            </label>
+            
+            <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
+            
             <form id="search-form" name="search-form">
               
-              <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
-                <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-              </label>
-              
               <input type="text" name="query" id="query" value="" title="Search">
-              
               <button name="submit_search" id="submit_search" type="submit" value="Search">
                 <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
               </button>
@@ -48,7 +49,7 @@
                 <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
               </button>-->
               
-              <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
+              
               <div id="advanced-form">
                 <fieldset id="query-types">
                   <legend>Search using this query type:</legend>

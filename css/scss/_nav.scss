@@ -126,6 +126,20 @@ nav {
     }
   }
   
+  .expand-advanced-form {
+    font-size: 1.5em;
+    color: $dark-grey;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+      color: $red;
+    }
+  }
+  
+  #expand-advanced-form-toggle:checked ~ form > #advanced-form {
+    display: block;
+  }
+  
   & #search-container form {
     #advanced-form {
       display: none;
@@ -151,15 +165,12 @@ nav {
         margin: 0 1em 0 2em;
       }
     }
-
-    #expand-advanced-form-toggle:checked ~ #advanced-form {
-      display: block;
-    }
     
     input[name="query"] {
       width: 75%;
     }
-    .expand-advanced-form, #submit_search {
+    
+    #submit_search {
       font-size: 1.5em;
       color: $dark-grey;
       cursor: pointer;
