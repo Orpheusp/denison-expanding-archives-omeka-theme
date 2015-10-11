@@ -20,20 +20,25 @@
   <?php echo auto_discovery_link_tags(); ?>
 
   <!-- Plugin Stuff -->
-
+  <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
+  
   <!-- Stylesheets -->
   <?php 
-    queue_css_file('screen', 'style'); 
-    queue_css_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+    queue_css_file('screen', 'screen'); 
+    queue_css_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
     echo head_css();
   ?>
   
   <!-- JavaScripts -->
+  <?php
+    queue_js_file('globals');
+    echo head_js(); 
+  ?>
   
 </head>
   
-<?php echo body_tag(); ?>
-
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    
   <input type="checkbox" id="nav-drawer-toggle" class="checkbox-hidden">
   <label class="nav-drawer-shade" for="nav-drawer-toggle" onclick></label>
   <div class="nav-drawer">
@@ -61,3 +66,6 @@
     </div><!-- end of container-->
     
   </div><!-- end of nav-drawer-->
+          
+
+            
