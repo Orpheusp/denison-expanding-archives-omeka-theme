@@ -45,7 +45,11 @@
     <div class="nav-container">
       <div class="container">
         <nav id="primary-nav" role="navigation" class="col-md-12">
-          <?php echo public_nav_main(array('role' => 'navigation', 'class' => 'col-md-6 col-md-offset-1')); ?>
+          <?php 
+            $menu = public_nav_main();
+            $menu -> setUlClass('col-md-6 col-md-offset-1 navigation');
+            echo $menu; 
+          ?>
           
           <div id="search-container" role="search" class="col-md-4">
             <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
