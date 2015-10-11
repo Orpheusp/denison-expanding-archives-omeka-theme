@@ -47,11 +47,11 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9998;
+  z-index: 9999;
   height: 100vh;
   widows: 100vh;
-  opacity: 0.5;
-  background-color: $dark-grey;
+  opacity: 0.9;
+  background-color: $dark-red;
 }
 
 #nav-drawer-toggle:checked ~ .nav-drawer {

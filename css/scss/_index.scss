@@ -12,70 +12,86 @@
   transition: $property $time $timing-function;
 }
 
+@mixin horizontal-center {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
 .homepage-logo {
-  font-size: 3.125em;
-  color: white;
-  line-height: 1em;
-  letter-spacing: 0.3em;
+  font-size: 2em;
+  color: $red;
+  line-height: 0.8em;
+  letter-spacing: 0.2em;
   text-align: center;
   position: relative;
+  background-color: white;
+  padding: 40px 0;
+  border: 8px solid $red;
 }
 
-.split-view {
-  padding: 0;
-}
-
-.featured-item-image {
-  width: 100vw;
+.highlight-jumbotron {
+  padding: 0 !important;
+  margin: 0 !important;
   height: 100vh;
-  overflow: hidden;
-  padding: 30px;
-  display: block;
-  
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  min-height: 600px;
+
+  & > * {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+      
+  & .section {
     overflow: hidden;
-  }
-  
-  &.hidden {
-    display: none;
-  }
-}
+    position: relative;
+    top: 0;
+    height: 50vh;
 
-.featured-item-description {
-  @extend .serif-400;
-  @extend .italic;
-  color: white;
-  text-decoration: none;
-  font-size: 1.25em;
-  line-height: 1.875em;
-  background-color: $red;
-  padding: 20px 40px 40px 40px !important;
-  display: block;
-  cursor: pointer;
-  text-decoration: none;
-  
-  @include transition(background-color, 0.1s, ease-in-out);
-  @include transition(opacity, 0.3s, ease-in-out);
-  
-  &:hover {
-    text-decoration: none;
-    color: white;
-    background-color: $dark-red;
-  }
-  
-  &.hidden {
-    opacity: 0.1;
-  }
-}
+    & .background, & .front, & .back {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+    }
 
-.featured-items-descriptions {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  max-height: 300px;
+    & .background {
+      z-index: 1;
+    }
+
+    & .front {
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 2;
+      opacity: 1;
+      @include transition(opacity, 0.2s, ease-in-out);
+      font-size: 2em;
+      color: $red;
+      line-height: 1em;
+      letter-spacing: 0.2em;
+      text-align: center;
+      
+      & .container {
+        width: 60%;
+        position: relative;
+        @include horizontal-center;
+      }
+    }
+
+    & .back {
+      height: 100%;
+      background-color: rgba(138, 0, 17, 0.9);
+      z-index: 3;
+      opacity: 0;
+      @include transition(opacity, 0.2s, ease-in-out);
+    }
+
+    &:hover .back {
+      opacity: 1;
+    }
+
+    &:hover .front {
+      opacity: 0;
+    }
+  }
 }
