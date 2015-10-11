@@ -52,12 +52,6 @@
           ?>
           
           <div id="search-container" role="search" class="col-md-4">
-            
-            <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
-              <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-            </label>
-            
-            <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
             <?php 
               if (get_theme_option('use_advanced_search') === null ||
                   get_theme_option('use_advanced_search')):
@@ -68,7 +62,20 @@
               endif; 
             ?>
           </div>
+          
+          <div id="footer-text" class="col-md-6 col-md-offset-3">
+            <?php 
+              echo get_theme_option('Footer Text'); 
+              if ((get_theme_option('Display Footer Copyright') == 1) && 
+                  $copyright = option('copyright')):
+                echo __('<p>'.$copyright.'</p>');
+              endif;
+              echo __('</p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
+            ?>
+          </div><!-- end of footer-text -->
+          
         </nav>
+        
       </div><!-- end of container-->
     </div><!-- end of nav-container-->
     
