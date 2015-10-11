@@ -285,7 +285,7 @@ nav {
       z-index: 1; }
     .highlight-jumbotron .section .front {
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.6);
       z-index: 2;
       opacity: 1;
       /* Firefox */
@@ -296,10 +296,7 @@ nav {
       -o-transition: opacity 0.2s ease-in-out;
       /* Standard */
       transition: opacity 0.2s ease-in-out;
-      font-size: 2em;
       color: #C33244;
-      line-height: 1em;
-      letter-spacing: 0.2em;
       text-align: center; }
       .highlight-jumbotron .section .front .container {
         width: 60%;
@@ -308,6 +305,13 @@ nav {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%); }
+        .highlight-jumbotron .section .front .container span {
+          font-size: 4em;
+          margin-bottom: 0.3em; }
+        .highlight-jumbotron .section .front .container p {
+          font-size: 1.5em;
+          line-height: 1em;
+          letter-spacing: 0.2em; }
     .highlight-jumbotron .section .back {
       height: 100%;
       background-color: rgba(138, 0, 17, 0.9);
