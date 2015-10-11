@@ -12,11 +12,19 @@
   transition: $property $time $timing-function;
 }
 
-@mixin horizontal-center {
+@mixin vertical-center {
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
+}
+
+@mixin vertical-horizontal-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .homepage-logo {
@@ -25,10 +33,13 @@
   line-height: 0.8em;
   letter-spacing: 0.2em;
   text-align: center;
-  position: relative;
+  position: absolute;
+  @include vertical-horizontal-center;
+  z-index: 9998;
   background-color: white;
   padding: 40px 0;
   border: 8px solid $red;
+  width: 300px;
 }
 
 .highlight-jumbotron {
@@ -71,7 +82,7 @@
       & .container {
         width: 60%;
         position: relative;
-        @include horizontal-center;
+        @include vertical-center;
         
         & span {
           font-size: 4em;
@@ -92,6 +103,36 @@
       z-index: 3;
       opacity: 0;
       @include transition(opacity, 0.2s, ease-in-out);
+      color: white;
+      padding: 80px;
+      
+      & p {
+        @extend .serif-400;
+        font-size: 1.4em;
+        line-height: 2em;
+      }
+      
+      & a {
+        @extend .sans-serif-700;
+        display: block;
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        border: 5px solid white;
+        text-align: center;
+        margin: auto;
+        width: 40%;
+        @include transition(background-color, 0.2s, ease-in-out);
+        margin-top: 50px;
+        
+        &:hover {
+          text-decoration: none;
+          color: $dark-red;
+          background-color: white;
+        }
+      }
     }
 
     &:hover .back {

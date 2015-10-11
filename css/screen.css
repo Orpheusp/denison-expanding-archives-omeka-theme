@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, nav > ul.navigation > li > a {
+.serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, nav > ul.navigation > li > a {
   font-family: 'Cardo', 'times new roman', serif; }
 
 .italic {
@@ -14,13 +14,13 @@
 .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small {
   font-weight: 600; }
 
-.sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1 {
+.sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a {
   font-weight: 700; }
 
 .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-weight: 800; }
 
-.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
+.serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
   font-weight: 400; }
 
 .serif-700, nav > ul.navigation > li > a {
@@ -258,10 +258,17 @@ nav {
   line-height: 0.8em;
   letter-spacing: 0.2em;
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 9998;
   background-color: white;
   padding: 40px 0;
-  border: 8px solid #C33244; }
+  border: 8px solid #C33244;
+  width: 300px; }
 
 .highlight-jumbotron {
   padding: 0 !important;
@@ -324,7 +331,36 @@ nav {
       /* Opera */
       -o-transition: opacity 0.2s ease-in-out;
       /* Standard */
-      transition: opacity 0.2s ease-in-out; }
+      transition: opacity 0.2s ease-in-out;
+      color: white;
+      padding: 80px; }
+      .highlight-jumbotron .section .back p {
+        font-size: 1.4em;
+        line-height: 2em; }
+      .highlight-jumbotron .section .back a {
+        display: block;
+        font-size: 1.5em;
+        letter-spacing: 0.2em;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        border: 5px solid white;
+        text-align: center;
+        margin: auto;
+        width: 40%;
+        /* Firefox */
+        -moz-transition: background-color 0.2s ease-in-out;
+        /* WebKit */
+        -webkit-transition: background-color 0.2s ease-in-out;
+        /* Opera */
+        -o-transition: background-color 0.2s ease-in-out;
+        /* Standard */
+        transition: background-color 0.2s ease-in-out;
+        margin-top: 50px; }
+        .highlight-jumbotron .section .back a:hover {
+          text-decoration: none;
+          color: #8A0011;
+          background-color: white; }
     .highlight-jumbotron .section:hover .back {
       opacity: 1; }
     .highlight-jumbotron .section:hover .front {
