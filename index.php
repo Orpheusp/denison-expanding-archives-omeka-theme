@@ -1,74 +1,98 @@
 <?php echo head(); ?>
 
 <?php
-  ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#FFFFFF");
-  ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
-  ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
-  ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
-  ($buttonTextColor = get_theme_option('button_text_color')) || ($buttonTextColor = "#FFFFFF");
-  ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");
+  ($jumbotronSection1BackgroundImage = get_theme_option('homepage_jumbotron_section_1_background_image'));
+  ($jumbotronSection1TitleIcon = get_theme_option('homepage_jumbotron_section_1_title_icon'));
+  ($jumbotronSection1Title1 = get_theme_option('homepage_jumbotron_section_1_title_1'));
+  ($jumbotronSection1Title2 = get_theme_option('homepage_jumbotron_section_1_title_2'));
+  ($jumbotronSection1Info = get_theme_option('homepage_jumbotron_section_1_info'));
+  ($jumbotronSection1Link = get_theme_option('homepage_jumbotron_section_1_link'));
+
+  ($jumbotronSection2BackgroundImage = get_theme_option('homepage_jumbotron_section_2_background_image'));
+  ($jumbotronSection2TitleIcon = get_theme_option('homepage_jumbotron_section_2_title_icon'));
+  ($jumbotronSection2Title1 = get_theme_option('homepage_jumbotron_section_2_title_1'));
+  ($jumbotronSection2Title2 = get_theme_option('homepage_jumbotron_section_2_title_2'));
+  ($jumbotronSection2Info = get_theme_option('homepage_jumbotron_section_2_info'));
+  ($jumbotronSection2Link = get_theme_option('homepage_jumbotron_section_2_link'));
+
+  ($jumbotronSection3BackgroundImage = get_theme_option('homepage_jumbotron_section_3_background_image'));
+  ($jumbotronSection3TitleIcon = get_theme_option('homepage_jumbotron_section_3_title_icon'));
+  ($jumbotronSection3Title1 = get_theme_option('homepage_jumbotron_section_3_title_1'));
+  ($jumbotronSection3Title2 = get_theme_option('homepage_jumbotron_section_3_title_2'));
+  ($jumbotronSection3Info = get_theme_option('homepage_jumbotron_section_3_info'));
+  ($jumbotronSection3Link = get_theme_option('homepage_jumbotron_section_3_link'));
+
+  ($jumbotronSection4BackgroundImage = get_theme_option('homepage_jumbotron_section_4_background_image'));
+  ($jumbotronSection4TitleIcon = get_theme_option('homepage_jumbotron_section_4_title_icon'));
+  ($jumbotronSection4Title1 = get_theme_option('homepage_jumbotron_section_4_title_1'));
+  ($jumbotronSection4Title2 = get_theme_option('homepage_jumbotron_section_4_title_2'));
+  ($jumbotronSection4Info = get_theme_option('homepage_jumbotron_section_4_info'));
+  ($jumbotronSection4Link = get_theme_option('homepage_jumbotron_section_4_link'));
 ?>
 
 <div class="container-fluid highlight-jumbotron">
   <div class="col-md-6">
     <div class="section">
-      <img src="./images/featured-item-5.jpg" class="background">
+      <img src="<?php echo $jumbotronSection1BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
-          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-          <p class="sans-serif-800">ABOUT</p>
-          <p class="serif-400">THE PROJECT</p>
+          <span class="glyphicon <?php echo $jumbotronSection1TitleIcon; ?>" aria-hidden="true"></span>
+          <p class="sans-serif-800"><?php echo $jumbotronSection1Title1; ?></p>
+          <p class="serif-400"><?php echo $jumbotronSection1Title2; ?></p>
         </div>
       </div>
       <div class="back">
-        <p>Lorem ipsum dolor sit amet, id vel brute inermis consulatu, te sit atqui harum. Vix cu causae legimus. No tota eius fabulas sed, an virtute nusquam dissentiet sed, in eum integre molestie ocurreret. Ut pri errem dicam bonorum, vim in omittam persequeris reprehendunt. Eos doctus phaedrum no, in tempor definitionem eos.</p>
-        <a>LEARN MORE</a>
+        <p><?php echo $jumbotronSection1Info; ?></p>
+        <a href="<?php echo $jumbotronSection1Link; ?>">LEARN MORE</a>
       </div>
-    </div>
+    </div><!-- end of section -->
+    
     <div class="section">
-      <img src="./images/featured-item-1.jpg" class="background">
+      <img src="<?php echo $jumbotronSection2BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
-          <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
-          <p class="sans-serif-800">STUDENT & FACULTY</p>
-          <p class="serif-400">SCHOLARSHIP</p>
+          <span class="glyphicon <?php echo $jumbotronSection2TitleIcon; ?>" aria-hidden="true"></span>
+          <p class="sans-serif-800"><?php echo $jumbotronSection2Title1; ?></p>
+          <p class="serif-400"><?php echo $jumbotronSection2Title2; ?></p>
         </div>
       </div>
       <div class="back">
-        <p>Lorem ipsum dolor sit amet, id vel brute inermis consulatu, te sit atqui harum. Vix cu causae legimus. No tota eius fabulas sed, an virtute nusquam dissentiet sed, in eum integre molestie ocurreret. Ut pri errem dicam bonorum, vim in omittam persequeris reprehendunt. Eos doctus phaedrum no, in tempor definitionem eos.</p>
-        <a>LEARN MORE</a>
+        <p><?php echo $jumbotronSection2Info; ?></p>
+        <a href="<?php echo $jumbotronSection2Link; ?>">LEARN MORE</a>
       </div>
-    </div>
+    </div><!-- end of section -->
   </div>
+  
   <div class="col-md-6">
     <div class="section">
-      <img src="./images/featured-item-6.jpg" class="background">
+      <img src="<?php echo $jumbotronSection3BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
-          <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
-          <p class="sans-serif-800">DENISON'S</p>
-          <p class="serif-400">QUEER STUDIES CONCENTRATION</p>
+          <span class="glyphicon <?php echo $jumbotronSection3TitleIcon; ?>" aria-hidden="true"></span>
+          <p class="sans-serif-800"><?php echo $jumbotronSection3Title1; ?></p>
+          <p class="serif-400"><?php echo $jumbotronSection3Title2; ?></p>
         </div>
       </div>
       <div class="back">
-        <p>Lorem ipsum dolor sit amet, id vel brute inermis consulatu, te sit atqui harum. Vix cu causae legimus. No tota eius fabulas sed, an virtute nusquam dissentiet sed, in eum integre molestie ocurreret. Ut pri errem dicam bonorum, vim in omittam persequeris reprehendunt. Eos doctus phaedrum no, in tempor definitionem eos.</p>
-        <a>LEARN MORE</a>
+        <p><?php echo $jumbotronSection3Info; ?></p>
+        <a href="<?php echo $jumbotronSection3Link; ?>">LEARN MORE</a>
       </div>
-    </div>
+    </div><!-- end of section -->
+    
     <div class="section">
-      <img src="./images/featured-item-4.jpg" class="background">
+      <img src="<?php echo $jumbotronSection4BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
-          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-          <p class="sans-serif-800">INSTITUTIONAL</p>
-          <p class="serif-400">HISTROY</p>
+          <span class="glyphicon <?php echo $jumbotronSection4TitleIcon; ?>" aria-hidden="true"></span>
+          <p class="sans-serif-800"><?php echo $jumbotronSection4Title1; ?></p>
+          <p class="serif-400"><?php echo $jumbotronSection4Title2; ?></p>
         </div>
       </div>
       <div class="back">
-        <p>Lorem ipsum dolor sit amet, id vel brute inermis consulatu, te sit atqui harum. Vix cu causae legimus. No tota eius fabulas sed, an virtute nusquam dissentiet sed, in eum integre molestie ocurreret. Ut pri errem dicam bonorum, vim in omittam persequeris reprehendunt. Eos doctus phaedrum no, in tempor definitionem eos.</p>
-        <a>LEARN MORE</a>
+        <p><?php echo $jumbotronSection4Info; ?></p>
+        <a href="<?php echo $jumbotronSection4Link; ?>">LEARN MORE</a>
       </div>
-    </div>
+    </div><!-- end of section -->
   </div>
 </div>
 
