@@ -52,6 +52,12 @@
           ?>
           
           <div id="search-container" role="search" class="col-md-4">
+            
+            <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
+              <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+            </label>
+            
+            <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
             <?php 
               if (get_theme_option('use_advanced_search') === null ||
                   get_theme_option('use_advanced_search')):
