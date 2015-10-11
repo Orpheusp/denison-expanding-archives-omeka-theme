@@ -22,8 +22,12 @@
   <!-- Plugin Stuff -->
 
   <!-- Stylesheets -->
-  <?php queue_css_file('screen'); ?>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  <?php 
+    queue_css_file(array('screen','style'));
+    queue_css_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+    echo head_css();
+  ?>
 
   <!-- JavaScripts -->
   
