@@ -52,11 +52,15 @@
           ?>
           
           <div id="search-container" role="search" class="col-md-4">
-            <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
-              <?php echo search_form(array('show_advanced' => true)); ?>
-            <?php else: ?>
-              <?php echo search_form(); ?>
-            <?php endif; ?>
+            <?php 
+              if (get_theme_option('use_advanced_search') === null ||
+                  get_theme_option('use_advanced_search')):
+                echo search_form(array('show_advanced' => true,
+                                       'submit_value' => 'Search')); 
+              else:
+                echo search_form();
+              endif; 
+            ?>
           </div>
         </nav>
       </div><!-- end of container-->
