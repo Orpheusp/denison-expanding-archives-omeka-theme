@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article > h1, article > h1, .article-header > h1, .article-content > h1 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article > p, article > p, .article-header > p, .article-content > p, .article > quote, article > quote, .article-header > quote, .article-content > quote, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, nav > ul.navigation > li > a {
@@ -8,7 +8,7 @@
 .italic {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, #advanced-search-form label, #advanced-search-form .label {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label {
   font-weight: 400; }
 
 .sans-serif-600, nav #search-container form #advanced-form legend, .section-header > small {
@@ -288,6 +288,8 @@ nav {
         text-indent: 0;
         text-align: center;
         margin-top: -1.75em; }
+  nav #footer-text {
+    text-align: center; }
 
 .section-header {
   margin: 120px 0 30px 0;

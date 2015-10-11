@@ -126,7 +126,7 @@ nav {
     }
   }
   
-  & #search-container form {
+  #search-container form {
     /* the button for expanding advanced search form */
     .show-advanced.button {
       width: 30px;
@@ -242,5 +242,10 @@ nav {
         margin-top: -1.75em; 
       }
     }
+  }
+  
+  #footer-text {
+    text-align: center;
+    @extend .sans-serif-400;
   }
 }
