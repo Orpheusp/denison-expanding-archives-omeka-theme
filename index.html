@@ -30,49 +30,39 @@
           <div id="search-container" role="search" class="col-md-4">
             <!-- Commented for static demo -->
             <!--<form id="search-form" name="search-form" action="/search" method="get">-->
-            <label class="expand-advanced-form" for="expand-advanced-form-toggle" onclick>
-              <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-            </label>
             
-            <input type="checkbox" id="expand-advanced-form-toggle" class="checkbox-hidden">
-            
-            <form id="search-form" name="search-form">
-              
+            <form id="search-form" name="search-form" action="/search" method="get">    
               <input type="text" name="query" id="query" value="" title="Search">
-              <button name="submit_search" id="submit_search" type="submit" value="Search">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
-              </button>
-              
-              <!-- Commented for static demo -->
-              <!--
-              <button name="submit_search" id="submit_search" type="submit" value="Search">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"><a href="search.html"></a></span>
-              </button>-->
-              
               
               <div id="advanced-form">
                 <fieldset id="query-types">
                   <legend>Search using this query type:</legend>
                   <label><input type="radio" name="query_type" id="query_type-keyword" value="keyword" checked="checked">Keyword</label><br>
                   <label><input type="radio" name="query_type" id="query_type-boolean" value="boolean">Boolean</label><br>
-                  <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>
+                  <label><input type="radio" name="query_type" id="query_type-exact_match" value="exact_match">Exact match</label>        
                 </fieldset>
+                
                 <fieldset id="record-types">
                   <legend>Search only these record types:</legend>
-                  <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked">
-                  <label for="record_types-Item">Item</label><br>
-                  <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> 
-                  <label for="record_types-File">File</label><br>
-                  <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked">
+                  <input type="checkbox" name="record_types[]" id="record_types-Item" value="Item" checked="checked"> <label for="record_types-Item">Item</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-File" value="File" checked="checked"> <label for="record_types-File">File</label><br>
+                  <input type="checkbox" name="record_types[]" id="record_types-Collection" value="Collection" checked="checked"> 
                   <label for="record_types-Collection">Collection</label><br>
                 </fieldset>
-                <!--<p><a href="/items/search">Advanced Search (Items only)</a></p>-->
+                
+                <p><a href="/items/search">Advanced Search (Items only)</a></p>
               </div>
               
+              
+              <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
+                
             </form>
-          </div>
+            
+            
+            
+          </div><!-- end of search-container -->
         </nav>
-      </div>
+      </div><!-- end of container -->
     </div><!-- end of nav-container-->
     
     <div class="container">
@@ -153,5 +143,10 @@
     
 </body>
     <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-    <!--<script src="js/index.js"></script>-->
+    <script src="javascripts/global.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+          Omeka.showAdvancedForm();
+      });
+    </script>
 </html>

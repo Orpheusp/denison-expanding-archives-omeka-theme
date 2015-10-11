@@ -126,23 +126,53 @@ nav {
     }
   }
   
-  .expand-advanced-form {
-    font-size: 1.5em;
-    color: $dark-grey;
-    cursor: pointer;
-    display: inline-block;
-    &:hover {
-      color: $red;
-    }
-  }
-  
-  #expand-advanced-form-toggle:checked ~ form > #advanced-form {
-    display: block;
-  }
-  
   & #search-container form {
+    /* the button for expanding advanced search form */
+    .show-advanced.button {
+      width: 30px;
+      font-size: 1.5em;
+      color: $dark-grey;
+      cursor: pointer;
+      display: inline-block;
+      text-indent: -9999px;
+      @include appearance(none);
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 30px;
+      
+      &:hover {
+        color: $red;
+      }
+
+      &:hover, &:active {
+        color: $red;
+      }
+
+      &:after {
+        font-family: 'Glyphicons Halflings';
+        content: "\e011";
+        display: block;
+        text-indent: 0;
+        text-align: center;
+        margin-top: -1.75em; 
+      }
+    }
+    
+    /* advanced search form */
     #advanced-form {
-      display: none;
+      position: absolute;
+      top: 5em;
+      
+      &.closed {
+        display: none;
+      }
+      
+      &.open {
+        display: block;
+      }
+      
       legend {
         @extend .sans-serif-600;
         font-size: 1em;
@@ -166,31 +196,33 @@ nav {
       }
     }
     
-    input[name="query"] {
+    input[title="Search"] {
       width: 75%;
+      position: absolute;
+      left: 30px;
     }
     
-    #submit_search {
-      font-size: 1.5em;
-      color: $dark-grey;
-      cursor: pointer;
-      &:hover {
-        color: $red;
-      }
-    }
-    
+    /* Search button */
     #submit_search {
       display: inline-block;
       text-align: center;
       
       @include appearance(none);
       @include box-shadow(none);
+      font-size: 1.5em;
       border: none;
       color: $dark-grey;
       border-radius: 0;
       background-color: white;
       margin: 0 0 0 -5px;
       cursor: pointer;
+      text-indent: -9999px;
+      width: 30px;
+      
+      position: absolute;
+      top: 0;
+      right: 30px;
+      padding-top: 30px;
 
       &:focus {
         @include box-shadow(none);
@@ -199,6 +231,15 @@ nav {
 
       &:hover, &.active {
         color: $red;
+      }
+      
+      &:after {
+        font-family: 'Glyphicons Halflings';
+        content: "\e003";
+        display: block;
+        text-indent: 0;
+        text-align: center;
+        margin-top: -1.75em; 
       }
     }
   }
