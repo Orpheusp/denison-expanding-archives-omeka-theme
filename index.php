@@ -28,12 +28,14 @@
   ($jumbotronSection4Title2 = get_theme_option('homepage_jumbotron_section_4_title_2'));
   ($jumbotronSection4Info = get_theme_option('homepage_jumbotron_section_4_info'));
   ($jumbotronSection4Link = get_theme_option('homepage_jumbotron_section_4_link'));
+  
+  ($themeUploadsPath = '/files/theme_uploads/');
 ?>
 
 <div class="container-fluid highlight-jumbotron">
   <div class="col-md-6">
     <div class="section">
-      <img src="<?php echo $jumbotronSection1BackgroundImage; ?>" class="background">
+      <img src="<?php echo $themeUploadsPath . $jumbotronSection1BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
           <span class="glyphicon <?php echo $jumbotronSection1TitleIcon; ?>" aria-hidden="true"></span>
@@ -48,7 +50,7 @@
     </div><!-- end of section -->
     
     <div class="section">
-      <img src="<?php echo $jumbotronSection2BackgroundImage; ?>" class="background">
+      <img src="<?php echo $themeUploadsPath . $jumbotronSection2BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
           <span class="glyphicon <?php echo $jumbotronSection2TitleIcon; ?>" aria-hidden="true"></span>
@@ -65,7 +67,7 @@
   
   <div class="col-md-6">
     <div class="section">
-      <img src="<?php echo $jumbotronSection3BackgroundImage; ?>" class="background">
+      <img src="<?php echo $themeUploadsPath . $jumbotronSection3BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
           <span class="glyphicon <?php echo $jumbotronSection3TitleIcon; ?>" aria-hidden="true"></span>
@@ -80,7 +82,7 @@
     </div><!-- end of section -->
     
     <div class="section">
-      <img src="<?php echo $jumbotronSection4BackgroundImage; ?>" class="background">
+      <img src="<?php echo $themeUploadsPath . $jumbotronSection4BackgroundImage; ?>" class="background">
       <div class="front">
         <div class="container">
           <span class="glyphicon <?php echo $jumbotronSection4TitleIcon; ?>" aria-hidden="true"></span>
