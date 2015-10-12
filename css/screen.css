@@ -133,6 +133,9 @@ article {
   opacity: 0.9;
   background-color: #8A0011; }
 
+#nav-drawer-toggle:checked ~ .navigation-button {
+  top: calc(40vh + 10em + 8px); }
+
 #nav-drawer-toggle:checked ~ .nav-drawer {
   top: 0; }
 
@@ -140,6 +143,21 @@ article {
   display: block; }
 
 .navigation-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  /* Firefox */
+  -moz-transition: top 0.3s ease-in-out;
+  /* WebKit */
+  -webkit-transition: top 0.3s ease-in-out;
+  /* Opera */
+  -o-transition: top 0.3s ease-in-out;
+  /* Standard */
+  transition: top 0.3s ease-in-out;
+  width: 200px;
   background-color: #C33244;
   display: block;
   padding-top: 20px;

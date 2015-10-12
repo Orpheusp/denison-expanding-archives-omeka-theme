@@ -54,6 +54,10 @@
   background-color: $dark-red;
 }
 
+#nav-drawer-toggle:checked ~ .navigation-button {
+  top: calc(40vh + 10em + 8px);
+}
+
 #nav-drawer-toggle:checked ~ .nav-drawer {
   top: 0;
 }
@@ -63,6 +67,15 @@
 }
 
 .navigation-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  @include transition(top, 0.3s, ease-in-out);
+  
+  width: 200px;
   background-color: $red;
   display: block;
   padding-top: 20px;
