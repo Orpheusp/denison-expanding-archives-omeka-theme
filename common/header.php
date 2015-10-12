@@ -63,7 +63,7 @@
             ?>
           </div>
           
-          <div id="footer-text" class="col-md-6 col-md-offset-3">
+          <div id="footer-text" class="col-md-8 col-md-offset-2">
             <?php 
               echo get_theme_option('Footer Text'); 
               if ((get_theme_option('Display Footer Copyright') == 1) && 
