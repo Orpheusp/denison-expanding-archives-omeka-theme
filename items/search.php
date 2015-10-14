@@ -4,7 +4,6 @@
                   'bodyclass' => 'items advanced-search'));
 ?>
 
-<h1><?php echo $pageTitle; ?></h1>
 
 <?php 
   echo $this->partial('items/search-form.php',

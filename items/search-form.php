@@ -9,19 +9,41 @@
 ?>
 
 <div class="container">
-  <form <?php echo tag_attributes($formAttributes); ?>>
-    <div class="col-md-10 col-md-offset-1">
-      <div id="search-keywords" class="field">
-        <?php echo $this->formLabel('keyword-search', __('Search for Keywords')); ?>
+  <form <?php echo tag_attributes($formAttributes); ?> class="col-md-12">
+    <div class="section-header col-md-10 col-md-offset-1">
+      <small>-SEARCH ITEMS-</small>
+      <!-- search-keywords -->
+      <div id="search-keywords" class="field col-md-12">
+        <?php echo $this->formLabel('keyword-search', __('')); ?>  
         <div class="inputs">
+          
+          <label class="expand-advanced-search" for="expand-advanced-search-toggle" onclick>
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+          </label>
+          
           <?php
             echo $this->formText('search',
                                  @$_REQUEST['search'],
-                                 array('id' => 'keyword-search', 'size' => '40'));
+                                 array('id' => 'keyword-search', 
+                                       'size' => '40',
+                                       'placeholder' => 'Search for Keywords'
+                                      )
+                                );
+          
           ?>
-        </div>
-      </div>
-    </div>
+          <!-- Commented for static demo -->
+          <!--<button type="submit" class="submit" name="submit_search" id="submit_search_advanced">-->
+          <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>
+          <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="<?php echo $buttonText ?>">
+          
+          <button type="submit" class="submit" name="submit_search" id="submit_search_advanced" disabled>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+          <!--<input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">-->
+        </div><!-- end of inputs -->
+
+      </div><!-- end of search-keywords -->
+    </div><!-- end of section-header -->
 
     <div class="col-md-4">
       <div id="search-narrow-by-fields" class="field">
@@ -80,7 +102,7 @@
                                     );
                       ?>
                 <button type="button" class="remove_search" disabled="disabled" style="display: none;">
-                  <?php echo __('Remove field'); ?>  
+                  <?php echo __(''); ?>  
                 </button>
               </div>
           <?php endforeach; ?>
@@ -198,10 +220,11 @@
     </div>
 
     <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
+    
     <div>
-      <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>
-      <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="<?php echo $buttonText ?>">
+      
     </div>
+    
   </form>
 </div>
 
