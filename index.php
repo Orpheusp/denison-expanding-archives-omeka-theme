@@ -22,79 +22,52 @@
   ($jumbotronSection3Info = get_theme_option('homepage_jumbotron_section_3_info'));
   ($jumbotronSection3Link = get_theme_option('homepage_jumbotron_section_3_link'));
 
-  ($jumbotronSection4BackgroundImage = get_theme_option('homepage_jumbotron_section_4_background_image'));
-  ($jumbotronSection4TitleIcon = get_theme_option('homepage_jumbotron_section_4_title_icon'));
-  ($jumbotronSection4Title1 = get_theme_option('homepage_jumbotron_section_4_title_1'));
-  ($jumbotronSection4Title2 = get_theme_option('homepage_jumbotron_section_4_title_2'));
-  ($jumbotronSection4Info = get_theme_option('homepage_jumbotron_section_4_info'));
-  ($jumbotronSection4Link = get_theme_option('homepage_jumbotron_section_4_link'));
+  $jumbotronSection4BackgroundImage = get_theme_option('homepage_jumbotron_section_4_background_image');
+  $jumbotronSection4TitleIcon = get_theme_option('homepage_jumbotron_section_4_title_icon');
+  $jumbotronSection4Title1 = get_theme_option('homepage_jumbotron_section_4_title_1');
+  $jumbotronSection4Title2 = get_theme_option('homepage_jumbotron_section_4_title_2');
+  $jumbotronSection4Info = get_theme_option('homepage_jumbotron_section_4_info');
+  $jumbotronSection4Link = get_theme_option('homepage_jumbotron_section_4_link');
+
+  function showSection($sectionNum) {
+    $themeUploadsPath = '/files/theme_uploads/';
+    $themeOptionPrefix = 'homepage_jumbotron_section_'.$sectionNum.'_';
+    
+    $sectionBackgroundImage = get_theme_option($themeOptionPrefix.'background_image');
+    $sectionBackgroundImagePath = $themeUploadsPath.$sectionBackgroundImage;
+    $sectionTitleIcon = get_theme_option($themeOptionPrefix.'title_icon');
+    $sectionTitle1 = get_theme_option($themeOptionPrefix.'title_1');
+    $sectionTitle2 = get_theme_option($themeOptionPrefix.'title_2');
+    $sectionInfo = get_theme_option($themeOptionPrefix.'info');
+    $sectionLink = get_theme_option($themeOptionPrefix.'link');
   
-  ($themeUploadsPath = '/files/theme_uploads/');
+    
+    echo __('<div class="section">');
+    echo __('  <img src="'.$sectionBackgroundImagePath.'" class="background">');
+    echo __('  <div class="front">');
+    echo __('    <div class="container">');
+    echo __('      <span class="glyphicon '.$sectionTitleIcon.'" aria-hidden="true"></span>');
+    echo __('      <p class="sans-serif-800">'.$sectionTitle1.'</p>');
+    echo __('      <p class="serif-400">'.$sectionTitle2.'</p>');
+    echo __('    </div>');
+    echo __('  </div>');
+    echo __('  <div class="back">');
+    echo __('    <p>'.$sectionInfo.'</p>');
+    echo __('    <a href="'.$sectionLink.'">LEARN MORE</a>');
+    echo __('  </div>');
+    echo __('</div>');
+  }
 ?>
 
 <div class="container-fluid highlight-jumbotron">
   <div class="col-md-6">
-    <div class="section">
-      <img src="<?php echo $themeUploadsPath . $jumbotronSection1BackgroundImage; ?>" class="background">
-      <div class="front">
-        <div class="container">
-          <span class="glyphicon <?php echo $jumbotronSection1TitleIcon; ?>" aria-hidden="true"></span>
-          <p class="sans-serif-800"><?php echo $jumbotronSection1Title1; ?></p>
-          <p class="serif-400"><?php echo $jumbotronSection1Title2; ?></p>
-        </div>
-      </div>
-      <div class="back">
-        <p><?php echo $jumbotronSection1Info; ?></p>
-        <a href="<?php echo $jumbotronSection1Link; ?>">LEARN MORE</a>
-      </div>
-    </div><!-- end of section -->
-    
-    <div class="section">
-      <img src="<?php echo $themeUploadsPath . $jumbotronSection2BackgroundImage; ?>" class="background">
-      <div class="front">
-        <div class="container">
-          <span class="glyphicon <?php echo $jumbotronSection2TitleIcon; ?>" aria-hidden="true"></span>
-          <p class="sans-serif-800"><?php echo $jumbotronSection2Title1; ?></p>
-          <p class="serif-400"><?php echo $jumbotronSection2Title2; ?></p>
-        </div>
-      </div>
-      <div class="back">
-        <p><?php echo $jumbotronSection2Info; ?></p>
-        <a href="<?php echo $jumbotronSection2Link; ?>">LEARN MORE</a>
-      </div>
-    </div><!-- end of section -->
+    <?php showSection(1) ?>
+    <?php showSection(2) ?>
   </div>
   
   <div class="col-md-6">
-    <div class="section">
-      <img src="<?php echo $themeUploadsPath . $jumbotronSection3BackgroundImage; ?>" class="background">
-      <div class="front">
-        <div class="container">
-          <span class="glyphicon <?php echo $jumbotronSection3TitleIcon; ?>" aria-hidden="true"></span>
-          <p class="sans-serif-800"><?php echo $jumbotronSection3Title1; ?></p>
-          <p class="serif-400"><?php echo $jumbotronSection3Title2; ?></p>
-        </div>
-      </div>
-      <div class="back">
-        <p><?php echo $jumbotronSection3Info; ?></p>
-        <a href="<?php echo $jumbotronSection3Link; ?>">LEARN MORE</a>
-      </div>
-    </div><!-- end of section -->
-    
-    <div class="section">
-      <img src="<?php echo $themeUploadsPath . $jumbotronSection4BackgroundImage; ?>" class="background">
-      <div class="front">
-        <div class="container">
-          <span class="glyphicon <?php echo $jumbotronSection4TitleIcon; ?>" aria-hidden="true"></span>
-          <p class="sans-serif-800"><?php echo $jumbotronSection4Title1; ?></p>
-          <p class="serif-400"><?php echo $jumbotronSection4Title2; ?></p>
-        </div>
-      </div>
-      <div class="back">
-        <p><?php echo $jumbotronSection4Info; ?></p>
-        <a href="<?php echo $jumbotronSection4Link; ?>">LEARN MORE</a>
-      </div>
-    </div><!-- end of section -->
+    <?php showSection(3) ?>
+    <?php showSection(4) ?>
   </div>
 </div>
 
