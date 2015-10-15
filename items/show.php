@@ -19,6 +19,17 @@
   $tags = tag_string('item');
   $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
+
+  function showItemDescriptionTag($tagName, $tagVal) {
+    echo __('<div class="item-description-tag">');
+    echo __('  <h1>'.$tagName.'</h1>');
+    if ($tagName == 'TITLE') {
+      echo __('  <b>'.$tagVal.'</b>');
+    } else {
+      echo __('  <p>'.$tagVal.'</p>');
+    }
+    echo __('</div>');
+  }
 ?>
 <div class="container item">
   <div class="section-header col-md-10 col-md-offset-1">
@@ -34,103 +45,45 @@
 
   <div class="item-description col-lg-12">
     <div class="col-lg-2">
-      <!-- title -->
-      <div class="item-description-tag">
-        <h1>TITLE</h1>
-        <b><?php echo $title ?></b>
-      </div>
-      <!-- subject -->
-      <div class="item-description-tag">
-        <h1>SUBJECT</h1>
-        <p><?php echo $subject ?></p>
-      </div>
-      <!-- type -->
-      <div class="item-description-tag">
-        <h1>TYPE</h1>
-        <p><?php echo $type ?></p>
-      </div>
-      <!-- creator -->
-      <div class="item-description-tag">
-        <h1>CREATOR</h1>
-        <p><?php echo $creators ?></p>
-      </div>
+      <?php 
+        showItemDescriptionTag('TITLE', $title); 
+        showItemDescriptionTag('SUBJECT', $subject); 
+        showItemDescriptionTag('TYPE', $type); 
+        showItemDescriptionTag('CREATOR', $creators); 
+      ?>
     </div>
 
     <div class="col-lg-2">
-      <!-- date -->
-      <div class="item-description-tag">
-        <h1>DATE</h1>
-        <p><?php echo $date ?></p>
-      </div>
-      <!-- sources -->
-      <div class="item-description-tag">
-        <h1>SOURCES</h1>
-        <p><?php echo $source ?></p>
-      </div>
-      <!-- rights -->
-      <div class="item-description-tag">
-        <h1>RIGHTS</h1>
-        <p><?php echo $rights ?></p>
-      </div>
+      <?php 
+        showItemDescriptionTag('DATE', $date); 
+        showItemDescriptionTag('SOURCE', $source); 
+        showItemDescriptionTag('RIGHTS', $rights); 
+      ?>
     </div>
     
     <div class="col-lg-4">
-      <!-- description -->
-      <div class="item-description-tag">
-        <h1>DESCRIPTION</h1>
-        <p><?php echo $description ?></p>
-      </div>
-      <!-- citation -->
-      <div class="item-description-tag">
-        <h1>CITATION</h1>
-        <p><?php echo $citation ?></p>
-      </div>
-      <!-- relation -->
-      <div class="item-description-tag">
-        <h1>SEE ALSO</h1>
-        <p><?php echo $relation ?></p>
-      </div>
+      <?php 
+        showItemDescriptionTag('DESCRIPTION', $description); 
+        showItemDescriptionTag('CITATION', $citation); 
+        showItemDescriptionTag('SEE ALSO', $relation); 
+      ?>
     </div>
     
     <div class="col-lg-2">
-      <!-- contributors -->
-      <div class="item-description-tag">
-        <h1>CONTRIBUTOR</h1>
-        <p><?php echo $contributors ?></p>
-      </div>
-      <!-- tags -->
-      <div class="item-description-tag">
-        <h1>TAGS</h1>
-        <p><?php echo $tags ?></p>
-      </div>
-      <!-- identifier -->
-      <div class="item-description-tag">
-        <h1>IDENTIFIER</h1>
-        <p><?php echo $identifier ?></p>
-      </div>
+      <?php 
+        showItemDescriptionTag('CONTRIBUTOR', $contributors); 
+        showItemDescriptionTag('TAGS', $tags); 
+        showItemDescriptionTag('IDENTIFIER', $identifier); 
+      ?>
     </div>
 
     <div class="col-lg-2">
-      <!-- format -->
-      <div class="item-description-tag">
-        <h1>FORMAT</h1>
-        <p><?php echo $format ?></p>
-      </div>
-      <!-- language -->
-      <div class="item-description-tag">
-        <h1>LANGUAGE</h1>
-        <p><?php echo $language ?></p>
-      </div>
-      <!-- coverage -->
-      <div class="item-description-tag">
-        <h1>COVERAGE</h1>
-        <p><?php echo $coverage ?></p>
-      </div>
-      <!-- collection -->
-      <div class="item-description-tag">
-        <h1>COLLECTION</h1>
-        <p><?php echo $collection ?></p>
-      </div>
+      <?php 
+        showItemDescriptionTag('FORMAT', $title); 
+        showItemDescriptionTag('LANGUAGE', $subject); 
+        showItemDescriptionTag('COVERAGE', $type); 
+        showItemDescriptionTag('COLLECTION', $creators); 
+      ?>
     </div>
     
   </div><!-- end of item-description -->
