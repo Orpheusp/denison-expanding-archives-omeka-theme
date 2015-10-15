@@ -7,7 +7,7 @@
             $copyright = option('copyright')):
           echo __('<p>'.$copyright.'</p>');
         endif;
-        echo __('</p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
+        echo __('<p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
       ?>
     </div><!-- end of footer-text -->
   </div><!-- end of container -->
@@ -16,7 +16,7 @@
 </body>
 
 <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-<script src="javascripts/global.js"></script>
+<?php queue_js_file('globals');?>
 <script type="text/javascript">
   jQuery(document).ready(function () {
     Omeka.showAdvancedForm();
