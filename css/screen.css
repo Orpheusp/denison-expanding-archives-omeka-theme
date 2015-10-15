@@ -128,15 +128,18 @@ article {
   height: 800px;
   margin-bottom: 50px; }
   .item-image img {
-    height: 100%;
-    width: 100%;
     object-fit: contain;
+    width: 100%;
+    height: 100%;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
+  .item-image .item-file.image-jpeg {
+    width: 100%;
+    height: 100%; }
 
 .nav-drawer {
   position: fixed;
