@@ -1,23 +1,23 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
 
 <?php
-  $title = item('Dublin Core', 'Title');
-  $subject = item('Dublin Core', 'Subject');
-  $description = item('Dublin Core', 'Description');
-  $creators = item('Dublin Core', 'Creator', array('delimiter' => ', '));
-  $source = item('Dublin Core', 'Source');
-  $publisher = item('Dublin Core', 'Publisher');
-  $date = item('Dublin Core', 'Date');
-  $contributors = item('Dublin Core', 'Contributor', array('delimiter' => ', '));
-  $rights = item('Dublin Core', 'Rights');
-  $relation = item('Dublin Core', 'Relation');
-  $format = item('Dublin Core', 'Format');
-  $language = item('Dublin Core', 'Language');
-  $type = item('Dublin Core', 'Type');
-  $identitier = item('Dublin Core', 'Identifier');
-  $coverage = item('Dublin Core', 'Coverage');
+  $title = metadata('item', array('Dublin Core', 'Title'));
+  $subject = metadata('item', array('Dublin Core', 'Subject'));
+  $description = metadata('item', array('Dublin Core', 'Description'));
+  $creators = metadata('item', array('Dublin Core', 'Creator'));
+  $source = metadata('item', array('Dublin Core', 'Source'));
+  $publisher = metadata('item', array('Dublin Core', 'Publisher'));
+  $date = metadata('item', array('Dublin Core', 'Date'));
+  $contributors = metadata('item', array('Dublin Core', 'Contributor'));
+  $rights = metadata('item', array('Dublin Core', 'Rights'));
+  $relation = metadata('item', array('Dublin Core', 'Relation'));
+  $format = metadata('item', array('Dublin Core', 'Format'));
+  $language = metadata('item', array('Dublin Core', 'Language'));
+  $type = metadata('item', array('Dublin Core', 'Type'));
+  $identifier = metadata('item', array('Dublin Core', 'Identifier'));
+  $coverage = metadata('item', array('Dublin Core', 'Coverage'));
   $tags = tag_string('item');
-  $citation = item('citation', array('no_escape' => true));
+  $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
 ?>
 <div class="container item">
@@ -30,7 +30,7 @@
     <?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
       <div class="element-text"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
     <?php endif; ?>
-  </div>
+  </div><!-- end of item-image -->
 
   <div class="item-description col-lg-12">
     <div class="col-lg-2">
@@ -65,7 +65,7 @@
       <!-- sources -->
       <div class="item-description-tag">
         <h1>SOURCES</h1>
-        <p><?php echo $sources ?></p>
+        <p><?php echo $source ?></p>
       </div>
       <!-- rights -->
       <div class="item-description-tag">
@@ -128,7 +128,7 @@
       </div>
       <!-- collection -->
       <div class="item-description-tag">
-        <h1>COVERAGE</h1>
+        <h1>COLLECTION</h1>
         <p><?php echo $collection ?></p>
       </div>
     </div>
