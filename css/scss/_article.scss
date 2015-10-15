@@ -30,7 +30,6 @@
 
   article {
     @extend .article;
-    margin-bottom: 120px;
     
     & p#simple-pages-breadcrumbs {
       @extend .sans-serif-600;

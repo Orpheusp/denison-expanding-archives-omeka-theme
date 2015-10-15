@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
@@ -8,7 +8,7 @@
 .italic {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small {
@@ -32,20 +32,18 @@
 .article > h1, article > h1, .article-header > h1, .article-content > h1, .article > h2, article > h2, .article-header > h2, .article-content > h2, .article > h3, article > h3, .article-header > h3, .article-content > h3, .article > h4, article > h4, .article-header > h4, .article-content > h4, .article > h5, article > h5, .article-header > h5, .article-content > h5, .article > h6, article > h6, .article-header > h6, .article-content > h6, .article > p, article > p, .article-header > p, .article-content > p, .article > a, article > a, .article-header > a, .article-content > a, .article > strong, article > strong, .article-header > strong, .article-content > strong, .article > b, article > b, .article-header > b, .article-content > b, .article > i, article > i, .article-header > i, .article-content > i {
   color: #4a4a4a; }
 
-article {
-  margin-bottom: 120px; }
-  article p#simple-pages-breadcrumbs {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 1em; }
-    article p#simple-pages-breadcrumbs a {
-      text-decoration: none;
-      color: #C33244;
-      padding: 3px 5px; }
-      article p#simple-pages-breadcrumbs a:hover {
-        background-color: #C33244;
-        color: white;
-        border-radius: 3px; }
+article p#simple-pages-breadcrumbs {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1em; }
+  article p#simple-pages-breadcrumbs a {
+    text-decoration: none;
+    color: #C33244;
+    padding: 3px 5px; }
+    article p#simple-pages-breadcrumbs a:hover {
+      background-color: #C33244;
+      color: white;
+      border-radius: 3px; }
 
 .article-header > h1 {
   font-size: 3.125em;
@@ -120,9 +118,6 @@ article {
     margin-bottom: 1.5em; }
   .exhibit-item > a {
     font-size: 0.9em; }
-
-.item {
-  padding-bottom: 150px; }
 
 .item-image {
   height: 800px;
@@ -708,6 +703,25 @@ input[type=checkbox].checkbox-hidden {
       outline: none;
       color: white;
       background-color: #4a4a4a; }
+
+footer {
+  margin-top: 200px;
+  margin-bottom: 0 !important; }
+  footer #footer-text p {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-align: center;
+    font-size: 0.8em;
+    color: #4a4a4a; }
+  footer #footer-text a {
+    text-decoration: none;
+    color: #C33244;
+    padding: 3px 5px; }
+    footer #footer-text a:hover {
+      text-decoration: none;
+      background-color: #C33244;
+      color: white;
+      border-radius: 3px; }
 
 body {
   margin: 0px;
