@@ -13,7 +13,7 @@
     $sectionInfo = get_theme_option($themeOptionPrefix.'info');
     $sectionLink = get_theme_option($themeOptionPrefix.'link');
   
-    
+  
     echo __('<div class="section">');
     echo __('  <img src="'.$sectionBackgroundImagePath.'" class="background">');
     echo __('  <div class="front">');
@@ -48,4 +48,15 @@
   <p class="serif-400">ARCHIVE</p>
 </div>
 
-<?php echo foot(); ?>
+
+</body>
+
+<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<script src="javascripts/global.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    Omeka.showAdvancedForm();
+  });
+</script>
+
+</html>

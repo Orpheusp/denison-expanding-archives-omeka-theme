@@ -63,17 +63,6 @@
             ?>
           </div>
           
-          <div id="footer-text" class="col-md-8 col-md-offset-2">
-            <?php 
-              echo get_theme_option('Footer Text'); 
-              if ((get_theme_option('Display Footer Copyright') == 1) && 
-                  $copyright = option('copyright')):
-                echo __('<p>'.$copyright.'</p>');
-              endif;
-              echo __('</p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
-            ?>
-          </div><!-- end of footer-text -->
-          
         </nav>
         
       </div><!-- end of container-->
