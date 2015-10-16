@@ -1,28 +1,92 @@
 @import 'article';
+@import 'font';
 
-.item {
+.multi-item-files {
+  .item-file {
+    margin-bottom: 15px;
+  }
+  
+  div[class*="image-"] {
+    img {
+      object-fit: fill;
+      width: 100%;
+    }
+  }
+  
+  div[class*="application-"] {
+    :before {
+      @extend .glyphicon;
+      content: "\e142";
+    }
+    
+    text-align: center;
+    height: 360px;
+    
+    a {
+      display: block;
+      height: 100%;
+      @extend .sans-serif-400;
+      text-transform: uppercase;
+      color: $red;
+      border: 2px solid $red;
+      font-size: 1.5em;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      
+      &:hover {
+        background-color: $red;
+        color: white;
+      }
+    }
+  }
 }
 
-.item-image {
-  height: 800px;
-  margin-bottom: 50px;
-  
-  img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.single-item-files {
+  .item-file {
+    margin-bottom: 50px;
   }
   
-  .item-file.image-jpeg {
-    width: 100%;
-    height: 100%;
+  div[class*="image-"] {
+    height: 800px;
+    
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
   }
+  
+  div[class*="application-"] {
+    :before {
+      @extend .glyphicon;
+      content: "\e142";
+    }
+    
+    text-align: center;
+    
+    a {
+      @extend .sans-serif-400;
+      text-transform: uppercase;
+      color: $red;
+      font-size: 1.5em;
+      text-decoration: none;
+      padding: 5px 15px;
+      letter-spacing: 0.1em;
+      
+      &:hover {
+        background-color: $red;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
+  
   
 }
 
