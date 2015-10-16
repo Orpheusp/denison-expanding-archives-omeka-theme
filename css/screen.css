@@ -107,6 +107,8 @@ article p#simple-pages-breadcrumbs {
   padding-left: 15px; }
 
 .exhibit-item {
+  display: block;
+  text-decoration: none !important;
   margin-bottom: 1em;
   width: 360px;
   color: #4a4a4a;
