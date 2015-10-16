@@ -16,7 +16,7 @@
   $type = metadata('item', array('Dublin Core', 'Type'));
   $identifier = metadata('item', array('Dublin Core', 'Identifier'));
   $coverage = metadata('item', array('Dublin Core', 'Coverage'));
-  $tags = tag_string('item');
+  $tags = tag_string('item', 'items/browse', '');
   $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
   $outputFormat = output_format_list();
@@ -39,15 +39,23 @@
   </div><!-- end of section-header -->
 
       
-  <?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
-    <div class="item-image col-lg-8 col-lg-offset-2">
-      <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
-    </div><!-- end of item-image -->
-  <?php endif; ?>
+  <?php 
+    if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')) {
+      if (metadata('item', 'file_count') > 1) {
+        echo __('<div class="multi-item-files col-lg-8 col-lg-offset-2 col-md-12">');
+        echo files_for_item(array('imageSize' => 'square_thumbnail'), array('class' => 'item-file col-md-6'));
+      } else {
+        echo __('<div class="single-item-files col-lg-8 col-lg-offset-2 col-md-12">');
+        echo files_for_item(array('imageSize' => 'fullsize'));
+      }
+      echo __('</div><!-- end of item-files -->'); 
+    }
+  
+  ?>
   
 
   <div class="item-description col-lg-12">
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
         showItemDescriptionTag('TITLE', $title); 
         showItemDescriptionTag('SUBJECT', $subject); 
@@ -56,7 +64,7 @@
       ?>
     </div>
 
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
         showItemDescriptionTag('CREATOR', $creators);
         showItemDescriptionTag('CONTRIBUTOR', $contributors); 
@@ -65,7 +73,7 @@
       ?>
     </div>
     
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
         showItemDescriptionTag('TYPE', $type); 
         showItemDescriptionTag('FORMAT', $format);
@@ -73,7 +81,7 @@
       ?>
     </div>
 
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
         showItemDescriptionTag('LANGUAGE', $language); 
         showItemDescriptionTag('COVERAGE', $coverage); 
@@ -81,7 +89,7 @@
       ?>
     </div>
     
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6 col-sm-12">
       <?php 
         showItemDescriptionTag('DESCRIPTION', $description); 
         showItemDescriptionTag('CITATION', $citation); 

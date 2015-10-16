@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
@@ -8,7 +8,10 @@
 .italic {
   font-style: italic; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .exhibit-item > a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p {
+.glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before {
+  font-family: 'Glyphicons Halflings'; }
+
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, nav #search-container form #advanced-form legend, .section-header > small {
@@ -100,6 +103,22 @@ article p#simple-pages-breadcrumbs {
     margin-bottom: 0.5em; }
   .article-description-tag > img, .item-description-tag > img {
     width: 100%; }
+  .article-description-tag a, .item-description-tag a {
+    text-decoration: none !important;
+    display: inline-block;
+    color: #C33244;
+    border: 1px solid #C33244;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin: 3px; }
+    .article-description-tag a:hover, .item-description-tag a:hover {
+      color: white;
+      background-color: #C33244; }
+  .article-description-tag ul, .item-description-tag ul {
+    padding: 0; }
+  .article-description-tag li, .item-description-tag li {
+    display: inline-block;
+    margin: 0; }
 
 .search-results {
   width: 1200px;
@@ -128,10 +147,34 @@ article p#simple-pages-breadcrumbs {
   .exhibit-item > a {
     font-size: 0.9em; }
 
-.item-image {
-  height: 800px;
+.multi-item-files .item-file {
+  margin-bottom: 15px; }
+.multi-item-files div[class*="image-"] img {
+  object-fit: fill;
+  width: 100%; }
+.multi-item-files div[class*="application-"] {
+  text-align: center;
+  height: 360px; }
+  .multi-item-files div[class*="application-"] :before {
+    content: "\e142"; }
+  .multi-item-files div[class*="application-"] a {
+    display: block;
+    height: 100%;
+    text-transform: uppercase;
+    color: #C33244;
+    border: 2px solid #C33244;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 0.1em; }
+    .multi-item-files div[class*="application-"] a:hover {
+      background-color: #C33244;
+      color: white; }
+
+.single-item-files .item-file {
   margin-bottom: 50px; }
-  .item-image img {
+.single-item-files div[class*="image-"] {
+  height: 800px; }
+  .single-item-files div[class*="image-"] img {
     object-fit: contain;
     width: 100%;
     height: 100%;
@@ -141,9 +184,21 @@ article p#simple-pages-breadcrumbs {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
-  .item-image .item-file.image-jpeg {
-    width: 100%;
-    height: 100%; }
+.single-item-files div[class*="application-"] {
+  text-align: center; }
+  .single-item-files div[class*="application-"] :before {
+    content: "\e142"; }
+  .single-item-files div[class*="application-"] a {
+    text-transform: uppercase;
+    color: #C33244;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 5px 15px;
+    letter-spacing: 0.1em; }
+    .single-item-files div[class*="application-"] a:hover {
+      background-color: #C33244;
+      color: white;
+      border-radius: 5px; }
 
 .nav-drawer {
   position: fixed;
