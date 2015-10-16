@@ -13,21 +13,32 @@
         echo __('(%s total)', $total_results); 
       ?>  
     </h1>
+    
+  </div><!-- end of section-header -->
+  
+  
+  <div class="sort-links col-md-8 col-md-offset-2">
+    <span class="sort-label">-SORT BY-</span>
     <?php 
-      echo item_search_filters(); 
       echo pagination_links();
       if ($total_results > 0) {
         $sortLinks[__('Title')] = 'Dublin Core,Title';
         $sortLinks[__('Creator')] = 'Dublin Core,Creator';
         $sortLinks[__('Date Added')] = 'added';
-        echo __('<div id="sort-links">');
-        echo __('  <span class="sort-label">Sort by: </span>');
         echo browse_sort_links($sortLinks);
-        echo __('</div>');
       }
     ?>
-  </div><!-- end of section-header -->
+  </div><!-- end of sort-links -->
   
+  <div class="outputs col-md-8 col-md-offset-2">
+    <span class="outputs-label">-OUTPUT-</span>
+    <?php echo output_format_list(false, ''); ?>
+  </div><!-- end of outputs -->
+  
+  <div class="item-search-filters col-md-8 col-md-offset-2">
+    <span class="filters-label">-SEARCH FILTERS-</span>
+    <?php echo item_search_filters(); ?>
+  </div><!-- end of item_search_filters -->
   
   <!--<nav class="items-nav navigation secondary-nav">
     <?php /* echo public_nav_items(); */ ?>
@@ -55,13 +66,7 @@
 
 <div class="container">
   <?php echo pagination_links(); ?>
-
-  <div id="outputs">
-    <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
-    <?php echo output_format_list(false); ?>
-  </div>
-</div><!-- end of container -->
-
+</div>
 
 <?php 
   fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); 

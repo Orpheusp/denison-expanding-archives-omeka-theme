@@ -19,7 +19,7 @@
   $tags = tag_string('item', 'items/browse', '');
   $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
-  $outputFormat = output_format_list();
+  $outputFormat = output_format_list(false, '');
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
