@@ -1,66 +1,60 @@
 <?php
-$pageTitle = __('Browse Items');
-echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
+  $pageTitle = __('Browse Items');
+  echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
-<h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
+<h1>
+  <?php 
+    echo $pageTitle;
+    echo __('(%s total)', $total_results); 
+  ?>  
+</h1>
 
-<nav class="items-nav navigation secondary-nav">
+<div class="container">
+  <nav class="items-nav navigation secondary-nav">
     <?php echo public_nav_items(); ?>
-</nav>
+  </nav>
 
-<?php echo item_search_filters(); ?>
+  <?php 
+    echo item_search_filters(); 
+    echo pagination_links();
+    if ($total_results > 0) {
+      $sortLinks[__('Title')] = 'Dublin Core,Title';
+      $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+      $sortLinks[__('Date Added')] = 'added';
+      echo __('<div id="sort-links">');
+      echo __('  <span class="sort-label">Sort by: </span>');
+      echo browse_sort_links($sortLinks);
+      echo __('</div>');
+    }
+  ?>
 
-<?php echo pagination_links(); ?>
+  <div class="col-md-12 search-results grid" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth" : 360 }'>
+    <?php foreach (loop('items') as $item): ?>
+      <?php 
+        $itemImageTag = link_to_item(item_image('square_thumbnail'));
+        $itemTitle = link_to_item(metadata('item', array('Dublin Core', 'Title')));
+        $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
+      ?>
+      <div class="exhibit-item grid-item">
+        <?php echo $itemImageTag ?>
+        <h1><?php echo $itemTitle ?></h1>
+        <p><?php echo $itemDescription ?></p>
+        <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+      </div>
+    <?php endforeach; ?>
+  </div><!-- end of grid-->
 
-<?php if ($total_results > 0): ?>
+  <?php echo pagination_links(); ?>
 
-<?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Creator')] = 'Dublin Core,Creator';
-$sortLinks[__('Date Added')] = 'added';
-?>
-<div id="sort-links">
-    <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
-</div>
-
-<?php endif; ?>
-
-<?php foreach (loop('items') as $item): ?>
-<div class="item hentry">
-    <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
-    <div class="item-meta">
-    <?php if (metadata('item', 'has files')): ?>
-    <div class="item-img">
-        <?php echo link_to_item(item_image('square_thumbnail')); ?>
-    </div>
-    <?php endif; ?>
-
-    <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
-    <div class="item-description">
-        <?php echo $description; ?>
-    </div>
-    <?php endif; ?>
-
-    <?php if (metadata('item', 'has tags')): ?>
-    <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-        <?php echo tag_string('items'); ?></p>
-    </div>
-    <?php endif; ?>
-
-    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-
-    </div><!-- end class="item-meta" -->
-</div><!-- end class="item hentry" -->
-<?php endforeach; ?>
-
-<?php echo pagination_links(); ?>
-
-<div id="outputs">
+  <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
     <?php echo output_format_list(false); ?>
-</div>
+  </div>
 
-<?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
+</div><!-- end of container -->
 
-<?php echo foot(); ?>
+<?php 
+  fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); 
+  echo foot();
+?>

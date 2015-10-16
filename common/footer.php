@@ -16,6 +16,7 @@
 </body>
 
 <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <?php queue_js_file('globals');?>
 <script type="text/javascript">
   jQuery(document).ready(function () {
