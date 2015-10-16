@@ -31,8 +31,11 @@
   
   <!-- JavaScripts -->
   <?php
+    queue_js_url('//code.jquery.com/jquery-2.1.4.min.js');
     queue_js_file('globals');
     queue_js_file('global');
+    queue_js_file('masonry.pkgd');
+    queue_js_file('imagesloaded.pkgd');
     echo head_js(); 
   ?>
   

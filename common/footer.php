@@ -15,12 +15,22 @@
 
 </body>
 
-<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
-<?php queue_js_file('globals');?>
 <script type="text/javascript">
   jQuery(document).ready(function () {
     Omeka.showAdvancedForm();
+  });
+  
+  $(document).ready( function() {
+    // init Masonry
+    var $grid = $('.search-results').masonry({
+      itemSelector: '.exhibit-item',
+      columnWidth: '.exhibit-item',
+      gutter: 30
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    });  
   });
 </script>
 

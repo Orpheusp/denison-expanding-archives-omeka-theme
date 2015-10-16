@@ -28,31 +28,34 @@
       echo __('</div>');
     }
   ?>
+</div><!-- end of container -->
 
-  <div class="col-md-12 search-results grid js-masonry" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 360 }'>
-    <?php foreach (loop('items') as $item): ?>
-      <?php 
-        $itemImageTag = link_to_item(item_image('square_thumbnail'));
-        $itemTitle = link_to_item(metadata('item', array('Dublin Core', 'Title')));
-        $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
-      ?>
-      <div class="exhibit-item grid-item">
-        <?php echo $itemImageTag ?>
-        <h1><?php echo $itemTitle ?></h1>
-        <p><?php echo $itemDescription ?></p>
-        <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-      </div>
-    <?php endforeach; ?>
-  </div><!-- end of grid-->
+<div class="search-results">
+  <?php foreach (loop('items') as $item): ?>
+    <?php 
+      $itemLink = link_to_item();
+      $itemImageTag = item_image('square_thumbnail');
+      $itemTitle = metadata('item', array('Dublin Core', 'Title'));
+      $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
+    ?>
+    <div class="exhibit-item">
+      <?php echo $itemImageTag ?>
+      <h1><?php echo $itemTitle ?></h1>
+      <p><?php echo $itemDescription ?></p>
+      <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+    </div>
+  <?php endforeach; ?>
+</div><!-- end of grid-->
 
+<div class="container">
   <?php echo pagination_links(); ?>
 
   <div id="outputs">
     <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
     <?php echo output_format_list(false); ?>
   </div>
-
 </div><!-- end of container -->
+
 
 <?php 
   fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); 
