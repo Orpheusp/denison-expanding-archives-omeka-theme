@@ -19,6 +19,7 @@
   $tags = tag_string('item');
   $citation = metadata('item', 'citation', array('no_escape' => true));
   $collection = link_to_collection_for_item();
+  $outputFormat = output_format_list();
 
   function showItemDescriptionTag($tagName, $tagVal) {
     echo __('<div class="item-description-tag">');
@@ -37,26 +38,45 @@
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
 
-  <div class="item-image col-lg-8 col-lg-offset-2">    
-    <?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
+      
+  <?php if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')): ?>
+    <div class="item-image col-lg-8 col-lg-offset-2">
       <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
-    <?php endif; ?>
-  </div><!-- end of item-image -->
+    </div><!-- end of item-image -->
+  <?php endif; ?>
+  
 
   <div class="item-description col-lg-12">
     <div class="col-lg-2">
       <?php 
         showItemDescriptionTag('TITLE', $title); 
         showItemDescriptionTag('SUBJECT', $subject); 
-        showItemDescriptionTag('TYPE', $type); 
-        showItemDescriptionTag('CREATOR', $creators); 
+        showItemDescriptionTag('COLLECTION', $collection); 
+        showItemDescriptionTag('TAGS', $tags); 
       ?>
     </div>
 
     <div class="col-lg-2">
       <?php 
+        showItemDescriptionTag('CREATOR', $creators);
+        showItemDescriptionTag('CONTRIBUTOR', $contributors); 
         showItemDescriptionTag('DATE', $date); 
         showItemDescriptionTag('SOURCE', $source); 
+      ?>
+    </div>
+    
+    <div class="col-lg-2">
+      <?php 
+        showItemDescriptionTag('TYPE', $type); 
+        showItemDescriptionTag('FORMAT', $format);
+        showItemDescriptionTag('IDENTIFIER', $identifier); 
+      ?>
+    </div>
+
+    <div class="col-lg-2">
+      <?php 
+        showItemDescriptionTag('LANGUAGE', $language); 
+        showItemDescriptionTag('COVERAGE', $coverage); 
         showItemDescriptionTag('RIGHTS', $rights); 
       ?>
     </div>
@@ -66,23 +86,7 @@
         showItemDescriptionTag('DESCRIPTION', $description); 
         showItemDescriptionTag('CITATION', $citation); 
         showItemDescriptionTag('SEE ALSO', $relation); 
-      ?>
-    </div>
-    
-    <div class="col-lg-2">
-      <?php 
-        showItemDescriptionTag('CONTRIBUTOR', $contributors); 
-        showItemDescriptionTag('TAGS', $tags); 
-        showItemDescriptionTag('IDENTIFIER', $identifier); 
-      ?>
-    </div>
-
-    <div class="col-lg-2">
-      <?php 
-        showItemDescriptionTag('FORMAT', $title); 
-        showItemDescriptionTag('LANGUAGE', $subject); 
-        showItemDescriptionTag('COVERAGE', $type); 
-        showItemDescriptionTag('COLLECTION', $creators); 
+        showItemDescriptionTag('OUTPUT FORMAT', $outputFormat);
       ?>
     </div>
     
