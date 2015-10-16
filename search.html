@@ -290,8 +290,9 @@
         </div>
       </div>
     </form>
-    
-    <div class="waterfall col-md-12 search-results" data-col-min-width="360">
+  </div>
+  
+    <div class="search-results">
       <div class="exhibit-item">
         <img src="./images/featured-item-1.jpg">
         <h1>LOREM IPSUM DOLOR SIT AMET, ID VEL BRUTE INTERMIS CONSULATU</h1>
@@ -330,7 +331,7 @@
 
     </div>
     
-  </div>
+
 
   <footer role="contentinfo" class="jumbotron">
     <div class="container">
@@ -342,5 +343,22 @@
   
 </body>
   <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-  <script src="javascripts/jquery.waterfall.js"></script>
+  <!--<script src="javascripts/jquery.waterfall.js"></script>-->
+  <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+  <script type="text/javascript">
+    $(document).ready( function() {
+      // init Masonry
+      var $grid = $('.search-results').masonry({
+        itemSelector: '.exhibit-item',
+        columnWidth: '.exhibit-item',
+        gutter: 30
+      });
+      // layout Isotope after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+      });  
+
+    });
+  </script>
 </html>

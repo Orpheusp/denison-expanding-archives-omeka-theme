@@ -101,10 +101,17 @@ article p#simple-pages-breadcrumbs {
   .article-description-tag > img, .item-description-tag > img {
     width: 100%; }
 
+.search-results {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px; }
+
 .exhibit-item {
   margin-bottom: 1em;
-  padding: 10px;
-  color: #4a4a4a; }
+  width: 360px;
+  color: #4a4a4a;
+  float: left;
+  padding: 10px; }
   .exhibit-item:hover {
     background-color: #C33244;
     color: white !important; }
@@ -722,6 +729,11 @@ footer {
       background-color: #C33244;
       color: white;
       border-radius: 3px; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 body {
   margin: 0px;
