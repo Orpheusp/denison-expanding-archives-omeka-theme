@@ -23,6 +23,13 @@ if (!Omeka) {
         advanced_form.toggleClass('open').toggleClass('closed');
       });
     };
-
+    
+    Omeka.showGrid = function () {
+      $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 360
+      });
+    };
+    
   });
 })(jQuery);
