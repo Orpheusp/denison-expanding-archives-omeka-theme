@@ -3,31 +3,37 @@
   echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
-<h1>
-  <?php 
-    echo $pageTitle;
-    echo __('(%s total)', $total_results); 
-  ?>  
-</h1>
-
 <div class="container">
-  <nav class="items-nav navigation secondary-nav">
-    <?php echo public_nav_items(); ?>
-  </nav>
+  
+  <div class="section-header col-md-10 col-md-offset-1">
+    <small>-BROWSE-</small>
+    <h1>
+      <?php 
+        echo $pageTitle;
+        echo __('(%s total)', $total_results); 
+      ?>  
+    </h1>
+    <?php 
+      echo item_search_filters(); 
+      echo pagination_links();
+      if ($total_results > 0) {
+        $sortLinks[__('Title')] = 'Dublin Core,Title';
+        $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+        $sortLinks[__('Date Added')] = 'added';
+        echo __('<div id="sort-links">');
+        echo __('  <span class="sort-label">Sort by: </span>');
+        echo browse_sort_links($sortLinks);
+        echo __('</div>');
+      }
+    ?>
+  </div><!-- end of section-header -->
+  
+  
+  <!--<nav class="items-nav navigation secondary-nav">
+    <?php /* echo public_nav_items(); */ ?>
+  </nav>-->
 
-  <?php 
-    echo item_search_filters(); 
-    echo pagination_links();
-    if ($total_results > 0) {
-      $sortLinks[__('Title')] = 'Dublin Core,Title';
-      $sortLinks[__('Creator')] = 'Dublin Core,Creator';
-      $sortLinks[__('Date Added')] = 'added';
-      echo __('<div id="sort-links">');
-      echo __('  <span class="sort-label">Sort by: </span>');
-      echo browse_sort_links($sortLinks);
-      echo __('</div>');
-    }
-  ?>
+  
 </div><!-- end of container -->
 
 <div class="search-results">
