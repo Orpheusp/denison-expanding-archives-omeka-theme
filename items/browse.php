@@ -29,7 +29,7 @@
     }
   ?>
 
-  <div class="col-md-12 search-results grid" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth" : 360 }'>
+  <div class="col-md-12 search-results grid">
     <?php foreach (loop('items') as $item): ?>
       <?php 
         $itemImageTag = link_to_item(item_image('square_thumbnail'));

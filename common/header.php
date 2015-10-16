@@ -32,6 +32,7 @@
   <!-- JavaScripts -->
   <?php
     queue_js_file('globals');
+    queue_js_file('global');
     echo head_js(); 
   ?>
   
