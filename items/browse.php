@@ -48,9 +48,9 @@
         $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
       ?>
       <a class="exhibit-item" href="<?php echo $itemLink ?>">
-        <?php echo $itemImageTag ?>
-        <h1><?php echo $itemTitle ?></h1>
-        <p><?php echo $itemDescription ?></p>
+        <?php echo $itemImageTag; ?>
+        <h1><?php echo $itemTitle; ?></h1>
+        <p><?php echo $itemDescription; ?></p>
         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
       </a>
     <?php endforeach; ?>
@@ -73,9 +73,9 @@
         <?php 
           echo get_theme_option('Footer Text'); 
           if ((get_theme_option('Display Footer Copyright') == 1) && 
-              $copyright = option('copyright')):
+              $copyright = option('copyright')) {
             echo __('<p>'.$copyright.'</p>');
-          endif;
+        }
           echo __('<p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
         ?>
       </div><!-- end of footer-text -->
