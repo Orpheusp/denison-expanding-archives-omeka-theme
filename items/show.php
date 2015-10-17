@@ -68,6 +68,7 @@
       <?php 
         showItemDescriptionTag('CREATOR', $creators);
         showItemDescriptionTag('CONTRIBUTOR', $contributors); 
+        showItemDescriptionTag('PUBLISHER', $phblisher); 
         showItemDescriptionTag('DATE', $date); 
         showItemDescriptionTag('SOURCE', $source); 
       ?>
