@@ -51,7 +51,8 @@ article p#simple-pages-breadcrumbs {
 .article-header > h1 {
   font-size: 3.125em;
   line-height: 1.25em;
-  margin-bottom: 1.275em; }
+  margin-bottom: 1.275em;
+  text-transform: uppercase; }
 
 .article-content {
   margin-bottom: 120px; }
