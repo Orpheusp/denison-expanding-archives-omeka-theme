@@ -1,46 +1,44 @@
 <?php
-$title = __('Browse Exhibits');
-echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
+  $title = __('Browse Exhibits');
+  echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 ?>
-<h1><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
+
+<div class="container">
+  
+  <div class="section-header col-md-10 col-md-offset-1">
+    <small>-BROWSE-</small>
+    <h1>Exhibits <?php echo __('(%s total)', $total_results); ?></h1>
+  </div>
+  
+</div>
+
 <?php if (count($exhibits) > 0): ?>
+  <?php echo pagination_links(); ?>
 
-<nav class="navigation secondary-nav">
-    <?php echo nav(array(
-        array(
-            'label' => __('Browse All'),
-            'uri' => url('exhibits')
-        ),
-        array(
-            'label' => __('Browse by Tag'),
-            'uri' => url('exhibits/tags')
-        )
-    )); ?>
-</nav>
+  <div class="search-results">
+    <?php foreach (loop('exhibit') as $exhibit): ?>
+      <?php
+        $exhibitLink = record_url(get_current_record('exhibit'));
+        $exhibitTitle = metadata('exhibit', 'description');
+        $exhibitImage = record_image($exhibit, 'square_thumbnail');
+        $exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet'=>150));
+        $exhibitTags = tag_string('exhibit', 'exhibits');
+      ?>
 
-<?php echo pagination_links(); ?>
+      <div class="exhibit-item" onclick="window.location='<?php echo $exhibitLink ?>'">
+        <?php echo $exhibitImage ?>
+        <h1><?php echo $exhibitTitle; ?></h1>
+        <p><?php echo $exhibitDescription; ?></p>
+        <p><?php echo $exhibitTags; ?></p>
+      </div>
 
-<?php $exhibitCount = 0; ?>
-<?php foreach (loop('exhibit') as $exhibit): ?>
-    <?php $exhibitCount++; ?>
-    <div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
-        <h2><?php echo link_to_exhibit(); ?></h2>
-        <?php if ($exhibitImage = record_image($exhibit, 'square_thumbnail')): ?>
-            <?php echo exhibit_builder_link_to_exhibit($exhibit, $exhibitImage, array('class' => 'image')); ?>
-        <?php endif; ?>
-        <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
-        <div class="description"><?php echo $exhibitDescription; ?></div>
-        <?php endif; ?>
-        <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
-        <p class="tags"><?php echo $exhibitTags; ?></p>
-        <?php endif; ?>
-    </div>
-<?php endforeach; ?>
+    <?php endforeach; ?>
+  </div>
 
-<?php echo pagination_links(); ?>
+  <?php echo pagination_links(); ?>
 
 <?php else: ?>
-<p><?php echo __('There are no exhibits available yet.'); ?></p>
+  <p>There are no exhibits available yet.</p>
 <?php endif; ?>
 
 <?php echo foot(); ?>
