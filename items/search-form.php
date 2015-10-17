@@ -17,10 +17,6 @@
         <?php echo $this->formLabel('keyword-search', __('')); ?>  
         <div class="inputs">
           
-          <label class="expand-advanced-search" for="expand-advanced-search-toggle" onclick>
-            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-          </label>
-          
           <?php
             echo $this->formText('search',
                                  @$_REQUEST['search'],
@@ -31,15 +27,8 @@
                                 );
           
           ?>
-          <!-- Commented for static demo -->
-          <!--<button type="submit" class="submit" name="submit_search" id="submit_search_advanced">-->
-          <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>
-          <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="<?php echo $buttonText ?>">
+          <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">
           
-          <button type="submit" class="submit" name="submit_search" id="submit_search_advanced" disabled>
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-          </button>
-          <!--<input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">-->
         </div><!-- end of inputs -->
 
       </div><!-- end of search-keywords -->
@@ -47,7 +36,7 @@
 
     <div class="col-md-4">
       <div id="search-narrow-by-fields" class="field">
-        <div class="label"><?php echo __('Narrow by Specific Fields'); ?></div>
+        <div class="label">Narrow by Specific Fields'</div>
         <div class="inputs">
         <?php
           // If the form has been submitted, retain the number of search
@@ -107,13 +96,13 @@
               </div>
           <?php endforeach; ?>
         </div>
-        <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
+        <button type="button" class="add_search">Add a Field</button>
       </div>
     </div>
 
     <div class="col-md-4">
       <div id="search-by-range" class="field">
-        <?php echo $this->formLabel('range', __('Search by a range of ID#s (example: 1-4, 156, 79)')); ?>
+        <?php echo $this->formLabel('range', __('Search by range of ID#s (e.g: 1-4, 156)')); ?>
         <div class="inputs">
           <?php
             echo $this->formText('range', @$_GET['range'],
@@ -217,9 +206,9 @@
         ?>
         </div>
       </div>
+      
+      <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
     </div>
-
-    <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
     
     <div>
       

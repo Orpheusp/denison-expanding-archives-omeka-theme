@@ -146,7 +146,7 @@ input[type=checkbox].checkbox-hidden {
     }
   }
   
-  & button[class="remove_search"] {
+  & button.remove_search {
     text-align: center;
     width: 2em;
     height: 2em;
@@ -169,12 +169,22 @@ input[type=checkbox].checkbox-hidden {
       color: white;
       background-color: $dark-grey;
     }
+    
+    &:before {
+      @extend .glyphicon;
+      content: "\2212";
+      text-align: center;
+
+    }
   }
   
-  & button[class="add_search"] {
+  & button.add_search {
     @include appearance(none);
     @include box-shadow(none);
     
+    @extend .sans-serif-400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: $light-grey;
     border: 1px dashed $light-grey;
     width: 100%;
@@ -187,7 +197,7 @@ input[type=checkbox].checkbox-hidden {
     
     &:hover {
       color: $grey;
-    border: 1px dashed $dark-grey;
+      border: 1px dashed $dark-grey;
     }
   }
   /*

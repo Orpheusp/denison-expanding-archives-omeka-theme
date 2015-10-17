@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
@@ -8,10 +8,10 @@
 .italic {
   font-style: italic; }
 
-.glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before {
+.glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before, #advanced-search-form button.remove_search:before {
   font-family: 'Glyphicons Halflings'; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, footer #footer-text p {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small {
@@ -708,7 +708,7 @@ input[type=checkbox].checkbox-hidden {
       outline: none; }
     #advanced-search-form button[type="submit"]:hover, #advanced-search-form button[type="submit"].active, #advanced-search-form .expand-advanced-search:hover, #advanced-search-form .expand-advanced-search.active {
       color: #C33244; }
-  #advanced-search-form button[class="remove_search"] {
+  #advanced-search-form button.remove_search {
     text-align: center;
     width: 2em;
     height: 2em;
@@ -732,7 +732,7 @@ input[type=checkbox].checkbox-hidden {
     background-color: white;
     margin: 20px 0;
     cursor: pointer; }
-    #advanced-search-form button[class="remove_search"]:focus {
+    #advanced-search-form button.remove_search:focus {
       box-shadow: none;
       /* Opera */
       -o-box-shadow: none;
@@ -741,10 +741,13 @@ input[type=checkbox].checkbox-hidden {
       /* Safari and Chrome */
       -webkit-box-shadow: none;
       outline: none; }
-    #advanced-search-form button[class="remove_search"]:hover {
+    #advanced-search-form button.remove_search:hover {
       color: white;
       background-color: #4a4a4a; }
-  #advanced-search-form button[class="add_search"] {
+    #advanced-search-form button.remove_search:before {
+      content: "\2212";
+      text-align: center; }
+  #advanced-search-form button.add_search {
     appearance: none;
     /* Opera */
     -o-appearance: none;
@@ -759,6 +762,8 @@ input[type=checkbox].checkbox-hidden {
     -moz-box-shadow: none;
     /* Safari and Chrome */
     -webkit-box-shadow: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: #b0b0b0;
     border: 1px dashed #b0b0b0;
     width: 100%;
@@ -768,7 +773,7 @@ input[type=checkbox].checkbox-hidden {
     background-color: white;
     margin-left: auto;
     margin-right: auto; }
-    #advanced-search-form button[class="add_search"]:hover {
+    #advanced-search-form button.add_search:hover {
       color: #808080;
       border: 1px dashed #4a4a4a; }
   #advanced-search-form .field {
