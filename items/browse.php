@@ -102,7 +102,6 @@
     }); 
     
     var expandAdvancedSearch = $('.drawer-above button.expand-advanced-search');
-    var removeSearchButton = $('#search-narrow-by-fields button.remove_search');
     var addSearchButton = $('#search-narrow-by-fields button.add_search');
     
     var drawerAbove = $('.drawer-above');
@@ -114,6 +113,10 @@
       if (expandAdvancedSearch.hasClass('open')) {
         drawerAbove.css({top: drawerUnderMargin + drawerUnder.height()});
       }
+    };
+    
+    var updateRemoveSearchButtons = function () {
+      $('#search-narrow-by-fields button.remove_search').click(updateDrawerAbovePosition);
     };
     
     expandAdvancedSearch.click(function () {
@@ -130,13 +133,11 @@
     
     addSearchButton.click(function () {
       if (expandAdvancedSearch.hasClass('open')) {
-        removeSearchButton = $('#search-narrow-by-fields button.remove_search');
-        removeSearchButton.click(updateDrawerAbovePosition);
+        updateRemoveSearchButtons();
       }
       updateDrawerAbovePosition();
     });
     
-    removeSearchButton.click(updateDrawerAbovePosition);
   });
 </script>
 
