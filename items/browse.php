@@ -33,10 +33,6 @@
     <span class="outputs-label">-OUTPUT-</span>
     <?php echo output_format_list(false, ''); ?>
   </div><!-- end of outputs -->
-  
-  <!--<nav class="items-nav navigation secondary-nav">
-    <?php /* echo public_nav_items(); */ ?>
-  </nav>-->
 
   
 </div><!-- end of container -->

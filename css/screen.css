@@ -607,7 +607,6 @@ input[type=checkbox].checkbox-hidden {
 
 #advanced-search-form {
   color: #4a4a4a;
-  margin-bottom: 50px;
   /*
   & input[type="submit"] {
     width: 15%;
