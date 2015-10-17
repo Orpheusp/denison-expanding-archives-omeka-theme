@@ -24,12 +24,5 @@ if (!Omeka) {
       });
     };
     
-    Omeka.showGrid = function () {
-      $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: 360
-      });
-    };
-    
   });
 })(jQuery);
