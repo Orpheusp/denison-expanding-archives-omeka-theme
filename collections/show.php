@@ -38,6 +38,16 @@
     <h1><?php echo $title ?></h1>
     <h1><?php echo link_to_items_browse(__('Items in the Collection'), array('collection' => $id)); ?></h1>
   </div><!-- end of section-header -->
+  
+  <article class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="article-content">
+        <p><?php echo $description; ?></p>
+        <?php echo $outputFormat; ?>
+      </div><!-- end of article-content -->
+    </div>
+  </article>
+  
 </div>
 
 
@@ -51,7 +61,6 @@
         if (!($itemDescription = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250)))) {
           $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
         }
-        
       ?>
   
       <div class="exhibit-item" onclick="window.location='<?php echo $itemLink ?>'">
@@ -68,7 +77,7 @@
 
 <div class="container">
   <div class="collection-description col-lg-12">
-    <div class="col-lg-2 col-md-3 col-sm-6">
+    <div class="col-lg-2 col-md-3 col-sm-6 col-lg-offset-2">
       <?php 
         showCollectionDescriptionTag('TITLE', $title); 
         showCollectionDescriptionTag('SUBJECT', $subject);
@@ -98,14 +107,7 @@
         showCollectionDescriptionTag('LANGUAGE', $language); 
         showCollectionDescriptionTag('COVERAGE', $coverage); 
         showCollectionDescriptionTag('RIGHTS', $rights); 
-      ?>
-    </div>
-    
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <?php 
-        showCollectionDescriptionTag('DESCRIPTION', $description);
         showCollectionDescriptionTag('SEE ALSO', $relation); 
-        showCollectionDescriptionTag('OUTPUT FORMAT', $outputFormat);
       ?>
     </div>
     

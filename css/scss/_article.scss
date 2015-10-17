@@ -37,7 +37,7 @@
       letter-spacing: 0.1em;
       font-size: 1em;
       
-      & a {
+      a {
         text-decoration: none;
         color: $red;
         padding: 3px 5px;
@@ -108,6 +108,27 @@
       font-size: 2.5em;
       margin-bottom: 1.6875em;
       padding: 0 2em 0 2em;
+    }
+    
+    & #output-format-list {
+      @extend .sans-serif-400;
+      text-decoration: none;
+      
+      a {
+        @extend .sans-serif-400;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.2em;
+        padding: 3px 5px;
+        margin-right: 10px;
+        background-color: $red;
+        color: white;
+        
+        &:hover {
+          background-color: $dark-red;
+        }
+      }
     }
   }
 

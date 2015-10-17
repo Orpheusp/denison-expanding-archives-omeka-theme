@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
@@ -11,7 +11,7 @@
 .glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before, #advanced-search-form button.remove_search:before {
   font-family: 'Glyphicons Halflings'; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
+.sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small {
@@ -92,6 +92,19 @@ article p#simple-pages-breadcrumbs {
     font-size: 2.5em;
     margin-bottom: 1.6875em;
     padding: 0 2em 0 2em; }
+  .article-content #output-format-list {
+    text-decoration: none; }
+    .article-content #output-format-list a {
+      font-size: 0.6em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2em;
+      padding: 3px 5px;
+      margin-right: 10px;
+      background-color: #C33244;
+      color: white; }
+      .article-content #output-format-list a:hover {
+        background-color: #8A0011; }
 
 .article-description-tag, .item-description-tag, .collection-description-tag {
   margin-bottom: 1.5em; }
