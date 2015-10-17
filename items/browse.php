@@ -47,12 +47,12 @@
         $itemTitle = metadata('item', array('Dublin Core', 'Title'));
         $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
       ?>
-      <a class="exhibit-item" href="<?php echo $itemLink ?>">
+      <div class="exhibit-item" onclick="window.location='<?php echo $itemLink ?>'">
         <?php echo $itemImageTag; ?>
         <h1><?php echo $itemTitle; ?></h1>
         <p><?php echo $itemDescription; ?></p>
         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-      </a>
+      </div>
     <?php endforeach; ?>
   </div><!-- end of grid-->
 

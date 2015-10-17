@@ -216,7 +216,8 @@ article p#simple-pages-breadcrumbs {
   width: 360px;
   color: #4a4a4a;
   float: left;
-  padding: 10px; }
+  padding: 10px;
+  cursor: pointer; }
   .exhibit-item:hover {
     background-color: #C33244;
     color: white !important; }
