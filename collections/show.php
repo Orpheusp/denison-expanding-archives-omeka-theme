@@ -16,6 +16,8 @@
   $coverage = metadata('collection', array('Dublin Core', 'Coverage'));
   $outputFormat = output_format_list(false, '');
 
+  $id = metadata('collection', 'id');
+
   function showCollectionDescriptionTag($tagName, $tagVal) {
     echo __('<div class="collection-description-tag">');
     echo __('  <h1>'.$tagName.'</h1>');
@@ -34,36 +36,33 @@
   <div class="section-header col-md-10 col-md-offset-1">
     <small>-COLLECTION-</small>
     <h1><?php echo $title ?></h1>
+    <h1><?php echo link_to_items_browse(__('Items in the Collection'), array('collection' => $id)); ?></h1>
   </div><!-- end of section-header -->
 </div>
 
-<div id="collection-items">
-  <h2><?php echo link_to_items_browse(__('Items in the %s Collection', $title), array('collection' => metadata('collection', 'id'))); ?></h2>
+
+<div class="search-results">
   <?php if (metadata('collection', 'total_items') > 0): ?>
-      <?php foreach (loop('items') as $item): ?>
-      <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-      <div class="item hentry">
-          <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
-
-          <?php if (metadata('item', 'has thumbnail')): ?>
-          <div class="item-img">
-              <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-          </div>
-          <?php endif; ?>
-
-          <?php if ($text = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250))): ?>
-          <div class="item-description">
-              <p><?php echo $text; ?></p>
-          </div>
-          <?php elseif ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
-          <div class="item-description">
-              <?php echo $description; ?>
-          </div>
-          <?php endif; ?>
+    <?php foreach (loop('items') as $item): ?>
+      <?php 
+        $itemTitle = metadata('item', array('Dublin Core', 'Title'));
+        $itemLink = record_url(get_current_record('item'));
+        $itemImage = item_image('square_thumbnail', array('alt' => $itemTitle));
+        if (!($itemDescription = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250)))) {
+          $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
+        }
+        
+      ?>
+  
+      <div class="exhibit-item" onclick="window.location='<?php echo $itemLink ?>'">
+        <?php echo $itemImage ?>
+        <h1><?php echo $itemTitle; ?></h1>
+        <p><?php echo $itemDescription; ?></p>
       </div>
-      <?php endforeach; ?>
+
+    <?php endforeach; ?>
   <?php else: ?>
-    <p><?php echo __("There are currently no items within this collection."); ?></p>
+    <p>There are currently no items within this collection.</p>
   <?php endif; ?>
 </div><!-- end collection-items -->
 
@@ -113,6 +112,23 @@
   </div><!-- end of collection-description -->
 </div>
 
-<?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    // init Masonry
+    var $grid = $('.search-results').masonry({
+      itemSelector: '.exhibit-item',
+      columnWidth: '.exhibit-item',
+      gutter: 30
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    }); 
+    
+  });
+</script>
 
-<?php echo foot(); ?>
+<?php 
+  fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection));
+  echo foot(); 
+?>
