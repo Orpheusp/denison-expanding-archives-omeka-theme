@@ -15,20 +15,57 @@
 
 .drawer {
   position: absolute;
-  top: 0;
+  
   background-color: white;
   width: 100%;
 }
 
 .drawer-under {
   @extend .drawer;
+  top: 0;
   z-index: 0;
 }
 
 .drawer-above {
   @extend .drawer;
+  top: 210px;
   z-index: 1;
   @include transition(top, 0.3s, ease-in-out);
+  
+  button.expand-advanced-search {
+    @extent .sans-serif-400;
+    font-size: 0.7em;
+    letter-spacing: 0.3em;
+    border:1px solid $red;
+    border-radius: none;
+    margin: 0 auto;
+    display: block;
+    
+    &.closed { 
+      .glyphicon-menu-down { display: inline-block; }
+      .glyphicon-menu-up { display: none; }
+      color: $red;
+      background-color: white;
+      
+      &:hover, &:focus {
+        color: white;
+        background-color: $red;
+      }
+    }
+    
+    &.open { 
+      .glyphicon-menu-down { display: none; }
+      .glyphicon-menu-up { display: inline-block; }
+      
+      color: white;
+      background-color: $red;
+      
+      &:hover, &:focus {
+        color: white;
+        background-color: $dark-red;
+      }
+    }
+  }
 }
 
 .search-results {

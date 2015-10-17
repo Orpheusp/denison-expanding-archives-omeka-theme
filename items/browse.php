@@ -12,6 +12,11 @@
 
 <div class="drawer-above">
   <div class="container">
+    <button class="expand-advanced-search closed">
+      <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+      ADVANCED SEARCH
+    </button>
     <div class="section-header col-md-10 col-md-offset-1">
       <small>-BROWSE-</small>
       <h1>Items <?php echo __('(%s total)', $total_results); ?></h1>
@@ -30,10 +35,7 @@
       ?>
     </div><!-- end of sort-links -->
 
-    <div class="outputs col-md-8 col-md-offset-2">
-      <span class="outputs-label">-OUTPUT-</span>
-      <?php echo output_format_list(false, ''); ?>
-    </div><!-- end of outputs -->
+    
 
   </div><!-- end of container -->
 
@@ -56,8 +58,15 @@
 
   <div class="container">
     <?php echo pagination_links(); ?>
+    
+    <div class="outputs col-md-8 col-md-offset-2">
+      <span class="outputs-label">-OUTPUT-</span>
+      <?php echo output_format_list(false, ''); ?>
+    </div><!-- end of outputs -->
+    
   </div>
 
+  
   <footer role="contentinfo" class="jumbotron">
     <div class="container">
       <div id="footer-text" class="col-md-8 col-md-offset-2">
@@ -74,6 +83,43 @@
   </footer><!-- end footer -->
 
 </div><!-- end of drawer-above -->
+
+<?php echo js_tag('items-search'); ?>
+
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    Omeka.Search.activateSearchButtons();
+    
+    // init Masonry
+    var $grid = $('.search-results').masonry({
+      itemSelector: '.exhibit-item',
+      columnWidth: '.exhibit-item',
+      gutter: 30
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    }); 
+    
+    var expandAdvancedSearch = $('.drawer-above button.expand-advanced-search');
+    var drawerAbove = $('.drawer-above');
+    var drawerUnder = $('.drawer-under');
+    var drawerUnderMargin = 120;
+    var drawerAboveOriginalTop = 210;
+    
+    expandAdvancedSearch.click(function () {
+        if (expandAdvancedSearch.hasClass("closed")) {
+        expandAdvancedSearch.removeClass("closed");
+        expandAdvancedSearch.addClass("open");
+        drawerAbove.css({top: drawerUnderMargin + drawerUnder.height()});
+      } else {
+        expandAdvancedSearch.addClass("closed");
+        expandAdvancedSearch.removeClass("open");
+        drawerAbove.css({top: drawerAboveOriginalTop});
+      }
+    });
+  });
+</script>
 
 <?php 
   fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); 

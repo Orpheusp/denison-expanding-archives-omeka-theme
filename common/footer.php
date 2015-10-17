@@ -20,19 +20,6 @@
   jQuery(document).ready(function () {
     Omeka.showAdvancedForm();
   });
-  
-  $(document).ready( function() {
-    // init Masonry
-    var $grid = $('.search-results').masonry({
-      itemSelector: '.exhibit-item',
-      columnWidth: '.exhibit-item',
-      gutter: 30
-    });
-    // layout Isotope after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry();
-    });  
-  });
 </script>
 
 </html>

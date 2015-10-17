@@ -124,14 +124,15 @@ article p#simple-pages-breadcrumbs {
 
 .drawer, .drawer-under, .drawer-above {
   position: absolute;
-  top: 0;
   background-color: white;
   width: 100%; }
 
 .drawer-under {
+  top: 0;
   z-index: 0; }
 
 .drawer-above {
+  top: 210px;
   z-index: 1;
   /* Firefox */
   -moz-transition: top 0.3s ease-in-out;
@@ -141,6 +142,34 @@ article p#simple-pages-breadcrumbs {
   -o-transition: top 0.3s ease-in-out;
   /* Standard */
   transition: top 0.3s ease-in-out; }
+  .drawer-above button.expand-advanced-search {
+    @extent .sans-serif-400;
+    font-size: 0.7em;
+    letter-spacing: 0.3em;
+    border: 1px solid #C33244;
+    border-radius: none;
+    margin: 0 auto;
+    display: block; }
+    .drawer-above button.expand-advanced-search.closed {
+      color: #C33244;
+      background-color: white; }
+      .drawer-above button.expand-advanced-search.closed .glyphicon-menu-down {
+        display: inline-block; }
+      .drawer-above button.expand-advanced-search.closed .glyphicon-menu-up {
+        display: none; }
+      .drawer-above button.expand-advanced-search.closed:hover, .drawer-above button.expand-advanced-search.closed:focus {
+        color: white;
+        background-color: #C33244; }
+    .drawer-above button.expand-advanced-search.open {
+      color: white;
+      background-color: #C33244; }
+      .drawer-above button.expand-advanced-search.open .glyphicon-menu-down {
+        display: none; }
+      .drawer-above button.expand-advanced-search.open .glyphicon-menu-up {
+        display: inline-block; }
+      .drawer-above button.expand-advanced-search.open:hover, .drawer-above button.expand-advanced-search.open:focus {
+        color: white;
+        background-color: #8A0011; }
 
 .search-results {
   width: 1200px;
