@@ -1,0 +1,6 @@
+@import 'article';
+@import 'font';
+
+.collection-description-tag {
+  @extend .article-description-tag;
+}

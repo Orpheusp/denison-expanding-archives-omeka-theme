@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
+.serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
   font-family: 'Cardo', 'times new roman', serif; }
 
 .italic {
@@ -11,19 +11,19 @@
 .glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before, #advanced-search-form button.remove_search:before {
   font-family: 'Glyphicons Halflings'; }
 
-.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .article-description-tag a, .item-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
+.sans-serif-400, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item > a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small {
   font-weight: 600; }
 
-.sans-serif-700, .article-description-tag > b, .item-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a {
+.sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a {
   font-weight: 700; }
 
 .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
   font-weight: 800; }
 
-.serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
+.serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
   font-weight: 400; }
 
 .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
@@ -93,18 +93,18 @@ article p#simple-pages-breadcrumbs {
     margin-bottom: 1.6875em;
     padding: 0 2em 0 2em; }
 
-.article-description-tag, .item-description-tag {
+.article-description-tag, .item-description-tag, .collection-description-tag {
   margin-bottom: 1.5em; }
-  .article-description-tag > h1, .item-description-tag > h1 {
+  .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1 {
     letter-spacing: 0.5em;
     font-size: 0.8em;
     border-top: 1px solid #4a4a4a;
     border-bottom: 1px solid #4a4a4a;
     padding: 2px 0 2px 0;
     margin-bottom: 0.5em; }
-  .article-description-tag > img, .item-description-tag > img {
+  .article-description-tag > img, .item-description-tag > img, .collection-description-tag > img {
     width: 100%; }
-  .article-description-tag a, .item-description-tag a {
+  .article-description-tag a, .item-description-tag a, .collection-description-tag a {
     text-decoration: none !important;
     display: inline-block;
     color: white;
@@ -113,12 +113,12 @@ article p#simple-pages-breadcrumbs {
     margin: 3px;
     font-size: 0.8em;
     letter-spacing: 0.1em; }
-    .article-description-tag a:hover, .item-description-tag a:hover {
+    .article-description-tag a:hover, .item-description-tag a:hover, .collection-description-tag a:hover {
       background-color: #8A0011;
       color: white; }
-  .article-description-tag ul, .item-description-tag ul {
+  .article-description-tag ul, .item-description-tag ul, .collection-description-tag ul {
     padding: 0; }
-  .article-description-tag li, .item-description-tag li {
+  .article-description-tag li, .item-description-tag li, .collection-description-tag li {
     display: inline-block;
     margin: 0; }
 
