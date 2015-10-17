@@ -19,7 +19,7 @@
     <?php foreach (loop('exhibit') as $exhibit): ?>
       <?php
         $exhibitLink = record_url(get_current_record('exhibit'));
-        $exhibitTitle = metadata('exhibit', 'description');
+        $exhibitTitle = metadata('exhibit', 'description',  array('no_escape' => true));
         $exhibitImage = record_image($exhibit, 'square_thumbnail');
         $exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet'=>150));
         $exhibitTags = tag_string('exhibit', 'exhibits');
@@ -29,7 +29,7 @@
         <?php echo $exhibitImage ?>
         <h1><?php echo $exhibitTitle; ?></h1>
         <p><?php echo $exhibitDescription; ?></p>
-        <p><?php echo $exhibitTags; ?></p>
+        <?php echo $exhibitTags; ?>
       </div>
 
     <?php endforeach; ?>
@@ -40,5 +40,21 @@
 <?php else: ?>
   <p>There are no exhibits available yet.</p>
 <?php endif; ?>
+
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    // init Masonry
+    var $grid = $('.search-results').masonry({
+      itemSelector: '.exhibit-item',
+      columnWidth: '.exhibit-item',
+      gutter: 30
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    }); 
+    
+  });
+</script>
 
 <?php echo foot(); ?>
