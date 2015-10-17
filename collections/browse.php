@@ -20,47 +20,52 @@
     ?>
   </div><!-- end of sort-links -->
   
+</div><!-- end of container -->
+
+<div class="search-results">
+  <?php foreach (loop('collections') as $collection): ?>
+    <?php
+      $collectionLink = record_url(get_current_record('collection'));
+      $collectionTitle = metadata('collection', array('Dublin Core', 'Title'));
+      $collectionId = metadata('collection', 'id');
+      $collectionImage = record_image('collection', 'square_thumbnail');
+      $collectionDescription = metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150));
+      $collectionContributors = metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', '));
+    ?>
+
+    <div class="exhibit-item" onclick="window.location='<?php echo $collectionLink ?>'">
+      <?php echo $collectionImage ?>
+      <h1><?php echo $collectionTitle; ?></h1>
+      <p><?php echo $collectionDescription; ?></p>
+      <p><b>Contributors:</b><?php echo $collectionContributors; ?></p>
+      <?php echo link_to_items_browse(__('View the items in %s', $collectionTitle), array('collection' => $collectionId)); ?>
+      <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
+    </div>
+
+  <?php endforeach; ?>
 </div>
 
-<?php foreach (loop('collections') as $collection): ?>
+<div class="container">
+  <?php echo pagination_links(); ?>
+</div>
 
-<div class="collection record">
-
-    <h2><?php echo link_to_collection(); ?></h2>
-
-    <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-        <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
-    <?php endif; ?>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    // init Masonry
+    var $grid = $('.search-results').masonry({
+      itemSelector: '.exhibit-item',
+      columnWidth: '.exhibit-item',
+      gutter: 30
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    }); 
     
-    <div class="collection-meta">
+  });
+</script>
 
-    <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
-    <div class="collection-description">
-        <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
-    </div>
-    <?php endif; ?>
-
-    <?php if ($collection->hasContributor()): ?>
-    <div class="collection-contributors">
-        <p>
-        <strong><?php echo __('Contributors'); ?>:</strong>
-        <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
-        </p>
-    </div>
-    <?php endif; ?>
-
-    <p class="view-items-link"><?php echo link_to_items_browse(__('View the items in %s', metadata('collection', array('Dublin Core', 'Title'))), array('collection' => metadata('collection', 'id'))); ?></p>
-
-    <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
-
-    </div>
-
-</div><!-- end class="collection" -->
-
-<?php endforeach; ?>
-
-<?php echo pagination_links(); ?>
-
-<?php fire_plugin_hook('public_collections_browse', array('collections'=>$collections, 'view' => $this)); ?>
-
-<?php echo foot(); ?>
+<?php 
+  fire_plugin_hook('public_collections_browse', array('collections'=>$collections, 'view' => $this));
+  echo foot(); 
+?>
