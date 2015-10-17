@@ -136,13 +136,22 @@
   text-decoration: none !important;
   margin-bottom: 1em;
   width: 360px;
-  color: $dark-grey;
+  color: $dark-grey !important;
   float: left;
   padding: 10px;
+  cursor: pointer;
   
   &:hover {
     background-color: $red;
     color: white !important;
+    & > a {
+      color: $red;
+      background-color: white;
+      &:hover {
+        color: white;
+        background-color: $dark-red;
+      }
+    }
   }
   
   & > img {
@@ -163,7 +172,12 @@
   
   & > a {
     @extend .sans-serif-400;
+    text-decoration: none !important;
     font-size: 0.9em;
+    color: white;
+    padding: 3px 5px;
+    background-color: $red;
+    letter-spacing: 0.1em;
   }
 }
 
