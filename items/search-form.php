@@ -27,7 +27,7 @@
                                 );
           
           ?>
-          <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="">
+          <button type="submit" class="submit glyphicon glyphicon-search" name="submit_search" id="submit_search_advanced">
           
         </div><!-- end of inputs -->
 

@@ -673,7 +673,7 @@ input[type=checkbox].checkbox-hidden {
     width: 60%;
     padding: 5px 10px;
     margin: 0 5px; }
-  #advanced-search-form button[type="submit"], #advanced-search-form .expand-advanced-search {
+  #advanced-search-form button[type="submit"] {
     display: inline-block;
     text-align: center;
     font-size: 2em;
@@ -697,7 +697,7 @@ input[type=checkbox].checkbox-hidden {
     background-color: white;
     margin: 0 0 0 -5px;
     cursor: pointer; }
-    #advanced-search-form button[type="submit"]:focus, #advanced-search-form .expand-advanced-search:focus {
+    #advanced-search-form button[type="submit"]:focus {
       box-shadow: none;
       /* Opera */
       -o-box-shadow: none;
@@ -706,7 +706,7 @@ input[type=checkbox].checkbox-hidden {
       /* Safari and Chrome */
       -webkit-box-shadow: none;
       outline: none; }
-    #advanced-search-form button[type="submit"]:hover, #advanced-search-form button[type="submit"].active, #advanced-search-form .expand-advanced-search:hover, #advanced-search-form .expand-advanced-search.active {
+    #advanced-search-form button[type="submit"]:hover, #advanced-search-form button[type="submit"].active {
       color: #C33244; }
   #advanced-search-form button.remove_search {
     text-align: center;

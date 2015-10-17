@@ -7,12 +7,7 @@
   
   <div class="section-header col-md-10 col-md-offset-1">
     <small>-BROWSE-</small>
-    <h1>
-      <?php 
-        echo $pageTitle;
-        echo __('(%s total)', $total_results); 
-      ?>  
-    </h1>
+    <h1>Items <?php echo __('(%s total)', $total_results); ?></h1>
     
   </div><!-- end of section-header -->
   
