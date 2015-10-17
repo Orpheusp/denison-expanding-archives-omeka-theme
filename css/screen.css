@@ -636,8 +636,6 @@ input[type=checkbox].checkbox-hidden {
     font-size: 0.8em;
     letter-spacing: 0.3em;
     color: #4a4a4a; }
-  #advanced-search-form #expand-advanced-search-toggle:checked ~ div.advanced-search-form-extra {
-    display: block; }
   #advanced-search-form .advanced-search-form-extra {
     height: auto;
     animation-name: fade;

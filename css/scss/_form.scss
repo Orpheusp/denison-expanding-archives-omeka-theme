@@ -80,10 +80,6 @@ input[type=checkbox].checkbox-hidden {
     color: $dark-grey;
   }
   
-  #expand-advanced-search-toggle:checked ~ div.advanced-search-form-extra {
-    display: block;
-  }
-  
   & .advanced-search-form-extra {
     height: auto;
     animation-name: fade;
