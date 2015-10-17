@@ -222,16 +222,17 @@ article p#simple-pages-breadcrumbs {
     background-color: #C33244;
     color: white !important; }
     .exhibit-item:hover > a {
-      color: #C33244;
-      background-color: white; }
+      color: white;
+      background-color: #8A0011; }
       .exhibit-item:hover > a:hover {
-        color: white;
-        background-color: #8A0011; }
+        color: #C33244;
+        background-color: white; }
   .exhibit-item > img {
     width: 100%;
     margin-bottom: 1em; }
   .exhibit-item > h1 {
-    font-size: 1.25em; }
+    font-size: 1.25em;
+    text-transform: uppercase; }
   .exhibit-item > p {
     font-size: 1.25em;
     margin-bottom: 1.5em; }

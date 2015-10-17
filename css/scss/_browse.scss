@@ -145,11 +145,12 @@
     background-color: $red;
     color: white !important;
     & > a {
-      color: $red;
-      background-color: white;
+      color: white;
+      background-color: $dark-red;
+      
       &:hover {
-        color: white;
-        background-color: $dark-red;
+        color: $red;
+        background-color: white;
       }
     }
   }
@@ -162,6 +163,7 @@
   & > h1 {
     @extend .sans-serif-700;
     font-size: 1.25em;
+    text-transform: uppercase;
   }
   
   & > p {
