@@ -122,6 +122,26 @@ article p#simple-pages-breadcrumbs {
     display: inline-block;
     margin: 0; }
 
+.drawer, .drawer-under, .drawer-above {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100%; }
+
+.drawer-under {
+  z-index: 0; }
+
+.drawer-above {
+  z-index: 1;
+  /* Firefox */
+  -moz-transition: top 0.3s ease-in-out;
+  /* WebKit */
+  -webkit-transition: top 0.3s ease-in-out;
+  /* Opera */
+  -o-transition: top 0.3s ease-in-out;
+  /* Standard */
+  transition: top 0.3s ease-in-out; }
+
 .search-results {
   width: 1200px;
   margin: 0 auto;

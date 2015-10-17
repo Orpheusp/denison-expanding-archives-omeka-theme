@@ -8,7 +8,7 @@
     echo $this->partial('items/search-form.php',
                         array('formAttributes' => array('id'=>'advanced-search-form'))); 
   ?>
-</div>
+</div><!-- end of drawer-under -->
 
 <div class="drawer-above">
   <div class="container">
@@ -58,9 +58,24 @@
     <?php echo pagination_links(); ?>
   </div>
 
+  <footer role="contentinfo" class="jumbotron">
+    <div class="container">
+      <div id="footer-text" class="col-md-8 col-md-offset-2">
+        <?php 
+          echo get_theme_option('Footer Text'); 
+          if ((get_theme_option('Display Footer Copyright') == 1) && 
+              $copyright = option('copyright')):
+            echo __('<p>'.$copyright.'</p>');
+          endif;
+          echo __('<p>Proudly powered by <a href="http://omeka.org">Omeka</a>.</p>'); 
+        ?>
+      </div><!-- end of footer-text -->
+    </div><!-- end of container -->
+  </footer><!-- end footer -->
+
 </div><!-- end of drawer-above -->
 
 <?php 
   fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); 
-  echo foot();
+  echo foot(array('displayFooter' => false));
 ?>

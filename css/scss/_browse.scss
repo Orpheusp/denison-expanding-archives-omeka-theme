@@ -1,6 +1,36 @@
 @import 'color';
 @import 'font';
 
+@mixin transition($property, $time, $timing-function) {
+   /* Firefox */
+  -moz-transition: $property $time $timing-function;
+  /* WebKit */
+  -webkit-transition: $property $time $timing-function;
+  /* Opera */
+  -o-transition: $property $time $timing-function;
+  /* Standard */
+  transition: $property $time $timing-function;
+}
+
+
+.drawer {
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100%;
+}
+
+.drawer-under {
+  @extend .drawer;
+  z-index: 0;
+}
+
+.drawer-above {
+  @extend .drawer;
+  z-index: 1;
+  @include transition(top, 0.3s, ease-in-out);
+}
+
 .search-results {
   width: 1200px;
   margin: 0 auto;

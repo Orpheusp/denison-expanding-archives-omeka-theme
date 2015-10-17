@@ -48,15 +48,4 @@
   <p class="serif-400">ARCHIVE</p>
 </div>
 
-
-</body>
-
-<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-<script src="javascripts/global.js"></script>
-<script type="text/javascript">
-  jQuery(document).ready(function () {
-    Omeka.showAdvancedForm();
-  });
-</script>
-
-</html>
+<?php echo foot(array('displayFooter' => false)); ?>
