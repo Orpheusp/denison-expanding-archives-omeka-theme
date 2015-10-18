@@ -35,10 +35,20 @@
     <?php endforeach; ?>
   </div>
 
-  <?php echo pagination_links(); ?>
+  <div class="containter">
+    <?php echo pagination_links(); ?>
+  </div>
 
 <?php else: ?>
-  <p>There are no exhibits available yet.</p>
+  <div class="container">
+    <article>
+      <div class="col-md-8 col-md-offset-2">
+        <div class="article-content">
+          <p>There are no exhibits available yet.</p>
+        </div>
+      </div>
+    </article>
+  </div>
 <?php endif; ?>
 
 <script type="text/javascript">
