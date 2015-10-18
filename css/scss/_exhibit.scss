@@ -37,13 +37,11 @@
 
   margin-bottom: 120px;
 
-  .exhibit-items, .exhibit-item {
-    .exhibit-item-caption {
-      p {
-        @extend .serif-400;
-        font-style: italic;
-        font-size: 1em;
-      }
+  .exhibit-item-caption {
+    p {
+      @extend .serif-400;
+      font-style: italic;
+      font-size: 1.5em !important;
     }
   }
   
