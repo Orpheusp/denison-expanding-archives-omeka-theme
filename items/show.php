@@ -38,6 +38,17 @@
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
 
+  <article class="col-md-12">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="article-content">
+        <p><?php echo $description; ?></p>
+        <b>Citation</b> 
+        <p><?php echo $citation; ?></p>
+        <b>Output Format</b>
+        <?php echo $outputFormat; ?>
+      </div><!-- end of article-content -->
+    </div>
+  </article>
       
   <?php 
     if (get_theme_option('Item FileGallery') == 0 && metadata('item', 'has files')) {
@@ -55,7 +66,7 @@
   
 
   <div class="item-description col-lg-12">
-    <div class="col-lg-2 col-md-3 col-sm-6">
+    <div class="col-lg-2 col-md-3 col-sm-6 col-lg-offset-2">
       <?php 
         showItemDescriptionTag('TITLE', $title); 
         showItemDescriptionTag('SUBJECT', $subject); 
@@ -70,12 +81,12 @@
         showItemDescriptionTag('CONTRIBUTOR', $contributors); 
         showItemDescriptionTag('PUBLISHER', $publisher); 
         showItemDescriptionTag('DATE', $date); 
-        showItemDescriptionTag('SOURCE', $source); 
       ?>
     </div>
     
     <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
+        showItemDescriptionTag('SOURCE', $source); 
         showItemDescriptionTag('TYPE', $type); 
         showItemDescriptionTag('FORMAT', $format);
         showItemDescriptionTag('IDENTIFIER', $identifier); 
@@ -87,15 +98,7 @@
         showItemDescriptionTag('LANGUAGE', $language); 
         showItemDescriptionTag('COVERAGE', $coverage); 
         showItemDescriptionTag('RIGHTS', $rights); 
-      ?>
-    </div>
-    
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <?php 
-        showItemDescriptionTag('DESCRIPTION', $description); 
-        showItemDescriptionTag('CITATION', $citation); 
         showItemDescriptionTag('SEE ALSO', $relation); 
-        showItemDescriptionTag('OUTPUT FORMAT', $outputFormat);
       ?>
     </div>
     

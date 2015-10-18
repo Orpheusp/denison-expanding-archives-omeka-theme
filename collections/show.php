@@ -40,9 +40,10 @@
   </div><!-- end of section-header -->
   
   <article class="col-md-12">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-2">
       <div class="article-content">
         <p><?php echo $description; ?></p>
+        <b>Output Format</b>
         <?php echo $outputFormat; ?>
       </div><!-- end of article-content -->
     </div>
