@@ -1,30 +1,32 @@
 <?php echo head(array('title' => metadata('exhibit', 'title'), 'bodyclass'=>'exhibits summary')); ?>
 
-<h1><?php echo metadata('exhibit', 'title'); ?></h1>
-<?php echo exhibit_builder_page_nav(); ?>
-
-<div id="primary">
-<?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
-<div class="exhibit-description">
-    <?php echo $exhibitDescription; ?>
-</div>
-<?php endif; ?>
-
-<?php if (($exhibitCredits = metadata('exhibit', 'credits'))): ?>
-<div class="exhibit-credits">
-    <h3><?php echo __('Credits'); ?></h3>
-    <p><?php echo $exhibitCredits; ?></p>
-</div>
-<?php endif; ?>
-</div>
-
 <?php
-$pageTree = exhibit_builder_page_tree();
-if ($pageTree):
+  $title = metadata('exhibit', 'title');
+  $description = metadata('exhibit', 'description', array('no_escape' => true));
+  $credits = metadata('exhibit', 'credits');
+  $pageTree = exhibit_builder_page_tree();
 ?>
-<nav id="exhibit-pages">
-    <?php echo $pageTree; ?>
-</nav>
-<?php endif; ?>
+
+<div class="container exhibit">
+  <div class="section-header col-md-10 col-md-offset-1">
+    <small>-EXHIBITS SUMMARY-</small>
+    <h1><?php echo $title ?></h1>
+  </div><!-- end of section-header -->
+  
+  <article>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="article-content">
+        <?php echo exhibit_builder_page_nav(); ?>
+        <?php echo $description; ?>
+        <b>Credits:</b>
+        <p><?php echo $credits; ?></p>
+        <nav id="exhibit-pages">
+          <?php echo $pageTree; ?>
+        </nav>
+      </div>
+    </div>
+  </article>
+</div>
+
 
 <?php echo foot(); ?>
