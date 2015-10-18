@@ -33,7 +33,7 @@
 <?php echo head(array('title'=> $title, 'bodyclass' => 'collections show')); ?>
 
 <div class="container collection">
-  <div class="section-header col-md-10 col-md-offset-1">
+  <div class="section-header col-md-8 col-md-offset-2">
     <small>-COLLECTION-</small>
     <h1><?php echo $title ?></h1>
     <h1><?php echo link_to_items_browse(__('Items in the Collection'), array('collection' => $id)); ?></h1>

@@ -9,7 +9,7 @@
 ?>
 
 <div class="container exhibit">
-  <div class="section-header col-md-10 col-md-offset-1">
+  <div class="section-header col-md-8 col-md-offset-2">
     <small>-EXHIBIT-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->

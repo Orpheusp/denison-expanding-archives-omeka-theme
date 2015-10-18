@@ -110,7 +110,7 @@
       padding: 0 2em 0 2em;
     }
     
-    & #output-format-list {
+    & #output-format-list, & #tags-list, & #collection-list {
       @extend .sans-serif-400;
       text-decoration: none;
       
@@ -120,10 +120,12 @@
         text-transform: uppercase;
         text-decoration: none;
         letter-spacing: 0.2em;
-        padding: 3px 5px;
+        padding: 5px 5px;
         margin-right: 10px;
         background-color: $red;
         color: white;
+        display: inline-block;
+        line-height: 1em;
         
         &:hover {
           background-color: $dark-red;

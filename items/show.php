@@ -33,7 +33,7 @@
   }
 ?>
 <div class="container item">
-  <div class="section-header col-md-10 col-md-offset-1">
+  <div class="section-header col-md-8 col-md-offset-2">
     <small>-ITEM-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
@@ -44,8 +44,13 @@
         <p><?php echo $description; ?></p>
         <b>Citation</b> 
         <p><?php echo $citation; ?></p>
+        <b>Collection</b>
+        <p id="collection-list"><?php echo $collection; ?></p>
+        <b>Tags</b>
+        <p id="tags-list"><?php echo $tags; ?></p>
         <b>Output Format</b>
         <?php echo $outputFormat; ?>
+        
       </div><!-- end of article-content -->
     </div>
   </article>
@@ -70,8 +75,7 @@
       <?php 
         showItemDescriptionTag('TITLE', $title); 
         showItemDescriptionTag('SUBJECT', $subject); 
-        showItemDescriptionTag('COLLECTION', $collection); 
-        showItemDescriptionTag('TAGS', $tags); 
+        showItemDescriptionTag('DATE', $date); 
       ?>
     </div>
 
@@ -80,7 +84,6 @@
         showItemDescriptionTag('CREATOR', $creators);
         showItemDescriptionTag('CONTRIBUTOR', $contributors); 
         showItemDescriptionTag('PUBLISHER', $publisher); 
-        showItemDescriptionTag('DATE', $date); 
       ?>
     </div>
     
