@@ -14,11 +14,7 @@
   column-rule-width:  $width;
 }
 
-article {
-  @extend .article;
-}
-
-.article-content .exhibit-block {
+.exhibit-block {
   @extend .article;
 
   margin-bottom: 120px;
@@ -33,12 +29,10 @@ article {
     }
   }
   
-  .gallery {
-    .exhibit-item {
-      &:hover {
-        color: white;
-        background-color: $red;
-      }
+  .gallery .exhibit-item, gallery-showcase{
+    &:hover {
+      color: white;
+      background-color: $red;
     }
   }
   
@@ -84,79 +78,4 @@ article {
     margin-bottom: 1.6875em;
     padding: 0 2em 0 2em;
   }
-
-  & #output-format-list {
-    @extend .sans-serif-400;
-    text-decoration: none;
-
-    a {
-      @extend .sans-serif-400;
-      font-size: 0.6em;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 0.2em;
-      padding: 3px 5px;
-      margin-right: 10px;
-      background-color: $red;
-      color: white;
-
-      &:hover {
-        background-color: $dark-red;
-      }
-    }
-  }
 }
-
-.article-description-tag {
-  margin-bottom: 1.5em;
-
-  & > h1 {
-    @extend .sans-serif-400;
-    letter-spacing: 0.5em;
-    font-size: 0.8em;
-    border-top: 1px solid $dark-grey;
-    border-bottom: 1px solid $dark-grey;
-    padding: 2px 0 2px 0;
-    margin-bottom: 0.5em;
-  }
-
-  & > b {
-    @extend .sans-serif-700;
-  }
-
-  & > p {
-    @extend .serif-400;
-
-  }
-
-  & > img {
-    width: 100%;
-  }
-
-  a {
-    text-decoration: none !important;
-    display: inline-block;
-    @extend .sans-serif-400;
-    color: white;
-    background-color: $red;
-    padding: 3px 5px;
-    margin: 3px;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-
-    &:hover {
-      background-color: $dark-red;
-      color: white;
-    }
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0;
-  }
-}
-
