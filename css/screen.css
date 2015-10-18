@@ -902,6 +902,87 @@ footer {
       color: white;
       border-radius: 3px; }
 
+.article-content {
+  margin-bottom: 120px; }
+  .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+    line-height: 100%;
+    margin-bottom: 0.3em;
+    text-transform: uppercase; }
+  .article-content > h1 {
+    font-size: 2.75em; }
+  .article-content > h2 {
+    font-size: 2.5em; }
+  .article-content > h3 {
+    font-size: 2.25em; }
+  .article-content > h4 {
+    font-size: 2em; }
+  .article-content > h5 {
+    font-size: 1.75em; }
+  .article-content > h6 {
+    font-size: 1.5em; }
+  .article-content > p, .article-content > a, .article-content > strong, .article-content > b, .article-content > i, .article-content > em, .article-content > mark, .article-content > del, .article-content > ins {
+    font-size: 1.5em;
+    margin-bottom: 1.6875em;
+    line-height: 1.7em; }
+  .article-content > i {
+    font-style: italic; }
+  .article-content > em {
+    color: #C33244; }
+  .article-content > sub, .article-content > sup {
+    font-size: 1em; }
+  .article-content > mark {
+    background-color: #C33244;
+    color: white; }
+  .article-content > quote {
+    font-style: italic;
+    color: #C33244;
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 1.6875em;
+    padding: 0 2em 0 2em; }
+  .article-content #output-format-list {
+    text-decoration: none; }
+    .article-content #output-format-list a {
+      font-size: 0.6em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.2em;
+      padding: 3px 5px;
+      margin-right: 10px;
+      background-color: #C33244;
+      color: white; }
+      .article-content #output-format-list a:hover {
+        background-color: #8A0011; }
+
+.article-description-tag, .item-description-tag, .collection-description-tag {
+  margin-bottom: 1.5em; }
+  .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1 {
+    letter-spacing: 0.5em;
+    font-size: 0.8em;
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    padding: 2px 0 2px 0;
+    margin-bottom: 0.5em; }
+  .article-description-tag > img, .item-description-tag > img, .collection-description-tag > img {
+    width: 100%; }
+  .article-description-tag a, .item-description-tag a, .collection-description-tag a {
+    text-decoration: none !important;
+    display: inline-block;
+    color: white;
+    background-color: #C33244;
+    padding: 3px 5px;
+    margin: 3px;
+    font-size: 0.8em;
+    letter-spacing: 0.1em; }
+    .article-description-tag a:hover, .item-description-tag a:hover, .collection-description-tag a:hover {
+      background-color: #8A0011;
+      color: white; }
+  .article-description-tag ul, .item-description-tag ul, .collection-description-tag ul {
+    padding: 0; }
+  .article-description-tag li, .item-description-tag li, .collection-description-tag li {
+    display: inline-block;
+    margin: 0; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
