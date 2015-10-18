@@ -22,26 +22,30 @@
     </div>
   </article>
 
-  <div id="exhibit-page-navigation">
-    <?php if ($prevLink = exhibit_builder_link_to_previous_page()): ?>
-      <div id="exhibit-nav-prev">
-        <?php echo $prevLink; ?>
-      </div>
-    <?php endif; ?>
-    <?php if ($nextLink = exhibit_builder_link_to_next_page()): ?>
-      <div id="exhibit-nav-next">
-        <?php echo $nextLink; ?>
-      </div>
-    <?php endif; ?>
+  <nav id="exhibit-pages" class="col-md-8 col-md-offset-2">
+    <p><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></p>
+    <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
+  </nav>
+  
+  <nav>
+    <ul id="exhibit-page-navigation" class="pager">
+      <?php if ($prevLink = exhibit_builder_link_to_previous_page()): ?>
+        <li id="exhibit-nav-prev" class="previous">
+          <?php echo $prevLink; ?>
+        </li>
+      <?php endif; ?>
+      <?php if ($nextLink = exhibit_builder_link_to_next_page()): ?>
+        <li id="exhibit-nav-next" class="next">
+          <?php echo $nextLink; ?>
+        </li>
+      <?php endif; ?>
+    </ul>
     <div id="exhibit-nav-up">
       <?php echo exhibit_builder_page_trail(); ?>
     </div>
-  </div>
-
-  <nav id="exhibit-pages">
-    <h4><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h4>
-    <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
   </nav>
+
+  
   
 </div><!-- end of container -->
   

@@ -23,13 +23,17 @@
         <p><?php echo $credits; ?></p>
         <b>Tags</b>
         <p id="tags-list"><?php echo $tags; ?></p>
-        <b>Exhibit Navigation</b>
-        <nav id="exhibit-pages">
-          <?php echo $pageTree; ?>
-        </nav>
+        
       </div>
     </div>
   </article>
+  
+  
+  <nav id="exhibit-pages" class="col-md-8 col-md-offset-2">
+    <p>Exhibit Navigation</p>
+    <?php echo $pageTree; ?>
+  </nav>
+  
 </div>
 
 
