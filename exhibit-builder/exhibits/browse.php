@@ -19,7 +19,7 @@
     <?php foreach (loop('exhibit') as $exhibit): ?>
       <?php
         $exhibitLink = record_url(get_current_record('exhibit'));
-        $exhibitTitle = metadata('exhibit', 'description',  array('no_escape' => true));
+        $exhibitTitle = metadata('exhibit', 'title',  array('no_escape' => true));
         $exhibitImage = record_image($exhibit, 'square_thumbnail');
         $exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet'=>150));
         $exhibitTags = tag_string('exhibit', 'exhibits', '');
