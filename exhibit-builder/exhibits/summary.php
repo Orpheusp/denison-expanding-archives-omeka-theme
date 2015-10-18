@@ -4,6 +4,7 @@
   $title = metadata('exhibit', 'title');
   $description = metadata('exhibit', 'description', array('no_escape' => true));
   $credits = metadata('exhibit', 'credits');
+  $tags = tag_string('exhibit', 'exhibits', '');
   $pageTree = exhibit_builder_page_tree();
 ?>
 
@@ -18,8 +19,11 @@
       <div class="article-content">
         <?php echo exhibit_builder_page_nav(); ?>
         <?php echo $description; ?>
-        <b>Credits:</b>
+        <b>Credits</b>
         <p><?php echo $credits; ?></p>
+        <b>Tags</b>
+        <p id="tags-list"><?php echo $tags; ?></p>
+        <b>Exhibit Navigation</b>
         <nav id="exhibit-pages">
           <?php echo $pageTree; ?>
         </nav>
