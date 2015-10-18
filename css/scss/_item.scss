@@ -13,12 +13,7 @@
     }
   }
   
-  div[class*="application-"] {
-    :before {
-      @extend .glyphicon;
-      content: "\e142";
-    }
-    
+  :not(div[class*="application-pdf"], div[class*="image-"]) {
     text-align: center;
     height: 360px;
     
@@ -62,12 +57,7 @@
     }
   }
   
-  div[class*="application-"] {
-    :before {
-      @extend .glyphicon;
-      content: "\e142";
-    }
-    
+  :not(div[class*="application-pdf"], div[class*="image-"]) {
     text-align: center;
     
     a {

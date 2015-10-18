@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-content #output-format-list, .article-content #tags-list, .article-content #collection-list, .article-content #output-format-list a, .article-content #tags-list a, .article-content #collection-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6, .exhibit-block > h1, .exhibit-block > h2, .exhibit-block > h3, .exhibit-block > h4, .exhibit-block > h5, .exhibit-block > h6 {
+.sans-serif, .sans-serif-400, .article-content #output-format-list, .article-content #tags-list, .article-content #collection-list, .article-content #output-format-list a, .article-content #tags-list a, .article-content #collection-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a, .single-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6, .exhibit-block > h1, .exhibit-block > h2, .exhibit-block > h3, .exhibit-block > h4, .exhibit-block > h5, .exhibit-block > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
 .serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, nav#exhibit-pages ul, .exhibit-block .exhibit-item-caption p, .exhibit-block > p, .exhibit-block > quote, .exhibit-block > a, .exhibit-block > i, .exhibit-block > mark, .exhibit-block > del, .exhibit-block > ins, .exhibit-block > sub, .exhibit-block > sup, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a, .exhibit-block > strong, .exhibit-block > b, .exhibit-block > em {
@@ -8,10 +8,10 @@
 .italic {
   font-style: italic; }
 
-.glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before, #advanced-search-form button.remove_search:before {
+.glyphicon, #advanced-search-form button.remove_search:before {
   font-family: 'Glyphicons Halflings'; }
 
-.sans-serif-400, .article-content #output-format-list, .article-content #tags-list, .article-content #collection-list, .article-content #output-format-list a, .article-content #tags-list a, .article-content #collection-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
+.sans-serif-400, .article-content #output-format-list, .article-content #tags-list, .article-content #collection-list, .article-content #output-format-list a, .article-content #tags-list a, .article-content #collection-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a, .single-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small {
@@ -267,12 +267,10 @@ article p#simple-pages-breadcrumbs {
 .multi-item-files div[class*="image-"] img {
   object-fit: fill;
   width: 100%; }
-.multi-item-files div[class*="application-"] {
+.multi-item-files :not(div[class*="application-pdf"], div[class*="image-"]) {
   text-align: center;
   height: 360px; }
-  .multi-item-files div[class*="application-"] :before {
-    content: "\e142"; }
-  .multi-item-files div[class*="application-"] a {
+  .multi-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a {
     display: block;
     height: 100%;
     text-transform: uppercase;
@@ -281,7 +279,7 @@ article p#simple-pages-breadcrumbs {
     font-size: 1.5em;
     text-decoration: none;
     letter-spacing: 0.1em; }
-    .multi-item-files div[class*="application-"] a:hover {
+    .multi-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a:hover {
       background-color: #C33244;
       color: white; }
 
@@ -299,18 +297,16 @@ article p#simple-pages-breadcrumbs {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); }
-.single-item-files div[class*="application-"] {
+.single-item-files :not(div[class*="application-pdf"], div[class*="image-"]) {
   text-align: center; }
-  .single-item-files div[class*="application-"] :before {
-    content: "\e142"; }
-  .single-item-files div[class*="application-"] a {
+  .single-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a {
     text-transform: uppercase;
     color: #C33244;
     font-size: 1.5em;
     text-decoration: none;
     padding: 5px 15px;
     letter-spacing: 0.1em; }
-    .single-item-files div[class*="application-"] a:hover {
+    .single-item-files :not(div[class*="application-pdf"], div[class*="image-"]) a:hover {
       background-color: #C33244;
       color: white;
       border-radius: 5px; }
