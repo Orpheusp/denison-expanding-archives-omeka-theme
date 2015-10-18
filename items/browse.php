@@ -46,11 +46,13 @@
         $itemImageTag = item_image('square_thumbnail');
         $itemTitle = metadata('item', array('Dublin Core', 'Title'));
         $itemDescription = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250));
+        $itemTags = tag_string('item', 'items/browse', '');
       ?>
       <div class="exhibit-item" onclick="window.location='<?php echo $itemLink ?>'">
         <?php echo $itemImageTag; ?>
         <h1><?php echo $itemTitle; ?></h1>
         <p><?php echo $itemDescription; ?></p>
+        <p><?php echo $itemTags; ?></p>
         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
       </div>
     <?php endforeach; ?>
@@ -66,7 +68,6 @@
     
   </div>
 
-  
   <footer role="contentinfo" class="jumbotron">
     <div class="container">
       <div id="footer-text" class="col-md-8 col-md-offset-2">

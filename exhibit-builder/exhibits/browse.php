@@ -22,14 +22,14 @@
         $exhibitTitle = metadata('exhibit', 'description',  array('no_escape' => true));
         $exhibitImage = record_image($exhibit, 'square_thumbnail');
         $exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true, 'snippet'=>150));
-        $exhibitTags = tag_string('exhibit', 'exhibits');
+        $exhibitTags = tag_string('exhibit', 'exhibits', '');
       ?>
 
       <div class="exhibit-item" onclick="window.location='<?php echo $exhibitLink ?>'">
         <?php echo $exhibitImage ?>
         <h1><?php echo $exhibitTitle; ?></h1>
         <p><?php echo $exhibitDescription; ?></p>
-        <?php echo $exhibitTags; ?>
+        <p><?php echo $exhibitTags; ?><p>
       </div>
 
     <?php endforeach; ?>

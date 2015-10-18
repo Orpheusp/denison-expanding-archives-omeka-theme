@@ -144,7 +144,7 @@
   &:hover {
     background-color: $red;
     color: white !important;
-    & > a {
+    a {
       color: white;
       background-color: $dark-red;
       
@@ -172,14 +172,17 @@
     margin-bottom: 1.5em;
   }
   
-  & > a {
+  a {
     @extend .sans-serif-400;
     text-decoration: none !important;
-    font-size: 0.9em;
-    color: white;
-    padding: 3px 5px;
-    background-color: $red;
+    font-size: 0.6em;
     letter-spacing: 0.1em;
+    color: white;
+    background-color: $grey;
+    padding: 3px 5px;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    margin: 0 4px 4px 0;
   }
 }
 
