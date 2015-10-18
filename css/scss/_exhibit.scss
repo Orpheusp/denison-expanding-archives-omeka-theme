@@ -18,11 +18,30 @@ article {
   @extend .article;
 }
 
-.article-content {
+.article-content .exhibit-block {
   @extend .article;
 
   margin-bottom: 120px;
 
+  .exhibit-items, .exhibit-item {
+    .exhibit-item-caption {
+      p {
+        @extend .serif-400;
+        font-style: italic;
+        font-size: 1em;
+      }
+    }
+  }
+  
+  .gallery {
+    .exhibit-item {
+      &:hover {
+        color: white;
+        background-color: $red;
+      }
+    }
+  }
+  
   & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
     @extend .sans-serif-800;
     line-height: 100%;
