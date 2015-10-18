@@ -44,7 +44,7 @@
       <div class="article-content">
         <p><?php echo $description; ?></p>
         <b>Output Format</b>
-        <?php echo $outputFormat; ?>
+        <div><?php echo $outputFormat; ?></div>
       </div><!-- end of article-content -->
     </div>
   </article>

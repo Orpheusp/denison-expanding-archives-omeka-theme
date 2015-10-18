@@ -95,12 +95,12 @@ article p#simple-pages-breadcrumbs {
   .article-content #output-format-list, .article-content #tags-list, .article-content #collection-list {
     text-decoration: none; }
     .article-content #output-format-list a, .article-content #tags-list a, .article-content #collection-list a {
-      font-size: 0.6em;
+      font-size: 0.8em;
       text-transform: uppercase;
       text-decoration: none;
       letter-spacing: 0.2em;
       padding: 5px 5px;
-      margin-right: 10px;
+      margin: 0 10px 10px 0;
       background-color: #C33244;
       color: white;
       display: inline-block;
@@ -253,7 +253,7 @@ article p#simple-pages-breadcrumbs {
     margin-bottom: 1.5em; }
   .exhibit-item .tags a {
     text-decoration: none !important;
-    font-size: 0.6em;
+    font-size: 0.8em;
     letter-spacing: 0.1em;
     color: white;
     background-color: #808080;

@@ -116,12 +116,12 @@
       
       a {
         @extend .sans-serif-400;
-        font-size: 0.6em;
+        font-size: 0.8em;
         text-transform: uppercase;
         text-decoration: none;
         letter-spacing: 0.2em;
         padding: 5px 5px;
-        margin-right: 10px;
+        margin: 0 10px 10px 0;
         background-color: $red;
         color: white;
         display: inline-block;

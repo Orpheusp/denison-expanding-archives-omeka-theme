@@ -45,11 +45,11 @@
         <b>Citation</b> 
         <p><?php echo $citation; ?></p>
         <b>Collection</b>
-        <p id="collection-list"><?php echo $collection; ?></p>
+        <div id="collection-list"><?php echo $collection; ?></div>
         <b>Tags</b>
-        <p id="tags-list"><?php echo $tags; ?></p>
+        <div id="tags-list"><?php echo $tags; ?></div>
         <b>Output Format</b>
-        <?php echo $outputFormat; ?>
+        <div><?php echo $outputFormat; ?></div>
         
       </div><!-- end of article-content -->
     </div>

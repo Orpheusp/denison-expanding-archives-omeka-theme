@@ -29,7 +29,7 @@
         <?php echo $exhibitImage ?>
         <h1><?php echo $exhibitTitle; ?></h1>
         <p><?php echo $exhibitDescription; ?></p>
-        <p class="tags"><?php echo $exhibitTags; ?><p>
+        <div class="tags"><?php echo $exhibitTags; ?><div>
       </div>
 
     <?php endforeach; ?>

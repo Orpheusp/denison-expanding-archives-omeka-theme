@@ -22,7 +22,7 @@
         <b>Credits</b>
         <p><?php echo $credits; ?></p>
         <b>Tags</b>
-        <p id="tags-list"><?php echo $tags; ?></p>
+        <div id="tags-list"><?php echo $tags; ?></div>
         
       </div>
     </div>

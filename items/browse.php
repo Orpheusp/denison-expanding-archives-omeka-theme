@@ -52,7 +52,7 @@
         <?php echo $itemImageTag; ?>
         <h1><?php echo $itemTitle; ?></h1>
         <p><?php echo $itemDescription; ?></p>
-        <p class="tags"><?php echo $itemTags; ?></p>
+        <div class="tags"><?php echo $itemTags; ?></div>
         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
       </div>
     <?php endforeach; ?>
