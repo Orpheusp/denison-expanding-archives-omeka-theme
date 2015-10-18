@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700);
-.sans-serif, .sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif, .sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .article-content .exhibit-block #output-format-list, .article-content .exhibit-block #output-format-list a, .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small, .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a, .sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6, .article-content .exhibit-block > h1, .article-content .exhibit-block > h2, .article-content .exhibit-block > h3, .article-content .exhibit-block > h4, .article-content .exhibit-block > h5, .article-content .exhibit-block > h6 {
   font-family: 'Open Sans', 'arial', sans-serif; }
 
-.serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
+.serif, .serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .article-content .exhibit-block .exhibit-items .exhibit-item-caption p, .article-content .exhibit-block .exhibit-item .exhibit-item-caption p, .article-content .exhibit-block > p, .article-content .exhibit-block > quote, .article-content .exhibit-block > a, .article-content .exhibit-block > i, .article-content .exhibit-block > mark, .article-content .exhibit-block > del, .article-content .exhibit-block > ins, .article-content .exhibit-block > sub, .article-content .exhibit-block > sup, .serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a, .article-content .exhibit-block > strong, .article-content .exhibit-block > b, .article-content .exhibit-block > em {
   font-family: 'Cardo', 'times new roman', serif; }
 
 .italic {
@@ -11,7 +11,7 @@
 .glyphicon, .multi-item-files div[class*="application-"] :before, .single-item-files div[class*="application-"] :before, #advanced-search-form button.remove_search:before {
   font-family: 'Glyphicons Halflings'; }
 
-.sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p {
+.sans-serif-400, .article-content #output-format-list, .article-content #output-format-list a, .article-description-tag > h1, .item-description-tag > h1, .collection-description-tag > h1, .article-description-tag a, .item-description-tag a, .collection-description-tag a, .browse-options a, .item-search-filters a, .sort-links a, .outputs a, .browse-options ul li, .item-search-filters ul li, .sort-links ul li, .outputs ul li, .exhibit-item .tags a, .multi-item-files div[class*="application-"] a, .single-item-files div[class*="application-"] a, nav p, nav #search-container form #advanced-form label, nav #footer-text, #advanced-search-form label, #advanced-search-form .label, #advanced-search-form button.add_search, footer #footer-text p, .article-content .exhibit-block #output-format-list, .article-content .exhibit-block #output-format-list a {
   font-weight: 400; }
 
 .sans-serif-600, article p#simple-pages-breadcrumbs, .browse-options span, .item-search-filters span, .sort-links span, .outputs span, nav #search-container form #advanced-form legend, .section-header > small {
@@ -20,19 +20,19 @@
 .sans-serif-700, .article-description-tag > b, .item-description-tag > b, .collection-description-tag > b, .exhibit-item > h1, .highlight-jumbotron .section .back a {
   font-weight: 700; }
 
-.sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+.sans-serif-800, .article-header > h1, .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6, .article-content .exhibit-block > h1, .article-content .exhibit-block > h2, .article-content .exhibit-block > h3, .article-content .exhibit-block > h4, .article-content .exhibit-block > h5, .article-content .exhibit-block > h6 {
   font-weight: 800; }
 
-.serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select {
+.serif-400, .article-content > p, .article-content > quote, .article-content > a, .article-content > i, .article-content > mark, .article-content > del, .article-content > ins, .article-content > sub, .article-content > sup, .article-description-tag > p, .item-description-tag > p, .collection-description-tag > p, .exhibit-item > p, nav > ul.navigation > li * > a, .section-header > h1, .highlight-jumbotron .section .back p, form input[type="text"], #advanced-search-form input[type="text"], #advanced-search-form select, .article-content .exhibit-block .exhibit-items .exhibit-item-caption p, .article-content .exhibit-block .exhibit-item .exhibit-item-caption p, .article-content .exhibit-block > p, .article-content .exhibit-block > quote, .article-content .exhibit-block > a, .article-content .exhibit-block > i, .article-content .exhibit-block > mark, .article-content .exhibit-block > del, .article-content .exhibit-block > ins, .article-content .exhibit-block > sub, .article-content .exhibit-block > sup {
   font-weight: 400; }
 
-.serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a {
+.serif-700, .article-content > strong, .article-content > b, .article-content > em, nav > ul.navigation > li > a, .article-content .exhibit-block > strong, .article-content .exhibit-block > b, .article-content .exhibit-block > em {
   font-weight: 700; }
 
-.article > img, article > img, .article-header > img, .article-content > img {
+.article > img, article > img, .article-header > img, .article-content > img, .article-content .exhibit-block > img {
   width: 100%;
   margin-bottom: 3.125em; }
-.article > h1, article > h1, .article-header > h1, .article-content > h1, .article > h2, article > h2, .article-header > h2, .article-content > h2, .article > h3, article > h3, .article-header > h3, .article-content > h3, .article > h4, article > h4, .article-header > h4, .article-content > h4, .article > h5, article > h5, .article-header > h5, .article-content > h5, .article > h6, article > h6, .article-header > h6, .article-content > h6, .article > p, article > p, .article-header > p, .article-content > p, .article > a, article > a, .article-header > a, .article-content > a, .article > strong, article > strong, .article-header > strong, .article-content > strong, .article > b, article > b, .article-header > b, .article-content > b, .article > i, article > i, .article-header > i, .article-content > i {
+.article > h1, article > h1, .article-header > h1, .article-content > h1, .article-content .exhibit-block > h1, .article > h2, article > h2, .article-header > h2, .article-content > h2, .article-content .exhibit-block > h2, .article > h3, article > h3, .article-header > h3, .article-content > h3, .article-content .exhibit-block > h3, .article > h4, article > h4, .article-header > h4, .article-content > h4, .article-content .exhibit-block > h4, .article > h5, article > h5, .article-header > h5, .article-content > h5, .article-content .exhibit-block > h5, .article > h6, article > h6, .article-header > h6, .article-content > h6, .article-content .exhibit-block > h6, .article > p, article > p, .article-header > p, .article-content > p, .article-content .exhibit-block > p, .article > a, article > a, .article-header > a, .article-content > a, .article-content .exhibit-block > a, .article > strong, article > strong, .article-header > strong, .article-content > strong, .article-content .exhibit-block > strong, .article > b, article > b, .article-header > b, .article-content > b, .article-content .exhibit-block > b, .article > i, article > i, .article-header > i, .article-content > i, .article-content .exhibit-block > i {
   color: #4a4a4a; }
 
 article p#simple-pages-breadcrumbs {
@@ -234,10 +234,10 @@ article p#simple-pages-breadcrumbs {
   .exhibit-item:hover {
     background-color: #C33244;
     color: white !important; }
-    .exhibit-item:hover a {
+    .exhibit-item:hover .tags a {
       color: white;
       background-color: #8A0011; }
-      .exhibit-item:hover a:hover {
+      .exhibit-item:hover .tags a:hover {
         color: #C33244;
         background-color: white; }
   .exhibit-item > img {
@@ -249,7 +249,7 @@ article p#simple-pages-breadcrumbs {
   .exhibit-item > p {
     font-size: 1.25em;
     margin-bottom: 1.5em; }
-  .exhibit-item a {
+  .exhibit-item .tags a {
     text-decoration: none !important;
     font-size: 0.6em;
     letter-spacing: 0.1em;
@@ -902,47 +902,53 @@ footer {
       color: white;
       border-radius: 3px; }
 
-.article-content {
+.article-content .exhibit-block {
   margin-bottom: 120px; }
-  .article-content > h1, .article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6 {
+  .article-content .exhibit-block .exhibit-items .exhibit-item-caption p, .article-content .exhibit-block .exhibit-item .exhibit-item-caption p {
+    font-style: italic;
+    font-size: 1em; }
+  .article-content .exhibit-block .gallery .exhibit-item:hover {
+    color: white;
+    background-color: #C33244; }
+  .article-content .exhibit-block > h1, .article-content .exhibit-block > h2, .article-content .exhibit-block > h3, .article-content .exhibit-block > h4, .article-content .exhibit-block > h5, .article-content .exhibit-block > h6 {
     line-height: 100%;
     margin-bottom: 0.3em;
     text-transform: uppercase; }
-  .article-content > h1 {
+  .article-content .exhibit-block > h1 {
     font-size: 2.75em; }
-  .article-content > h2 {
+  .article-content .exhibit-block > h2 {
     font-size: 2.5em; }
-  .article-content > h3 {
+  .article-content .exhibit-block > h3 {
     font-size: 2.25em; }
-  .article-content > h4 {
+  .article-content .exhibit-block > h4 {
     font-size: 2em; }
-  .article-content > h5 {
+  .article-content .exhibit-block > h5 {
     font-size: 1.75em; }
-  .article-content > h6 {
+  .article-content .exhibit-block > h6 {
     font-size: 1.5em; }
-  .article-content > p, .article-content > a, .article-content > strong, .article-content > b, .article-content > i, .article-content > em, .article-content > mark, .article-content > del, .article-content > ins {
+  .article-content .exhibit-block > p, .article-content .exhibit-block > a, .article-content .exhibit-block > strong, .article-content .exhibit-block > b, .article-content .exhibit-block > i, .article-content .exhibit-block > em, .article-content .exhibit-block > mark, .article-content .exhibit-block > del, .article-content .exhibit-block > ins {
     font-size: 1.5em;
     margin-bottom: 1.6875em;
     line-height: 1.7em; }
-  .article-content > i {
+  .article-content .exhibit-block > i {
     font-style: italic; }
-  .article-content > em {
+  .article-content .exhibit-block > em {
     color: #C33244; }
-  .article-content > sub, .article-content > sup {
+  .article-content .exhibit-block > sub, .article-content .exhibit-block > sup {
     font-size: 1em; }
-  .article-content > mark {
+  .article-content .exhibit-block > mark {
     background-color: #C33244;
     color: white; }
-  .article-content > quote {
+  .article-content .exhibit-block > quote {
     font-style: italic;
     color: #C33244;
     display: block;
     font-size: 2.5em;
     margin-bottom: 1.6875em;
     padding: 0 2em 0 2em; }
-  .article-content #output-format-list {
+  .article-content .exhibit-block #output-format-list {
     text-decoration: none; }
-    .article-content #output-format-list a {
+    .article-content .exhibit-block #output-format-list a {
       font-size: 0.6em;
       text-transform: uppercase;
       text-decoration: none;
@@ -951,7 +957,7 @@ footer {
       margin-right: 10px;
       background-color: #C33244;
       color: white; }
-      .article-content #output-format-list a:hover {
+      .article-content .exhibit-block #output-format-list a:hover {
         background-color: #8A0011; }
 
 .article-description-tag, .item-description-tag, .collection-description-tag {
