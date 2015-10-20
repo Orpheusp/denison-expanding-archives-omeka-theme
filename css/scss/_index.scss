@@ -12,6 +12,19 @@
   transition: $property $time $timing-function;
 }
 
+@mixin background-radial-gradient($innerColor, $outerColor) {
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, $innerColor, $outerColor);
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, $innerColor, $outerColor);
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, $innerColor, $outerColor);
+  /* Opera */
+  background: -o-radial-gradient(circle, $innerColor, $outerColor);
+  /* Standard */
+  background: radial-gradient(circle, $innerColor, $outerColor);
+}
+
 @mixin vertical-center {
   top: 50%;
   transform: translateY(-50%);
@@ -68,6 +81,11 @@
 
     & .background {
       z-index: 1;
+      @include background-radial-gradient(#ffffff, #1a82f7);
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     & .front {

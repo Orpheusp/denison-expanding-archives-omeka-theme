@@ -15,7 +15,10 @@
   
   
     echo __('<div class="section">');
-    echo __('  <img src="'.$sectionBackgroundImagePath.'" class="background">');
+    if ($sectionBackgroundImagePath != $themeUploadsPath)
+      echo __('  <img src="'.$sectionBackgroundImagePath.'" class="background">');
+    else
+      echo __('  <div class="background"></div>');
     echo __('  <div class="front">');
     echo __('    <div class="container">');
     echo __('      <span class="glyphicon '.$sectionTitleIcon.'" aria-hidden="true"></span>');
