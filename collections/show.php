@@ -36,7 +36,6 @@
   <div class="section-header col-md-8 col-md-offset-2">
     <small>-COLLECTION-</small>
     <h1><?php echo $title ?></h1>
-    <h1><?php echo link_to_items_browse(__('Items in the Collection'), array('collection' => $id)); ?></h1>
   </div><!-- end of section-header -->
   
   <article class="col-md-12">

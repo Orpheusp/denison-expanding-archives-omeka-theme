@@ -38,7 +38,6 @@
       <h1><?php echo $collectionTitle; ?></h1>
       <p><?php echo $collectionDescription; ?></p>
       <p><b>Contributors:</b><?php echo $collectionContributors; ?></p>
-      <?php echo link_to_items_browse(__('View the items in %s', $collectionTitle), array('collection' => $collectionId)); ?>
       <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
     </div>
 
