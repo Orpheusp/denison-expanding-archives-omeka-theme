@@ -24,8 +24,9 @@
   
   <!-- Stylesheets -->
   <?php 
+    queue_css_url('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic|Cardo:400,400italic,700');
     queue_css_file('screen', 'screen'); 
-    queue_css_url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+    queue_css_file('bootstrap.min', 'all'); 
     echo head_css();
   ?>
   
@@ -74,8 +75,7 @@
   </div><!-- end of nav-drawer-->
   
   <label class="navigation-button" for="nav-drawer-toggle">
-    <p class="sans-serif-800">EXPANDING</p>
-    <p class="serif-400">ARCHIVE</p>
+    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
   </label>
           
 
