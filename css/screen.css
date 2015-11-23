@@ -531,16 +531,10 @@ nav {
   letter-spacing: 0.2em;
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  z-index: 9998;
   background-color: white;
   padding: 40px 0;
-  border: 8px solid #C33244;
-  width: 300px; }
+  /*border: 8px solid $red;*/
+  height: 100vh; }
 
 .highlight-jumbotron {
   padding: 0 !important;
@@ -572,8 +566,7 @@ nav {
       background: -o-radial-gradient(circle, #ffffff, #1a82f7);
       /* Standard */
       background: radial-gradient(circle, #ffffff, #1a82f7);
-      width: 100%;
-      height: 100%;
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat; }
     .highlight-jumbotron .section .front {
