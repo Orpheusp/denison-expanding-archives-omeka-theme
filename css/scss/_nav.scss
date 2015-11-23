@@ -34,7 +34,8 @@
 
 .nav-drawer {
   position: fixed;
-  top: calc(-40vh - 10em - 8px);
+  /* [nav height]: 40vh [nav padding]: 80px [nav border]: 8px */
+  top: calc(-40vh - 160px - 8px);
   left: 0;
   right: 0;
   z-index: 9999;
@@ -55,11 +56,11 @@
 }
 
 #nav-drawer-toggle:checked ~ .navigation-button {
-  top: calc(40vh + 10em + 8px);
+  top: calc(40vh + 160px + 8px);
 }
 
 #nav-drawer-toggle:checked ~ .nav-drawer {
-  top: 0;
+  top:0;
 }
 
 #nav-drawer-toggle:checked ~ .nav-drawer-shade {
@@ -75,14 +76,15 @@
   z-index: 9999;
   @include transition(top, 0.3s, ease-in-out);
   
-  width: 200px;
+  width: 60px;
   background-color: $red;
   display: block;
   padding-top: 20px;
   padding-bottom: 15px;
+  padding-left: 8px;
   cursor: pointer;
   
-  font-size: 1em;
+  font-size: 2em;
   color: white;
   line-height: 0.5em;
   letter-spacing: 0.3em;
@@ -93,7 +95,7 @@
 .nav-container {
   border-bottom: 8px solid $red;
   background-color: white;
-  padding: 5em 0;
+  padding: 80px 0;
 }
 
 nav {

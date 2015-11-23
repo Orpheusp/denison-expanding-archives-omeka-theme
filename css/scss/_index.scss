@@ -41,16 +41,23 @@
 }
 
 .homepage-logo {
-  font-size: 2em;
-  color: $red;
-  line-height: 0.8em;
-  letter-spacing: 0.2em;
+  font-size: 3em;
+  line-height: 1em;
+  letter-spacing: 0.3em;
   text-align: center;
-  position: absolute;
-  background-color: white;
-  padding: 40px 0;
-  /*border: 8px solid $red;*/
+  margin-top: 200px;
+}
+
+.homepage-intro {
+  color: white;
+  background-color: $dark-red;
   height: 100vh;
+  
+  & > p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 80px;
+  }
 }
 
 .highlight-jumbotron {

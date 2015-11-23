@@ -21,7 +21,7 @@
       echo __("  <div class=\"background\"></div>\n");
     echo __("  <div class=\"front\">\n");
     echo __("    <div class=\"container\">\n");
-    echo __("      <span class=\"glyphicon".$sectionTitleIcon."\" aria-hidden=\"true\"></span>\n");
+    echo __("      <span class=\"glyphicon ".$sectionTitleIcon."\" aria-hidden=\"true\"></span>\n");
     echo __("      <p class=\"sans-serif-800\">".$sectionTitle1."</p>\n");
     echo __("      <p class=\"serif-400\">".$sectionTitle2."</p>\n");
     echo __("    </div>\n");
@@ -32,20 +32,31 @@
     echo __("  </div>\n");
     echo __("</div>\n");
   }
+
+  function showIntro() {
+    $themeOption = 'homepage_introduction_content';
+    $introContent = get_theme_option($themeOption);
+    
+    echo __($introContent);
+  }
 ?>
 
 <div class="container-fluid highlight-jumbotron">
-  <div class="col-md-4">
+  
+  <div class="col-lg-4 col-lg-push-4 col-md-12 homepage-intro">
+    <div class="homepage-logo">
+      <p class="sans-serif-800">EXPANDING</p>
+      <p class="serif-400">ARCHIVE</p>
+    </div>
+    <p class="serif-400"><?php showIntro() ?></p>
+  </div>
+  
+  <div class="col-lg-4 col-lg-pull-4 col-md-6 col-sm-12">
     <?php showSection(1) ?>
     <?php showSection(2) ?>
-  </div>
+  </div>  
   
-  <div class="col-md-4 homepage-logo">
-    <p class="sans-serif-800">EXPANDING</p>
-    <p class="serif-400">ARCHIVE</p>
-  </div>
-  
-  <div class="col-md-4">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <?php showSection(3) ?>
     <?php showSection(4) ?>
   </div>
