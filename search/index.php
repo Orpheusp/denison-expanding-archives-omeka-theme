@@ -65,6 +65,7 @@
     $grid.imagesLoaded().progress( function() {
       $grid.masonry();
     }); 
+  }
 </script>
 
 <?php echo foot(); ?>
