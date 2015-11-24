@@ -283,10 +283,16 @@ article p#simple-pages-breadcrumbs {
       color: white; }
 
 .single-item-files .item-file {
-  margin-bottom: 50px; }
-.single-item-files div[class*="image-"] {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto; }
+.single-item-files video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+.single-item-files div[class*="image-"], .single-item-files div[class="application-pdf"] {
   height: 800px; }
-  .single-item-files div[class*="image-"] img {
+  .single-item-files div[class*="image-"] img, .single-item-files div[class="application-pdf"] img {
     object-fit: contain;
     width: 100%;
     height: 100%;

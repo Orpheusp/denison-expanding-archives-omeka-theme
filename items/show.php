@@ -42,15 +42,10 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="article-content">
         <p><?php echo $description; ?></p>
-        <b>Citation</b> 
-        <p><?php echo $citation; ?></p>
         <b>Collection</b>
         <div id="collection-list"><?php echo $collection; ?></div>
         <b>Tags</b>
         <div id="tags-list"><?php echo $tags; ?></div>
-        <b>Output Format</b>
-        <div><?php echo $outputFormat; ?></div>
-        
       </div><!-- end of article-content -->
     </div>
   </article>

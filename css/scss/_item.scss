@@ -39,9 +39,17 @@
 .single-item-files {
   .item-file {
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  div[class*="image-"] {
+  video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  div[class*="image-"], div[class="application-pdf"] {
     height: 800px;
     
     img {
