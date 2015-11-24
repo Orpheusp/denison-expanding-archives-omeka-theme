@@ -98,16 +98,13 @@
       <?php 
         showCollectionDescriptionTag('TYPE', $type); 
         showCollectionDescriptionTag('FORMAT', $format);
-        showCollectionDescriptionTag('IDENTIFIER', $identifier); 
+        showCollectionDescriptionTag('LANGUAGE', $language); 
       ?>
     </div>
 
     <div class="col-lg-2 col-md-3 col-sm-6">
-      <?php 
-        showCollectionDescriptionTag('LANGUAGE', $language); 
-        showCollectionDescriptionTag('COVERAGE', $coverage); 
+      <?php
         showCollectionDescriptionTag('RIGHTS', $rights); 
-        showCollectionDescriptionTag('SEE ALSO', $relation); 
       ?>
     </div>
     

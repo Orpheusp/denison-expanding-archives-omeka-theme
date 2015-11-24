@@ -84,19 +84,15 @@
     
     <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
-        showItemDescriptionTag('SOURCE', $source); 
         showItemDescriptionTag('TYPE', $type); 
         showItemDescriptionTag('FORMAT', $format);
-        showItemDescriptionTag('IDENTIFIER', $identifier); 
+        showItemDescriptionTag('LANGUAGE', $language); 
       ?>
     </div>
 
     <div class="col-lg-2 col-md-3 col-sm-6">
       <?php 
-        showItemDescriptionTag('LANGUAGE', $language); 
-        showItemDescriptionTag('COVERAGE', $coverage); 
         showItemDescriptionTag('RIGHTS', $rights); 
-        showItemDescriptionTag('SEE ALSO', $relation); 
       ?>
     </div>
     
