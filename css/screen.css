@@ -539,7 +539,7 @@ nav {
   .homepage-intro > p {
     font-size: 1.5em;
     line-height: 1.5em;
-    padding: 80px; }
+    padding: 10%; }
 
 .highlight-jumbotron {
   padding: 0 !important;
@@ -617,10 +617,10 @@ nav {
       /* Standard */
       transition: opacity 0.2s ease-in-out;
       color: white;
-      padding: 80px; }
+      padding: 10%; }
       .highlight-jumbotron .section .back p {
         font-size: 1.4em;
-        line-height: 2em; }
+        line-height: 1.6em; }
       .highlight-jumbotron .section .back a {
         display: block;
         font-size: 1.5em;
@@ -631,7 +631,7 @@ nav {
         border: 5px solid white;
         text-align: center;
         margin: auto;
-        width: 40%;
+        width: auto;
         /* Firefox */
         -moz-transition: background-color 0.2s ease-in-out;
         /* WebKit */
