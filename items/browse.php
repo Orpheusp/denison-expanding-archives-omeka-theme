@@ -60,12 +60,6 @@
 
   <div class="container">
     <?php echo pagination_links(); ?>
-    
-    <div class="outputs col-md-8 col-md-offset-2">
-      <span class="outputs-label">-OUTPUT-</span>
-      <?php echo output_format_list(false, ''); ?>
-    </div><!-- end of outputs -->
-    
   </div>
 
   <footer role="contentinfo" class="jumbotron">
