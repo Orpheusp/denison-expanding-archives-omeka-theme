@@ -45,7 +45,7 @@
   <div class="col-lg-4 col-lg-pull-4 col-md-6 col-sm-12">
     <!-- section 1 -->
     <div class="section">
-      <?php if ($sectionBackgroundImages[0] != ""): ?>
+      <?php if (!empty($sectionBackgroundImages[0])): ?>
         <img src="<?php echo $themeUploadsPath.$sectionBackgroundImages[0] ?>" class="background">
       <?php else: ?>
         <div class="background"></div>
@@ -67,7 +67,7 @@
     
     <!-- section 2 -->
     <div class="section">
-    <?php if ($sectionBackgroundImages[1] != ""): ?>
+    <?php if (!empty($sectionBackgroundImages[1])): ?>
       <img src="<?php echo $themeUploadsPath.$sectionBackgroundImages[1] ?>" class="background">
     <?php else: ?>
       <div class="background"></div>
@@ -92,7 +92,7 @@
   <div class="col-lg-4 col-md-6 col-sm-12">
     <!-- section 3 -->
     <div class="section">
-    <?php if ($sectionBackgroundImages[2] != ""): ?>
+    <?php if (!empty($sectionBackgroundImages[2])): ?>
       <img src="<?php echo $themeUploadsPath.$sectionBackgroundImages[2] ?>" class="background">
     <?php else: ?>
       <div class="background"></div>
@@ -114,7 +114,7 @@
     
     <!-- section 4 -->
     <div class="section">
-    <?php if ($sectionBackgroundImages[3] != ""): ?>
+    <?php if (!empty($sectionBackgroundImages[3])): ?>
       <img src="<?php echo $themeUploadsPath.$sectionBackgroundImages[3] ?>" class="background">
     <?php else: ?>
       <div class="background"></div>
