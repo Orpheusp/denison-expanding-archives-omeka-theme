@@ -25,7 +25,6 @@
     & > p, & > a, & > strong, & > b, & > i {
       color: $dark-grey;
     }
-    
   }
 
   article {
@@ -81,24 +80,11 @@
     & > h5 { font-size: 1.75em; }
     & > h6 { font-size: 1.5em; }
 
-    & > p, & > a, & > strong, & > b, & > i, & > em, & > mark, 
-    & > del, & > ins {
+    & > p, & > pre, & > address {
       font-size: 1.5em;
       margin-bottom: 1.6875em;
       line-height: 1.7em;
-    }
-    
-    & > p, & > quote, & > a, & > i, & > mark, & > del, & > ins, 
-    & > sub, & > sup { @extend .serif-400; }
-    
-    & > strong, & > b, & > em { @extend .serif-700; }
-    & > i { font-style: italic; }
-    & > em { color: $red; }
-    & > sub, & > sup { font-size: 1em;}
-    
-    & > mark { 
-      background-color: $red; 
-      color: white;
+      @extend .serif-400;
     }
 
     & > quote {
@@ -109,6 +95,18 @@
       margin-bottom: 1.6875em;
       padding: 0 2em 0 2em;
     }
+    
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > pre, & > address {
+      p, quote, a, i, mark, del, ins, sub, sup { @extend .serif-400; }
+      strong, b, em { @extend .serif-700; }
+      i { font-style: italic; }
+      em { color: $red; }
+      sub, sup { font-size: 1em;}
+      mark { 
+        background-color: $red; 
+        color: white;
+      }
+    } 
     
     & #output-format-list, & #tags-list, & #collection-list {
       @extend .sans-serif-400;
@@ -127,64 +125,62 @@
         display: inline-block;
         line-height: 1em;
         
-        &:hover {
-          background-color: $dark-red;
-        }
-      }
+        &:hover { background-color: $dark-red; }
+      } /* end of a */
+    }/* end of & #output-format-list, & #tags-list, & #collection-list */
+  }
+}
+
+.article-description-tag {
+  margin-bottom: 1.5em;
+
+  & > h1 {
+    @extend .sans-serif-400;
+    letter-spacing: 0.5em;
+    font-size: 0.8em;
+    border-top: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    padding: 2px 0 2px 0;
+    margin-bottom: 0.5em;
+  }
+
+  & > b {
+    @extend .sans-serif-700;
+  }
+
+  & > p {
+    @extend .serif-400;
+
+  }
+
+  & > img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none !important;
+    display: inline-block;
+    @extend .sans-serif-400;
+    color: white;
+    background-color: $red;
+    padding: 3px 5px;
+    margin: 3px;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+
+    &:hover {
+      background-color: $dark-red;
+      color: white;
     }
   }
 
-  .article-description-tag {
-    margin-bottom: 1.5em;
+  ul {
+    padding: 0;
+  }
 
-    & > h1 {
-      @extend .sans-serif-400;
-      letter-spacing: 0.5em;
-      font-size: 0.8em;
-      border-top: 1px solid $dark-grey;
-      border-bottom: 1px solid $dark-grey;
-      padding: 2px 0 2px 0;
-      margin-bottom: 0.5em;
-    }
-
-    & > b {
-      @extend .sans-serif-700;
-    }
-
-    & > p {
-      @extend .serif-400;
-      
-    }
-
-    & > img {
-      width: 100%;
-    }
-    
-    a {
-      text-decoration: none !important;
-      display: inline-block;
-      @extend .sans-serif-400;
-      color: white;
-      background-color: $red;
-      padding: 3px 5px;
-      margin: 3px;
-      font-size: 0.8em;
-      letter-spacing: 0.1em;
-      
-      &:hover {
-        background-color: $dark-red;
-        color: white;
-      }
-    }
-    
-    ul {
-      padding: 0;
-    }
-    
-    li {
-      display: inline-block;
-      margin: 0;
-    }
+  li {
+    display: inline-block;
+    margin: 0;
   }
 }
 
