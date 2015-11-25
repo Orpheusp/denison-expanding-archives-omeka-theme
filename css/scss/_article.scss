@@ -86,6 +86,13 @@
       line-height: 1.7em;
       @extend .serif-400;
     }
+    
+    & > b { 
+      font-size: 1.5em;
+      margin-bottom: 1.6875em;
+      line-height: 1.7em;
+      @extend .serif-700; 
+    }
 
     & > quote {
       font-style: italic;
@@ -97,7 +104,7 @@
     }
     
     & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > pre, & > address {
-      p, quote, a, i, mark, del, ins, sub, sup { @extend .serif-400; }
+      a, i, mark, del, ins, sub, sup { @extend .serif-400; }
       strong, b, em { @extend .serif-700; }
       i { font-style: italic; }
       em { color: $red; }
