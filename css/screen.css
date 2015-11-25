@@ -231,7 +231,8 @@ article p#simple-pages-breadcrumbs {
   color: #4a4a4a !important;
   float: left;
   padding: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #c0c0c0; }
   .exhibit-item:hover {
     background-color: #C33244;
     color: white !important; }
@@ -928,11 +929,6 @@ nav#exhibit-pages {
       padding: 0;
       margin-left: 1em;
       font-size: 100%; }
-
-.gallery {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px; }
 
 .exhibit-block {
   margin-bottom: 120px; }
