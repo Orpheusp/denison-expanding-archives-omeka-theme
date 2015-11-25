@@ -13,7 +13,9 @@
     <small>-EXHIBIT-</small>
     <h1><?php echo $title ?></h1>
   </div><!-- end of section-header -->
-  
+</div><!-- end of container -->
+
+<div class="container exhibit">
   <article>
     <div class="col-md-8 col-md-offset-2">
       <div class="article-content">
@@ -21,7 +23,9 @@
       </div>
     </div>
   </article>
+</div>
 
+<div class="container">
   <nav id="exhibit-pages" class="col-md-8 col-md-offset-2">
     <p><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></p>
     <?php echo exhibit_builder_page_tree($exhibit, $exhibit_page); ?>
@@ -44,9 +48,9 @@
       <?php echo exhibit_builder_page_trail(); ?>
     </div>
   </nav>
-
-  
-  
 </div><!-- end of container -->
+  
+  
+
   
 <?php echo foot(); ?>

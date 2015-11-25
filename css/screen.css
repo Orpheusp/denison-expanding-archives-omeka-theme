@@ -929,6 +929,11 @@ nav#exhibit-pages {
       margin-left: 1em;
       font-size: 100%; }
 
+.gallery {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px; }
+
 .exhibit-block {
   margin-bottom: 120px; }
   .exhibit-block .exhibit-item-caption p {

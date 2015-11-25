@@ -31,6 +31,12 @@ nav#exhibit-pages {
   }
 }
 
+.gallery {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+}
+
 .exhibit-block {
   @extend .article;
 
